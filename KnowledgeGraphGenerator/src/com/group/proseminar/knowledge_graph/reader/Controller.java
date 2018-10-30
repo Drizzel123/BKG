@@ -1,3 +1,4 @@
+package com.group.proseminar.knowledge_graph.reader;
 import java.util.LinkedList;
 import java.util.concurrent.Semaphore;
 
@@ -6,7 +7,7 @@ public class Controller {
 	private String ontology;
 	private LinkedList<ArticleHolder> pool=new LinkedList<ArticleHolder>();
 	
-	Controller ()
+	public Controller ()
 	{
 		StartView start_view=new StartView(start_view_wait,this);
 		try {

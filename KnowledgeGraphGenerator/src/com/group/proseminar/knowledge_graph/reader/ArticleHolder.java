@@ -1,8 +1,9 @@
+package com.group.proseminar.knowledge_graph.reader;
 
-public class ArticleHolder extends Thread{
+class ArticleHolder extends Thread{
 	private String plainText;
 	private Controller controller;
-	public ArticleHolder (String plainText, Controller controller)
+	ArticleHolder (String plainText, Controller controller)
 	{
 		this.plainText=plainText;
 		this.controller=controller;

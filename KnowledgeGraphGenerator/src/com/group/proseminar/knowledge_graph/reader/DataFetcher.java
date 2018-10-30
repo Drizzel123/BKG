@@ -1,3 +1,4 @@
+package com.group.proseminar.knowledge_graph.reader;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -8,7 +9,7 @@ import java.nio.charset.Charset;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class DataFetcher extends Thread{
+class DataFetcher extends Thread{
 	private String url;
 	private Controller controller;
 	DataFetcher(String ontology, Controller controller)
@@ -23,13 +24,16 @@ public class DataFetcher extends Thread{
 		JSONObject json;
 		try {
 			json = readJsonFromUrl(url);
-			for (Object i:json.getJSONObject("results").getJSONArray("bindings"))
+			System.out.println(((JSONObject)json.getJSONObject("results").getJSONArray("bindings").get(1)).getJSONObject("abs").getString("value"));
+			
+			
+			/*for (Object i:json.getJSONObject("results").getJSONArray("bindings"))
 			 {
 				 String textField=((JSONObject)i).getJSONObject("abs").getString("value");
 				 ArticleHolder ah=new ArticleHolder(textField, controller);
 				 ah.start();
 				 controller.addHolderToThePool(ah);
-			 }
+			 }*/
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

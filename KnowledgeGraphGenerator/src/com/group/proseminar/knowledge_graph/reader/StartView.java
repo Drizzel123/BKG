@@ -1,3 +1,4 @@
+package com.group.proseminar.knowledge_graph.reader;
 import java.awt.GraphicsEnvironment;
 import java.util.concurrent.Semaphore;
 
@@ -8,7 +9,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class StartView extends JFrame{
+class StartView extends JFrame{
 	
 	private JTextField ontology_chooser;
 	private JButton submit;
