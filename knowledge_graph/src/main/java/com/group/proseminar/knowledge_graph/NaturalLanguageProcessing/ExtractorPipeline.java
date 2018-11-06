@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import edu.stanford.nlp.pipeline.Annotation;
+import edu.stanford.nlp.pipeline.CoreDocument;
 import edu.stanford.nlp.pipeline.StanfordCoreNLP;
 import edu.stanford.nlp.trees.Tree;
 
@@ -33,26 +34,60 @@ public class ExtractorPipeline {
 	}
 
 	public void processArticle(String article) throws Exception {
-		Annotation doc = new Annotation(article);
+		CoreDocument doc = new CoreDocument(article);
 		corefPipeline.annotate(doc);
 		String resoluted = resoluter.coreferenceResolution(doc);
 		if (resoluted == null) {
 			resoluted = article;
 		}
+		Set<Entity> entities = resoluter.linkEntitiesToMentions(doc);
 		Annotation res = new Annotation(resoluted);
 		extrPipeline.annotate(res);
 		Set<Triplet<Tree, Tree, Tree>> triplets = extractor.extractFromText(res);
 		EntityLinker linker = new EntityLinker();
-		Set<Entity> entities = resoluter.getEntities();
+
 		for (Triplet<Tree, Tree, Tree> triplet : triplets) {
-			String subject = triplet.getFirst().toString();
-			String object = triplet.getThird().toString();
+			String subject = toMention(triplet.getFirst());
+			String object = toMention(triplet.getThird());
 			Entity sEntity = entities.stream().filter(x -> x.getMentions().contains(subject)).findAny().orElse(null);
 			Entity oEntity = entities.stream().filter(x -> x.getMentions().contains(object)).findAny().orElse(null);
+			// if sEntity or oEntity is null create a literal entity
+			if (sEntity == null) {
+				sEntity = new Entity(subject);
+				sEntity.setLabel("Literal");
+				entities.add(sEntity);
+			}
+			if (oEntity == null) {
+				oEntity = new Entity(object);
+				oEntity.setLabel("Literal");
+				entities.add(oEntity);
+			}
 			Set<Entity> set = Stream.of(sEntity, oEntity).collect(Collectors.toSet());
 			linker.resolveURIs(set);
+
+			System.out.println("Subject: " + subject + ", Object: " + object);
+			// Print out progress
+			// Remember: not every entity might have been resolved to an URI
+			if (sEntity.getUri() != null) {
+				System.out.println("Subject (URI): " + sEntity.getUri() + ", Label: " + sEntity.getLabel());
+			} else {
+				System.out.println("Subject: " + sEntity.getBestMention());
+			}
+
+			if (oEntity.getUri() != null) {
+				System.out.println("Object (URI): " + oEntity.getUri() + ", Label: " + oEntity.getLabel());
+			} else {
+				System.out.println("Object: " + oEntity.getBestMention());
+			}
 		}
 		// TODO: Write triplets to file
-		System.out.println("TRIPLETS: " + triplets);
+	}
+
+	private String toMention(Tree root) {
+		String s = "";
+		for (Tree leaf : root.getLeaves()) {
+			s += leaf.value() + " ";
+		}
+		return s.substring(0, s.length() - 1);
 	}
 }

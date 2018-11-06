@@ -3,10 +3,7 @@ package com.group.proseminar.knowledge_graph.NaturalLanguageProcessing;
 import java.io.InputStream;
 import java.net.URLEncoder;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.Set;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
@@ -30,29 +27,6 @@ public class EntityLinker {
 	private final String QUERYSTRING = "QueryString=";
 	private final String QUERYCLASS = "QueryClass=";
 
-	public static void main(String[] args) {
-		try {
-			Entity christiano = new Entity(Stream.of("Christiano", "Christiano Ronaldo").collect(Collectors.toList()));
-			Entity obama = new Entity(Stream.of("Barack", "Obama", "Barack Obama").collect(Collectors.toList()));
-			Entity place = new Entity(Stream.of("qqqqqqqqqqqqqqqqqqqqq", "Gauß").collect(Collectors.toList()));
-
-			Set<Entity> entities = new HashSet<>();
-			entities.add(christiano);
-			entities.add(obama);
-			entities.add(place);
-
-			EntityLinker linker = new EntityLinker();
-			linker.resolveURIs(entities);
-			for (Entity en : entities) {
-				System.out.println(en.getBestMention() + " " + en.getUri());
-			}
-
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
-
 	public EntityLinker() throws Exception {
 		this.client = new HttpClient();
 		this.factory = SAXParserFactory.newInstance();
@@ -61,6 +35,7 @@ public class EntityLinker {
 
 	/**
 	 * Links entities to an URI retrieved from DBPedia.
+	 * 
 	 * @param entities
 	 * @throws Exception
 	 */
@@ -74,7 +49,9 @@ public class EntityLinker {
 			while (entity.getUri() == null && index < mentions.size()) {
 				String mention = mentions.get(index);
 				String get = DBLOOKUP + QUERYSTRING + URLEncoder.encode(mention, "UTF-8");
-				if (entity.getLabel() != null) {
+				// Add the label to the query if possible (excluding label "Literal")
+				String label = entity.getLabel();
+				if (label != null && label != "Literal") {
 					get += "&" + QUERYCLASS + entity.getLabel();
 				}
 				HttpMethod request = new GetMethod(get);
@@ -102,4 +79,5 @@ public class EntityLinker {
 			}
 		}
 	}
+
 }

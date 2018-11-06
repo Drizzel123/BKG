@@ -35,8 +35,6 @@ public class TripletExtractor {
 		Set<Triplet<Tree, Tree, Tree>> tripletSet = new HashSet<>();
 		List<CoreMap> sentences = annotation.get(CoreAnnotations.SentencesAnnotation.class);
 		for (CoreMap sentence : sentences) {
-			System.out.println("Sentence: " + sentence);
-
 			Tree parseTree = sentence.get(TreeCoreAnnotations.TreeAnnotation.class);
 			// Start extraction on every "S" node
 			for (Tree node : parseTree) {

@@ -6,6 +6,9 @@ import java.util.TreeSet;
 
 public class Entity {
 
+	// TODO: select best mentions with respect to NER (mention has tag-> better
+	// candidate)
+
 	private TreeSet<String> mentions = new TreeSet<>(new Comparator<String>() {
 		@Override
 		public int compare(String o1, String o2) {
@@ -34,11 +37,15 @@ public class Entity {
 	}
 
 	public Entity(String bestMention) {
+		this.mentions.add(bestMention);
 		this.bestMention = bestMention;
 	}
 
 	public void addMention(String mention) {
 		this.mentions.add(mention);
+		if (bestMention == null || mention.length() > bestMention.length()) {
+			bestMention = mention;
+		}
 	}
 
 	public TreeSet<String> getMentions() {
@@ -55,6 +62,9 @@ public class Entity {
 
 	public void setBestMention(String bestMention) {
 		this.bestMention = bestMention;
+		if (!mentions.contains(bestMention)) {
+			mentions.add(bestMention);
+		}
 	}
 
 	public String getUri() {
@@ -70,6 +80,24 @@ public class Entity {
 	}
 
 	public void setLabel(String label) {
-		this.label = label;
+		// TODO: Check this!
+		switch (label) {
+		case "PERSON":
+		case "TITLE":
+			this.label = "Person";
+			break;
+		case "LOCATION":
+		case "CITY":
+			this.label = "Place";
+			break;
+		case "NUMBER":
+		case "DATE":
+		default:
+			this.label = "Literal";
+		}
+	}
+
+	public String toString() {
+		return "URI: " + uri + ", Label: " + label + ", Best Mention: " + bestMention + ", Mentions: " + mentions;
 	}
 }
