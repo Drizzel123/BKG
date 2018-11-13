@@ -1,17 +1,17 @@
-public class Pair
-{
-    String text;
-    String type;
+package com.group.proseminar.knowledge_graph.FOX;
 
-    public Pair(String text, String type)
-    {
-        this.text = text;
-        this.type = type;
-    }
-    
-    public String toString() {
-      
-      return "[" + this.text + ", " + this.type + "]";
-      
-    }
+public class Pair {
+	String text;
+	String type;
+
+	public Pair(String text, String type) {
+		this.text = text;
+		this.type = type;
+	}
+
+	public String toString() {
+
+		return "[" + this.text + ", " + this.type + "]";
+
+	}
 }
