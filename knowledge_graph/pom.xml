@@ -88,5 +88,37 @@
 			<version>3.1</version>
 		</dependency>
 
+		<dependency>
+			<groupId>org.apache.jena</groupId>
+			<artifactId>apache-jena-libs</artifactId>
+			<version>3.9.0</version>
+			<type>pom</type>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.jena</groupId>
+			<artifactId>jena-tdb</artifactId>
+			<version>3.9.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.jena</groupId>
+			<artifactId>jena-sdb</artifactId>
+			<version>3.9.0</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>net.sf.extjwnl</groupId>
+			<artifactId>extjwnl</artifactId>
+			<version>1.9.4</version>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.extjwnl</groupId>
+			<artifactId>extjwnl-data-wn31</artifactId>
+			<version>1.2</version>
+		</dependency>
+
+
+
+
 	</dependencies>
 </project>

@@ -10,7 +10,7 @@ public class ExtractorPipelineTest {
 	public void extractFromTextTest() throws Exception {
 		ExtractorPipeline pipeline = new ExtractorPipeline();
 		pipeline.processArticle(
-				"Johann Carl Friedrich Gauss was a German mathematician and physicist who made significant contributions to many fields in mathematics and sciences. Sometimes referred to as the Princeps mathematicorum and the greatest mathematician since antiquity, Gauss had an exceptional influence in many fields of mathematics and science, and is ranked among history's most influential mathematicians.");
+				"Carl Gauss was an ardent perfectionist and a hard worker. He was never a prolific writer, refusing to publish work which he did not consider complete and above criticism. Though he did take in a few students, Gauss was known to dislike teaching. It is said that he attended only a single scientific conference, which was in Berlin in 1828.");
 		assertEquals(true, true);
 	}
 }
