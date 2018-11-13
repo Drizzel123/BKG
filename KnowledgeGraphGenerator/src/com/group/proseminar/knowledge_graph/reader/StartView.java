@@ -35,6 +35,8 @@ class StartView extends JFrame{
 			start_view_wait.release();
 		});
 		
+		ontology_chooser.setText("Scientist");
+		
 		pack();
 		setLocation(GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice().getDisplayMode().getWidth()/2-(this.getWidth()/2),GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice().getDisplayMode().getHeight()/2-(this.getHeight()/2));
 		setDefaultCloseOperation(EXIT_ON_CLOSE);

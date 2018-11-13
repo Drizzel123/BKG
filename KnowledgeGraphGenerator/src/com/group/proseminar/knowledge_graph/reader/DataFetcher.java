@@ -23,17 +23,15 @@ class DataFetcher extends Thread{
 	{
 		JSONObject json;
 		try {
-			json = readJsonFromUrl(url);
-			System.out.println(((JSONObject)json.getJSONObject("results").getJSONArray("bindings").get(1)).getJSONObject("abs").getString("value"));
-			
-			
-			/*for (Object i:json.getJSONObject("results").getJSONArray("bindings"))
+			json = readJsonFromUrl(url);			
+			for (Object i:json.getJSONObject("results").getJSONArray("bindings"))
 			 {
+			 	 String uri=((JSONObject)i).getJSONObject("s").getString("value");
 				 String textField=((JSONObject)i).getJSONObject("abs").getString("value");
-				 ArticleHolder ah=new ArticleHolder(textField, controller);
+				 ArticleHolder ah=new ArticleHolder(textField,uri, controller);
 				 ah.start();
 				 controller.addHolderToThePool(ah);
-			 }*/
+			 }
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
