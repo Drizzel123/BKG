@@ -1,4 +1,4 @@
-package com.group.proseminar.knowledge_graph.NaturalLanguageProcessing;
+package com.group.proseminar.knowledge_graph.nlp;
 
 import java.util.ArrayList;
 import java.util.HashMap;

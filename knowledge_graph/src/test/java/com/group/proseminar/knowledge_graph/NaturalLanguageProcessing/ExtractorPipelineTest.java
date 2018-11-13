@@ -4,6 +4,8 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
+import com.group.proseminar.knowledge_graph.nlp.ExtractorPipeline;
+
 public class ExtractorPipelineTest {
 
 	@Test

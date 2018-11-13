@@ -7,6 +7,8 @@ import java.util.Properties;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.group.proseminar.knowledge_graph.nlp.TripletExtractor;
+
 import edu.stanford.nlp.pipeline.Annotation;
 import edu.stanford.nlp.pipeline.StanfordCoreNLP;
 

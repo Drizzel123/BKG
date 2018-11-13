@@ -3,6 +3,8 @@ package com.group.proseminar.knowledge_graph.Ontology;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.group.proseminar.knowledge_graph.ontology.SynonymUtil;
+
 import net.sf.extjwnl.JWNLException;
 
 public class SynonymUtilTest {

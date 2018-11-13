@@ -1,4 +1,4 @@
-package com.group.proseminar.knowledge_graph.NaturalLanguageProcessing;
+package com.group.proseminar.knowledge_graph.nlp;
 
 import java.io.InputStream;
 import java.net.URLEncoder;
@@ -79,5 +79,4 @@ public class EntityLinker {
 			}
 		}
 	}
-
 }

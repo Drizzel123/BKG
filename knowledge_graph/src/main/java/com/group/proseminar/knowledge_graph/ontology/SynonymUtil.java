@@ -1,4 +1,4 @@
-package com.group.proseminar.knowledge_graph.Ontology;
+package com.group.proseminar.knowledge_graph.ontology;
 
 import java.util.AbstractMap;
 import java.util.ArrayList;

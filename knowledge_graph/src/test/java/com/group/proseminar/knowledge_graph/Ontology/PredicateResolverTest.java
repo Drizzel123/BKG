@@ -7,6 +7,8 @@ import java.util.stream.Collectors;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.group.proseminar.knowledge_graph.ontology.PredicateResolver;
+
 public class PredicateResolverTest {
 	PredicateResolver res;
 
