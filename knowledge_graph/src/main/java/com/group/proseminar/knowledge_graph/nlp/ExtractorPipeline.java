@@ -19,7 +19,7 @@ public class ExtractorPipeline {
 	CoreferenceResoluter resoluter;
 	TripletExtractor extractor;
 
-	ExtractorPipeline() {
+	public ExtractorPipeline() {
 		this.resoluter = new CoreferenceResoluter();
 		this.extractor = new TripletExtractor();
 		// Initialize corefPipeline
