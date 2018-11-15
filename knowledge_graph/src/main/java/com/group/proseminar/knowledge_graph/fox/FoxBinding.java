@@ -7,7 +7,6 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
-import javax.management.relation.Relation;
 import org.aksw.fox.binding.*;
 import org.aksw.fox.data.Entity;
 import org.apache.log4j.LogManager;
