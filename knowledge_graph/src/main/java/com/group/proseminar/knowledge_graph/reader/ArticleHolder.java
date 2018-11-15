@@ -18,7 +18,7 @@ class ArticleHolder extends Thread {
 		// plainText.
 		// Preprocessing:
 		plainText = Preprocessor.preprocess(uri, plainText);
-
+		
 		controller.deleteHolderFromThePool(this);
 	}
 
