@@ -1,4 +1,4 @@
-package com.group.proseminar.knowledge_graph.Ontology;
+package com.group.proseminar.knowledge_graph.ontology_test;
 
 import org.junit.Before;
 import org.junit.Test;

@@ -1,9 +1,14 @@
 package com.group.proseminar.knowledge_graph.nlp;
 
+
+import java.util.Collection;
+import java.util.HashSet;
 import java.util.Properties;
 import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
+import com.group.proseminar.knowledge_graph.ontology.PredicateResolver;
 
 import edu.stanford.nlp.pipeline.Annotation;
 import edu.stanford.nlp.pipeline.CoreDocument;
@@ -16,11 +21,12 @@ public class ExtractorPipeline {
 	private StanfordCoreNLP extrPipeline;
 	private final String CPROPERTIES = "tokenize,ssplit,pos,lemma,ner,parse,dcoref";
 	private final String EPROPERTIES = "tokenize,ssplit,pos,lemma,ner,parse";
-	CoreferenceResoluter resoluter;
-	TripletExtractor extractor;
+	private CoreferenceResolver corefResolver;
+	private TripletExtractor extractor;
+	private PredicateResolver predResolver;
 
 	public ExtractorPipeline() {
-		this.resoluter = new CoreferenceResoluter();
+		this.corefResolver = new CoreferenceResolver();
 		this.extractor = new TripletExtractor();
 		// Initialize corefPipeline
 		Properties corefProps = new Properties();
@@ -31,22 +37,26 @@ public class ExtractorPipeline {
 		Properties extrProps = new Properties();
 		extrProps.put("annotators", EPROPERTIES);
 		this.extrPipeline = new StanfordCoreNLP(extrProps);
+		this.predResolver = new PredicateResolver();
 	}
 
-	public void processArticle(String article) throws Exception {
+	public Collection<Triplet<String, String, String>> processArticle(String article) throws Exception {
 		CoreDocument doc = new CoreDocument(article);
 		corefPipeline.annotate(doc);
-		String resoluted = resoluter.coreferenceResolution(doc);
+		String resoluted = corefResolver.coreferenceResolution(doc);
 		if (resoluted == null) {
 			resoluted = article;
 		}
-		Set<Entity> entities = resoluter.linkEntitiesToMentions(doc);
+		Set<Entity> entities = corefResolver.linkEntitiesToMentions(doc);
 		Annotation res = new Annotation(resoluted);
 		extrPipeline.annotate(res);
 		Set<Triplet<Tree, Tree, Tree>> triplets = extractor.extractFromText(res);
 		EntityLinker linker = new EntityLinker();
 
+		Collection<Triplet<String, String, String>> result = new HashSet<>();
+
 		for (Triplet<Tree, Tree, Tree> triplet : triplets) {
+			// handle subject and object
 			String subject = toMention(triplet.getFirst());
 			String object = toMention(triplet.getThird());
 			Entity sEntity = entities.stream().filter(x -> x.getMentions().contains(subject)).findAny().orElse(null);
@@ -65,6 +75,25 @@ public class ExtractorPipeline {
 			Set<Entity> set = Stream.of(sEntity, oEntity).collect(Collectors.toSet());
 			linker.resolveURIs(set);
 
+			// handle predicate
+			String predicate = toMention(triplet.getSecond());
+
+			// write to triplet
+			String subjURI = sEntity.getUri();
+			String predURI = predResolver.resolveToURI(predicate);
+			String objURI = oEntity.getUri();
+
+			Triplet<String, String, String> uriTriplet = null;
+			if (subjURI != null && predURI != null && objURI != null) {
+				uriTriplet = new Triplet<>(subjURI, predURI, objURI);
+			}
+			else if (subjURI != null && predURI != null && oEntity.getLabel() != null) {
+				uriTriplet = new Triplet<>(subjURI, predURI, oEntity.getLabel());
+			}
+			if (uriTriplet != null) {
+				result.add(uriTriplet);
+			}
+
 			System.out.println("Subject: " + subject + ", Object: " + object);
 			// Print out progress
 			// Remember: not every entity might have been resolved to an URI
@@ -79,8 +108,17 @@ public class ExtractorPipeline {
 			} else {
 				System.out.println("Object: " + oEntity.getBestMention());
 			}
+			System.out.println("Predicate: " + predicate);
+			if (predURI  != null) {
+				System.out.println("URI: " + predURI);
+			}
+
+			// handle predicate
+			// TODO: handle predicate
 		}
-		// TODO: Write triplets to file
+		System.out.println("Processing finished.");
+		System.out.println("Result: " + result);
+		return result;
 	}
 
 	private String toMention(Tree root) {
@@ -90,4 +128,6 @@ public class ExtractorPipeline {
 		}
 		return s.substring(0, s.length() - 1);
 	}
+
 }
+

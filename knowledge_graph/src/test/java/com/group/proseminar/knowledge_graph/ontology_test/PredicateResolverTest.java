@@ -1,4 +1,4 @@
-package com.group.proseminar.knowledge_graph.Ontology;
+package com.group.proseminar.knowledge_graph.ontology_test;
 
 import static org.junit.Assert.assertEquals;
 

@@ -1,4 +1,4 @@
-package com.group.proseminar.knowledge_graph.NaturalLanguageProcessing;
+package com.group.proseminar.knowledge_graph.nlp_test;
 
 import static org.junit.Assert.assertEquals;
 

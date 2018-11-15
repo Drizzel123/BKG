@@ -17,7 +17,7 @@ import edu.stanford.nlp.pipeline.CoreEntityMention;
 import edu.stanford.nlp.pipeline.CoreSentence;
 import edu.stanford.nlp.util.Pair;
 
-public class CoreferenceResoluter {
+public class CoreferenceResolver {
 
 	public String coreferenceResolution(CoreDocument document) {
 		String result = document.text();
