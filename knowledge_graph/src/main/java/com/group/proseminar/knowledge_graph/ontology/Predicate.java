@@ -10,7 +10,6 @@ public class Predicate {
 	private String schema;
 	private String domain;
 	private List<String> synonyms;
-	private List<String> derivations;
 	private float frequency;
 
 	public Predicate(String uri, String schema, String domain, String synonym) {
