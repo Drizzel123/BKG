@@ -20,7 +20,8 @@ import org.json.JSONObject;
 
 /**
  * Writes properties extracted from TURTLE and queried through SPARQL to a file
- *
+ * 
+ * @author Stefan Werner
  */
 public class PropertyFetcher {
 	public static void main(String[] args) {
@@ -41,6 +42,11 @@ public class PropertyFetcher {
 		}
 	}
 
+	/**
+	 * Inserts properties to JSONArray derived by the SPARQL query.
+	 * 
+	 * @param jarray - JSONArray containing properties
+	 */
 	private static void jsonFromSparql(JSONArray jarray) {
 		ResultSet results = queryProperties();
 		while (results.hasNext()) {
@@ -60,6 +66,11 @@ public class PropertyFetcher {
 		}
 	}
 
+	/**
+	 * SPARQL query for deriving properties from DBpedia.
+	 * 
+	 * @return a set of results from the query
+	 */
 	private static ResultSet queryProperties() {
 		ParameterizedSparqlString qs = new ParameterizedSparqlString(
 				"prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n"
@@ -72,6 +83,12 @@ public class PropertyFetcher {
 		return results;
 	}
 
+	/**
+	 * Creates a mention for a predicate based on its URI.
+	 * 
+	 * @param predicate
+	 * @return mention of the predicate
+	 */
 	private static String extractMention(String predicate) {
 		String[] arr = predicate.split("(?=\\p{Lu})");
 		StringBuilder builder = new StringBuilder();
@@ -82,6 +99,11 @@ public class PropertyFetcher {
 		return str;
 	}
 
+	/**
+	 * Parses .ttl file and translates it to JSON.
+	 * 
+	 * @param jarray - JSONArray containing properties
+	 */
 	private static void jsonFromTurtle(JSONArray jarray) {
 		Model model = ModelFactory.createDefaultModel();
 		model.read("dbpedia_3Eng_property.ttl", "TURTLE");

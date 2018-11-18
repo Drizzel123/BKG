@@ -23,6 +23,12 @@ import net.sf.extjwnl.data.Synset;
 import net.sf.extjwnl.data.Word;
 import net.sf.extjwnl.dictionary.Dictionary;
 
+/**
+ * Constructs a dictionary for synonym-lookup.
+ * 
+ * @author Stefan Werner
+ *
+ */
 public class SynonymUtil {
 	private Dictionary dictionary;
 	private final String PROPERTIES = "tokenize,ssplit,pos,lemma";

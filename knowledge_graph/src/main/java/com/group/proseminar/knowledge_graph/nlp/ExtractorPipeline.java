@@ -1,6 +1,5 @@
 package com.group.proseminar.knowledge_graph.nlp;
 
-
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Properties;
@@ -15,6 +14,12 @@ import edu.stanford.nlp.pipeline.CoreDocument;
 import edu.stanford.nlp.pipeline.StanfordCoreNLP;
 import edu.stanford.nlp.trees.Tree;
 
+/**
+ * Controls pipeline features of the natural language processing package.
+ * 
+ * @author Stefan Werner
+ *
+ */
 public class ExtractorPipeline {
 
 	private StanfordCoreNLP corefPipeline;
@@ -25,6 +30,9 @@ public class ExtractorPipeline {
 	private TripletExtractor extractor;
 	private PredicateResolver predResolver;
 
+	/**
+	 * Initialize dependent classes and setup annotators.
+	 */
 	public ExtractorPipeline() {
 		this.corefResolver = new CoreferenceResolver();
 		this.extractor = new TripletExtractor();
@@ -40,10 +48,17 @@ public class ExtractorPipeline {
 		this.predResolver = new PredicateResolver();
 	}
 
+	/**
+	 * Executes pipeline approach on a given article.
+	 * 
+	 * @param article
+	 * @return a collection of found triplets, specified by URIs.
+	 * @throws Exception
+	 */
 	public Collection<Triplet<String, String, String>> processArticle(String article) throws Exception {
 		CoreDocument doc = new CoreDocument(article);
 		corefPipeline.annotate(doc);
-		String resoluted = corefResolver.coreferenceResolution(doc);
+		String resoluted = corefResolver.resolveCoreferences(doc);
 		if (resoluted == null) {
 			resoluted = article;
 		}
@@ -86,8 +101,7 @@ public class ExtractorPipeline {
 			Triplet<String, String, String> uriTriplet = null;
 			if (subjURI != null && predURI != null && objURI != null) {
 				uriTriplet = new Triplet<>(subjURI, predURI, objURI);
-			}
-			else if (subjURI != null && predURI != null && oEntity.getLabel() != null) {
+			} else if (subjURI != null && predURI != null && oEntity.getLabel() != null) {
 				uriTriplet = new Triplet<>(subjURI, predURI, oEntity.getLabel());
 			}
 			if (uriTriplet != null) {
@@ -109,7 +123,7 @@ public class ExtractorPipeline {
 				System.out.println("Object: " + oEntity.getBestMention());
 			}
 			System.out.println("Predicate: " + predicate);
-			if (predURI  != null) {
+			if (predURI != null) {
 				System.out.println("URI: " + predURI);
 			}
 
@@ -121,6 +135,12 @@ public class ExtractorPipeline {
 		return result;
 	}
 
+	/**
+	 * Transforms the string representation of the given tree to a mention.
+	 * 
+	 * @param root - root node of the tree
+	 * @return mention contained by the tree
+	 */
 	private String toMention(Tree root) {
 		String s = "";
 		for (Tree leaf : root.getLeaves()) {
@@ -130,4 +150,3 @@ public class ExtractorPipeline {
 	}
 
 }
-

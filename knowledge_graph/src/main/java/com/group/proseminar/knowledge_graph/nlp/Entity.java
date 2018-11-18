@@ -4,6 +4,13 @@ import java.util.Collection;
 import java.util.Comparator;
 import java.util.TreeSet;
 
+/**
+ * Class representing an abstract view of an identified entity within a text,
+ * containing information like the associated uri, best mention, ...
+ * 
+ * @author Stefan Werner
+ *
+ */
 public class Entity {
 
 	// TODO: select best mentions with respect to NER (mention has tag-> better

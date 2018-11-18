@@ -17,7 +17,8 @@ import org.xml.sax.SAXException;
 /**
  * Links entities to their DBPedia URI with respect to their mentions and
  * DBPedia class.
- *
+ * 
+ * @author Stefan Werner
  */
 public class EntityLinker {
 	private HttpClient client;
