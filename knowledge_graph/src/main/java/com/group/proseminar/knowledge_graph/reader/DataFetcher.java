@@ -25,7 +25,8 @@ class DataFetcher extends Thread {
 	public void run() {
 		JSONObject json;
 		try {
-			json = readJsonFromUrl(url);
+			
+			json = readJsonFromUrl(url);		
 			for (Object i : json.getJSONObject("results").getJSONArray("bindings")) {
 				String uri = ((JSONObject) i).getJSONObject("s").getString("value");
 				String textField = ((JSONObject) i).getJSONObject("abs").getString("value");
