@@ -2,8 +2,17 @@ package com.group.proseminar.knowledge_graph.nlp;
 
 import java.util.Collection;
 import java.util.Comparator;
+import java.util.List;
 import java.util.TreeSet;
+import java.util.stream.Collectors;
 
+/**
+ * Class representing an abstract view of an identified entity within a text,
+ * containing information like the associated uri, best mention, ...
+ * 
+ * @author Stefan Werner
+ *
+ */
 public class Entity {
 
 	// TODO: select best mentions with respect to NER (mention has tag-> better
@@ -48,12 +57,13 @@ public class Entity {
 		}
 	}
 
-	public TreeSet<String> getMentions() {
-		return mentions;
+	public List<String> getMentions() {
+		return mentions.stream().collect(Collectors.toList());
 	}
 
-	public void setMentions(TreeSet<String> mentions) {
-		this.mentions = mentions;
+	public void setMentions(Collection<String> mentions) {
+		this.mentions.clear();
+		this.mentions.addAll(mentions);
 	}
 
 	public String getBestMention() {

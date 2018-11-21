@@ -10,43 +10,56 @@ import java.util.Set;
 
 import net.sf.extjwnl.JWNLException;
 
+/**
+ * Links predicates to URIs.
+ * 
+ * @author Stefan Werner
+ *
+ */
 public class PredicateResolver {
 	private PredicateParser parser;
 	private Set<Predicate> predicates;
 	private SynonymUtil util;
 	private Map<String, List<Predicate>> lookupMap;
 
+	/**
+	 * Initialize dependencies and add synonyms derived from a synonym database to
+	 * predicates.
+	 */
 	public PredicateResolver() {
 		this.parser = new PredicateParser();
-		this.parser.parseTurtleProperties();
+		this.parser.parseJSONProperties();
 		this.predicates = this.parser.getPredicates();
 		try {
 			this.util = new SynonymUtil();
 			// Extend predicates by possible synonyms
-//			this.predicates.stream().forEach(p -> p.addAllSynonyms(util.getSynonyms(p.getFirst())));
-			
-			
-			//TODO: pick number of synonym based on the difficulty of the word
-			for (Predicate pred: predicates) {
+			// TODO: pick number of synonym based on the difficulty of the word
+			for (Predicate pred : predicates) {
 				List<String> list = util.getSynonyms(pred.getFirst());
 				Collection<String> firstThree = new ArrayList<>();
 				// get the first num synonyms
 				int num = 3;
 				int i = 0;
-				while (i< num && i < list.size()) {
+				while (i < num && i < list.size()) {
 					firstThree.add(list.get(i));
 					i++;
 				}
 				pred.addAllSynonyms(firstThree);
 			}
-
 			this.lookupMap = fillLookupMap(predicates);
-
 		} catch (JWNLException e) {
 			this.util = null;
 		}
 	}
 
+	/**
+	 * Constructs a lookup-map based on a collection of predicates and their
+	 * affiliated synonyms.
+	 * 
+	 * @param predicates - set of predicates supposed to be contained by the
+	 *                   lookup-map
+	 * @return lookup-map
+	 */
 	private static Map<String, List<Predicate>> fillLookupMap(Set<Predicate> predicates) {
 		// Map synonyms to their predicate - a word might occur in multiple Predicates
 		// If a word is a synonym of two predicates, place the predicate where the
@@ -83,16 +96,41 @@ public class PredicateResolver {
 		return map;
 	}
 
+	/**
+	 * Links predicates to URIs based on their mentions/synonyms and their
+	 * respective entry in the lookup-map.
+	 */
 	public String resolveToURI(String word) {
 		word = word.toLowerCase();
-		List<Predicate> predicates = lookupMap.get(word);
-
+		// Try with lemma and original word
+		String lemma = util.getLemmaAndPOS(word).getKey();
+		// Gets candidates for word and lemma respectively (sorted by likelihood)
+		List<Predicate> predWord = lookupMap.get(word);
+		List<Predicate> predLemma = lookupMap.get(lemma);
 		// TODO: pick the best predicate for the word not just the first with an URI
-		if (predicates != null) {
-			Predicate bestPredicate = predicates.get(0);
+		// (return if a match is found with the normal word, then look at the lemma)
+		if (predWord != null) {
+			Predicate bestPredWord = predWord.get(0);
 
-			if (bestPredicate.getUri() != null) {
-				return bestPredicate.getUri();
+			if (bestPredWord.getUri() != null) {
+				System.out.println(bestPredWord);
+				return bestPredWord.getUri();
+			}
+		}
+		if (predLemma != null) {
+			Predicate bestPredLemma = predLemma.get(0);
+			
+			if (bestPredLemma.getUri() != null) {
+				System.out.println(bestPredLemma);
+				return bestPredLemma.getUri();
+			}
+		}
+		if (predWord != null) {
+			Predicate bestPredWord = predWord.get(0);
+
+			if (bestPredWord.getUri() != null) {
+				System.out.println(bestPredWord);
+				return bestPredWord.getUri();
 			}
 		}
 		return null;
@@ -100,5 +138,5 @@ public class PredicateResolver {
 
 	public Map<String, List<Predicate>> getLookupMap() {
 		return lookupMap;
-	}	
+	}
 }

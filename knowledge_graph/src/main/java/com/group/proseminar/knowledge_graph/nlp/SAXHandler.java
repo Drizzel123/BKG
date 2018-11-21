@@ -6,6 +6,12 @@ import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
+/**
+ * SAX parser handling responses by the DBpedia lookup API.
+ * 
+ * @author Stefan Werner
+ *
+ */
 public class SAXHandler extends DefaultHandler {
 
 	private String response;

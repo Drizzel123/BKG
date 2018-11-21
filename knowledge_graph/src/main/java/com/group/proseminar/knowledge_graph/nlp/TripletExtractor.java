@@ -260,10 +260,12 @@ public class TripletExtractor {
 	}
 
 	/**
-	 * Splits a sentence into parts by nodes with label contained by the set separator.
-	 * @param labels set of entries describing trees and their attached labels
+	 * Splits a sentence into parts by nodes with label contained by the set
+	 * separator.
+	 * 
+	 * @param labels    set of entries describing trees and their attached labels
 	 * @param separator set of labels to split by
-	 * @return set of trees, split by a separator 
+	 * @return set of trees, split by a separator
 	 */
 	public Set<Tree> splitObjectsByCC(List<Entry<Tree, String>> labels, Set<String> separator) {
 		Set<Tree> result = new HashSet<>();
