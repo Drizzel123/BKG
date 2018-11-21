@@ -10,12 +10,22 @@ import java.util.Set;
 
 import net.sf.extjwnl.JWNLException;
 
+/**
+ * Links predicates to URIs.
+ * 
+ * @author Stefan Werner
+ *
+ */
 public class PredicateResolver {
 	private PredicateParser parser;
 	private Set<Predicate> predicates;
 	private SynonymUtil util;
 	private Map<String, List<Predicate>> lookupMap;
 
+	/**
+	 * Initialize dependencies and add synonyms derived from a synonym database to
+	 * predicates.
+	 */
 	public PredicateResolver() {
 		this.parser = new PredicateParser();
 		this.parser.parseJSONProperties();
@@ -42,6 +52,14 @@ public class PredicateResolver {
 		}
 	}
 
+	/**
+	 * Constructs a lookup-map based on a collection of predicates and their
+	 * affiliated synonyms.
+	 * 
+	 * @param predicates - set of predicates supposed to be contained by the
+	 *                   lookup-map
+	 * @return lookup-map
+	 */
 	private static Map<String, List<Predicate>> fillLookupMap(Set<Predicate> predicates) {
 		// Map synonyms to their predicate - a word might occur in multiple Predicates
 		// If a word is a synonym of two predicates, place the predicate where the
@@ -78,6 +96,10 @@ public class PredicateResolver {
 		return map;
 	}
 
+	/**
+	 * Links predicates to URIs based on their mentions/synonyms and their
+	 * respective entry in the lookup-map.
+	 */
 	public String resolveToURI(String word) {
 		word = word.toLowerCase();
 		// Try with lemma and original word

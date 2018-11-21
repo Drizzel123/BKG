@@ -17,9 +17,21 @@ import edu.stanford.nlp.pipeline.CoreEntityMention;
 import edu.stanford.nlp.pipeline.CoreSentence;
 import edu.stanford.nlp.util.Pair;
 
+/**
+ * Substitutes entities of a coreference-chain by their respective mention.
+ * 
+ * @author Stefan Werner
+ *
+ */
 public class CoreferenceResolver {
-
-	public String coreferenceResolution(CoreDocument document) {
+	/**
+	 * Substitutes certain entities of a coreference-chain in an annotated document
+	 * by their respective mention.
+	 * 
+	 * @param document - annotated text
+	 * @return text with resolved coreferences
+	 */
+	public String resolveCoreferences(CoreDocument document) {
 		String result = document.text();
 		List<Pair<String, Pair<Integer, Integer>>> substitutionList = new ArrayList<>();
 		Map<Integer, CorefChain> corefChainMap = document.corefChains();
@@ -48,6 +60,14 @@ public class CoreferenceResolver {
 		return result;
 	}
 
+	/**
+	 * Returns the substitution of a pronoun with respect to its coreference-chain
+	 * and mention.
+	 * 
+	 * @param cc            - coreference-chain that contains the token
+	 * @param entityMention - respective mention of the pronoun
+	 * @return the substitution
+	 */
 	private String substitutePronoun(CorefChain cc, CoreEntityMention entityMention) {
 		List<CoreLabel> tokens = entityMention.tokens();
 		if (tokens.size() > 0) {
@@ -83,6 +103,14 @@ public class CoreferenceResolver {
 		return entityMention.toString();
 	}
 
+	/**
+	 * Substitutes characters in the text by given strings at their target position.
+	 * 
+	 * @param text     - target text
+	 * @param mentions - list of strings associated with their target substitution
+	 *                 range
+	 * @return
+	 */
 	private static String substituteByOffset(String text, List<Pair<String, Pair<Integer, Integer>>> mentions) {
 		int offset = 0;
 		for (Pair<String, Pair<Integer, Integer>> entry : mentions) {
@@ -96,6 +124,12 @@ public class CoreferenceResolver {
 		return text;
 	}
 
+	/**
+	 * Identifies entities in an annotated document.
+	 * 
+	 * @param document - the annotated text
+	 * @return a set of found entities
+	 */
 	public Set<Entity> linkEntitiesToMentions(CoreDocument document) {
 		Map<Integer, CorefChain> corefChainMap = document.corefChains();
 		Map<CorefChain, Entity> entities = new HashMap<>();

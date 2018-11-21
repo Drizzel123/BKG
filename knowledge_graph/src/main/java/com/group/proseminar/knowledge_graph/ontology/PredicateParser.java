@@ -15,6 +15,12 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 import org.json.JSONTokener;
 
+/**
+ * Parses the JSON properties and inserts them to a lookup-map.
+ * 
+ * @author Stefan Werner
+ *
+ */
 public class PredicateParser {
 
 	private Map<String, Predicate> predicateMap;
@@ -23,32 +29,14 @@ public class PredicateParser {
 		this.predicateMap = new HashMap<>();
 	}
 
-//	public void parseTurtleProperties() {
-//		Model model = ModelFactory.createDefaultModel();
-//		model.read("dbpedia_3Eng_property.ttl", "TURTLE");
-//		StmtIterator iter = model.listStatements();
-//
-//		while (iter.hasNext()) {
-//			Statement next = iter.next();
-//			Triple triple = next.asTriple();
-//			String url = triple.getSubject().toString();
-//			String label = triple.getPredicate().toString();
-//			String mention = triple.getObject().toString().substring(1, triple.getObject().toString().length() - 1);
-//
-//			if (!predicateMap.containsKey(url)) {
-//				Predicate predicate = new Predicate(url, label, mention);
-//				predicateMap.put(url, predicate);
-//			} else {
-//				Predicate predicate = predicateMap.get(url);
-//				predicate.addSynonym(mention);
-//			}
-//		}
-//	}
-
 	public Set<Predicate> getPredicates() {
 		return predicateMap.values().stream().collect(Collectors.toSet());
 	}
 
+	/**
+	 * Creates predicates with respect to the JSON file "properties.txt" and inserts
+	 * them to a lookup-map.
+	 */
 	public void parseJSONProperties() {
 		try {
 			Path path = Paths.get("src/main/resources/properties.txt");
@@ -80,12 +68,5 @@ public class PredicateParser {
 			e.printStackTrace();
 		}
 
-	}
-
-	public static void main(String[] args) {
-		PredicateParser parser = new PredicateParser();
-		parser.parseJSONProperties();
-
-		System.out.println(parser.getPredicates());
 	}
 }

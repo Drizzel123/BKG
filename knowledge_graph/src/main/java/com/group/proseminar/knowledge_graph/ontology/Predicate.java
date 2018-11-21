@@ -5,6 +5,12 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+/**
+ * Abstract representation of a predicate.
+ * 
+ * @author Stefan Werner
+ *
+ */
 public class Predicate {
 	private String uri;
 	private String schema;
