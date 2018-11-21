@@ -1,6 +1,5 @@
 package com.group.proseminar.knowledge_graph.nlp;
 
-
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Properties;
@@ -52,6 +51,7 @@ public class ExtractorPipeline {
 		extrPipeline.annotate(res);
 		Set<Triplet<Tree, Tree, Tree>> triplets = extractor.extractFromText(res);
 		EntityLinker linker = new EntityLinker();
+		EntitySearcher searcher = new EntitySearcher(entities);
 
 		Collection<Triplet<String, String, String>> result = new HashSet<>();
 
@@ -59,58 +59,48 @@ public class ExtractorPipeline {
 			// handle subject and object
 			String subject = toMention(triplet.getFirst());
 			String object = toMention(triplet.getThird());
-			Entity sEntity = entities.stream().filter(x -> x.getMentions().contains(subject)).findAny().orElse(null);
-			Entity oEntity = entities.stream().filter(x -> x.getMentions().contains(object)).findAny().orElse(null);
-			// if sEntity or oEntity is null create a literal entity
-			if (sEntity == null) {
-				sEntity = new Entity(subject);
-				sEntity.setLabel("Literal");
-				entities.add(sEntity);
-			}
-			if (oEntity == null) {
-				oEntity = new Entity(object);
-				oEntity.setLabel("Literal");
-				entities.add(oEntity);
-			}
-			Set<Entity> set = Stream.of(sEntity, oEntity).collect(Collectors.toSet());
-			linker.resolveURIs(set);
+			Entity sEntity = searcher.getLargestEntity(subject);
+			Entity oEntity = searcher.getLargestEntity(object);
 
-			// handle predicate
-			String predicate = toMention(triplet.getSecond());
+			if (sEntity != null && oEntity != null) {
+				Set<Entity> set = Stream.of(sEntity, oEntity).collect(Collectors.toSet());
+				linker.resolveURIs(set);
 
-			// write to triplet
-			String subjURI = sEntity.getUri();
-			String predURI = predResolver.resolveToURI(predicate);
-			String objURI = oEntity.getUri();
+				// handle predicate
+				String predicate = toMention(triplet.getSecond());
 
-			Triplet<String, String, String> uriTriplet = null;
-			if (subjURI != null && predURI != null && objURI != null) {
-				uriTriplet = new Triplet<>(subjURI, predURI, objURI);
-			}
-			else if (subjURI != null && predURI != null && oEntity.getLabel() != null) {
-				uriTriplet = new Triplet<>(subjURI, predURI, oEntity.getLabel());
-			}
-			if (uriTriplet != null) {
-				result.add(uriTriplet);
-			}
+				// write to triplet
+				String subjURI = sEntity.getUri();
+				String predURI = predResolver.resolveToURI(predicate);
+				String objURI = oEntity.getUri();
 
-			System.out.println("Subject: " + subject + ", Object: " + object);
-			// Print out progress
-			// Remember: not every entity might have been resolved to an URI
-			if (sEntity.getUri() != null) {
-				System.out.println("Subject (URI): " + sEntity.getUri() + ", Label: " + sEntity.getLabel());
-			} else {
-				System.out.println("Subject: " + sEntity.getBestMention());
-			}
+				Triplet<String, String, String> uriTriplet = null;
+				if (subjURI != null && predURI != null && objURI != null) {
+					uriTriplet = new Triplet<>(subjURI, predURI, objURI);
+				} else if (subjURI != null && predURI != null && oEntity.getLabel() != null) {
+					uriTriplet = new Triplet<>(subjURI, predURI, oEntity.getBestMention());
+				}
+				if (uriTriplet != null) {
+					result.add(uriTriplet);
+				}
 
-			if (oEntity.getUri() != null) {
-				System.out.println("Object (URI): " + oEntity.getUri() + ", Label: " + oEntity.getLabel());
-			} else {
-				System.out.println("Object: " + oEntity.getBestMention());
-			}
-			System.out.println("Predicate: " + predicate);
-			if (predURI  != null) {
-				System.out.println("URI: " + predURI);
+				System.out.println("Subject: " + subject + ", Predicate: " + predicate + ", Object: " + object);
+				// Print out progress
+				// Remember: not every entity might have been resolved to an URI
+				if (sEntity.getUri() != null) {
+					System.out.println("Subject (URI): " + sEntity.getUri() + ", Label: " + sEntity.getLabel());
+				} else {
+					System.out.println("Subject: " + sEntity.getBestMention());
+				}
+				if (predURI != null) {
+					System.out.println("URI: " + predURI);
+				}
+				if (oEntity.getUri() != null) {
+					System.out.println("Object (URI): " + oEntity.getUri() + ", Label: " + oEntity.getLabel());
+				} else {
+					System.out.println("Object: " + oEntity.getBestMention());
+				}
+				System.out.println("-----------------------------------------------------------------------------");
 			}
 
 			// handle predicate
@@ -130,4 +120,3 @@ public class ExtractorPipeline {
 	}
 
 }
-

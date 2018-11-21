@@ -2,11 +2,14 @@ package com.group.proseminar.knowledge_graph.ontology;
 
 import java.util.AbstractMap;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map.Entry;
 import java.util.Properties;
 import java.util.Set;
+
+import org.apache.commons.lang3.StringUtils;
 
 import edu.stanford.nlp.ling.CoreAnnotations.LemmaAnnotation;
 import edu.stanford.nlp.ling.CoreAnnotations.PartOfSpeechAnnotation;
@@ -43,11 +46,14 @@ public class SynonymUtil {
 	 * @return a list of synonyms
 	 */
 	public List<String> getSynonyms(String word) {
+		List<String> words = Arrays.asList(word.split(" "));
 		List<String> synonyms = new ArrayList<>();
 		List<String> result = new ArrayList<>();
 		try {
+			List<String> lemmaList = new ArrayList<>();
+			words.stream().forEach(x -> lemmaList.add(getLemmaAndPOS(x).getKey()));
+			String lemma = StringUtils.join(lemmaList, " ");
 			Entry<String, String> lemmaPOS = getLemmaAndPOS(word);
-			String lemma = lemmaPOS.getKey();
 			String pos = lemmaPOS.getValue();
 			IndexWord indexWord = dictionary.getIndexWord(translatePOS(pos), lemma);
 			List<Synset> synsets = indexWord.getSenses();

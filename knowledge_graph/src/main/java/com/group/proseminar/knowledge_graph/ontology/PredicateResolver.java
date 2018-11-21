@@ -91,13 +91,15 @@ public class PredicateResolver {
 			Predicate bestPredWord = predWord.get(0);
 
 			if (bestPredWord.getUri() != null) {
+				System.out.println(bestPredWord);
 				return bestPredWord.getUri();
 			}
 		}
 		if (predLemma != null) {
 			Predicate bestPredLemma = predLemma.get(0);
-
+			
 			if (bestPredLemma.getUri() != null) {
+				System.out.println(bestPredLemma);
 				return bestPredLemma.getUri();
 			}
 		}
@@ -105,6 +107,7 @@ public class PredicateResolver {
 			Predicate bestPredWord = predWord.get(0);
 
 			if (bestPredWord.getUri() != null) {
+				System.out.println(bestPredWord);
 				return bestPredWord.getUri();
 			}
 		}

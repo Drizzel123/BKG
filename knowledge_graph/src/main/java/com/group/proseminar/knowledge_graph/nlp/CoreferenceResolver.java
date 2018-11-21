@@ -53,7 +53,6 @@ public class CoreferenceResolver {
 		if (tokens.size() > 0) {
 			// Get first token
 			CoreLabel token = tokens.get(0);
-
 			if (cc != null && (token.tag().equals("PRP") || token.tag().equals("PRP$"))) {
 				// Substitute original word by its best mention
 				CorefMention representation = cc.getRepresentativeMention();
@@ -75,7 +74,6 @@ public class CoreferenceResolver {
 							if (!bestMention.endsWith("s")) {
 								bestMention += "s";
 							}
-							bestMention += "'";
 						}
 					}
 				}

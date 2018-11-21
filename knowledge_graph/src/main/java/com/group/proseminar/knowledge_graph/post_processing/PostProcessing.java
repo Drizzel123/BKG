@@ -1,4 +1,4 @@
-package com.group.proseminar.knowledge_graph.nlp;
+package com.group.proseminar.knowledge_graph.post_processing;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -33,6 +33,9 @@ public class PostProcessing {
 	// http://dbpedia.org/resource/Berlin)
 	// VERY IMPORTANT !!!!
 	private static Set<String> executeDomainQuery(String target) {
+		
+		
+		
 		ParameterizedSparqlString qs = new ParameterizedSparqlString("prefix owl: <http://www.w3.org/2002/07/owl#>\n"
 				+ "prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n" + "select distinct ?domain "
 				+ "{ ?domain rdfs:domain " + "<" + target + "> }");
