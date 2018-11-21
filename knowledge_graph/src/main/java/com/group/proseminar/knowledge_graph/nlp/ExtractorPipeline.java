@@ -77,7 +77,6 @@ public class ExtractorPipeline {
 			String object = toMention(triplet.getThird());
 			Entity sEntity = searcher.getLargestEntity(subject);
 			Entity oEntity = searcher.getLargestEntity(object);
-
 			if (sEntity != null && oEntity != null) {
 				Set<Entity> set = Stream.of(sEntity, oEntity).collect(Collectors.toSet());
 				linker.resolveURIs(set);

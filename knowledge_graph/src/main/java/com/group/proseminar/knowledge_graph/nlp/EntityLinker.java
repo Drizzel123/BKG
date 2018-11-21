@@ -47,8 +47,9 @@ public class EntityLinker {
 			mentions.add(entity.getBestMention());
 			mentions.addAll(entity.getMentions());
 			int index = 0;
+			// Try to resolve mentions to an URI starting from the first to the last mention
 			while (entity.getUri() == null && index < mentions.size()) {
-				String mention = mentions.get(index);
+				String mention = mentions.get(index).replace(" ","_");
 				String get = DBLOOKUP + QUERYSTRING + URLEncoder.encode(mention, "UTF-8");
 				// Add the label to the query if possible (excluding label "Literal")
 				String label = entity.getLabel();

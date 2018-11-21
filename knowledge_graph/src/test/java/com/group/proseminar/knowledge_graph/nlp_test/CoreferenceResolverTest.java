@@ -1,7 +1,5 @@
 package com.group.proseminar.knowledge_graph.nlp_test;
 
-import static org.junit.Assert.assertEquals;
-
 import java.util.Properties;
 
 import org.junit.Before;
@@ -13,24 +11,34 @@ import edu.stanford.nlp.pipeline.CoreDocument;
 import edu.stanford.nlp.pipeline.StanfordCoreNLP;
 
 public class CoreferenceResolverTest {
+	CoreferenceResolver resolver;
 	private StanfordCoreNLP corefPipeline;
 	private final String CPROPERTIES = "tokenize,ssplit,pos,lemma,ner,parse,dcoref";
-	CoreDocument document;
+	CoreDocument documentA;
+	CoreDocument documentB;
 
 	@Before
 	public void setup() {
-		String text = "Johann Carl Friedrich Gauss was a German mathematician and physicist who made significant contributions to many fields in mathematics and sciences.";
+		this.resolver = new CoreferenceResolver();
+		String textA = "Johann Carl Friedrich Gauss was a German mathematician and physicist who made significant contributions to many fields in mathematics and sciences.";
+		String textB = "Barack Obama is the president of America.";
 		Properties corefProps = new Properties();
 		corefProps.put("annotators", CPROPERTIES);
 		this.corefPipeline = new StanfordCoreNLP(corefProps);
-		this.document = new CoreDocument(text);
-		corefPipeline.annotate(document);
+		this.documentA = new CoreDocument(textA);
+		this.documentB = new CoreDocument(textB);
+		corefPipeline.annotate(documentA);
+		corefPipeline.annotate(documentB);
 	}
 
-	@Test
-	public void extractFromTextTest() {
-		CoreferenceResolver resolver = new CoreferenceResolver();
-		System.out.println("Result: " + resolver.resolveCoreferences(document));
-		assertEquals(true, true);
+//	@Test
+//	public void extractFromTextTest() {
+//		System.out.println("Result test A: " + resolver.resolveCoreferences(documentA));
+//	}
+	
+	@Test 
+	public void linkEntitiesToMentionsTest() {
+		resolver.resolveCoreferences(documentB);
+		System.out.println("Result test B: " + resolver.linkEntitiesToMentions(documentB));
 	}
 }

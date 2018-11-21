@@ -24,7 +24,7 @@ public class ExtractorPipelineTest {
 	@Test
 	public void extractFromTextTest() throws Exception {
 		ExtractorPipeline pipeline = new ExtractorPipeline();
-		pipeline.processArticle("Johann Carl Friedrich Gauss was born in Brunswick.");
+		pipeline.processArticle("New York City is the most densely populated major city in the United States.");
 		assertEquals(true, true);
 	}
 }
