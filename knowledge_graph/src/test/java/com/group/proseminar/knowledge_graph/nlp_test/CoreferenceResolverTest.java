@@ -30,7 +30,7 @@ public class CoreferenceResolverTest {
 	@Test
 	public void extractFromTextTest() {
 		CoreferenceResolver resolver = new CoreferenceResolver();
-		System.out.println("Result: " + resolver.coreferenceResolution(document));
+		System.out.println("Result: " + resolver.resolveCoreferences(document));
 		assertEquals(true, true);
 	}
 }
