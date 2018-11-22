@@ -13,6 +13,7 @@ import java.util.Map.Entry;
 import java.util.Set;
 import java.util.Stack;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import edu.stanford.nlp.ling.CoreAnnotations;
 import edu.stanford.nlp.ling.StringLabel;
@@ -31,15 +32,16 @@ public class TripletExtractor {
 	 * @param annotation annotated text
 	 * @return set of triplets
 	 */
-	public Set<Triplet<Tree, Tree, Tree>> extractFromText(Annotation annotation) {
-		Set<Triplet<Tree, Tree, Tree>> tripletSet = new HashSet<>();
+	public Set<Triplet<String, String, String>> extractFromText(Annotation annotation) {
+		Set<Triplet<String, String, String>> tripletSet = new HashSet<>();
 		List<CoreMap> sentences = annotation.get(CoreAnnotations.SentencesAnnotation.class);
 		for (CoreMap sentence : sentences) {
 			Tree parseTree = sentence.get(TreeCoreAnnotations.TreeAnnotation.class);
 			// Start extraction on every "S" node
 			for (Tree node : parseTree) {
 				if (node.label().toString().equals("S")) {
-					tripletSet.addAll(extractTripletFromS(node));
+					tripletSet.addAll(
+							extractTripletFromS(node).stream().map(x -> toMention(x)).collect(Collectors.toSet()));
 				}
 			}
 		}
@@ -57,6 +59,7 @@ public class TripletExtractor {
 		Set<Triplet<Tree, Tree, Tree>> tripletSet = new HashSet<>();
 		Tree subj = extractSubjectFromS(sroot);
 		Tree pred = extractPredicateFromS(sroot);
+		predicatePostProcessing(pred, sroot);
 		if (pred == null || subj == null) {
 			return tripletSet;
 		}
@@ -158,6 +161,39 @@ public class TripletExtractor {
 			}
 		}
 		return deepestVT;
+	}
+
+	/**
+	 * If a token with part-of-speech tag "IN" follows the predicate, the original
+	 * vtype is substituted by a new tree containing the original tree and the
+	 * following preprosition.
+	 * 
+	 * @param vtype - tree of the extracted predicate
+	 * @param root  - root containing the predicate
+	 * 
+	 */
+	private void predicatePostProcessing(Tree vtype, Tree root) {
+		List<Tree> leafs = root.getLeaves();
+		List<Tree> parents = leafs.stream().map(x -> x.ancestor(1, root)).collect(Collectors.toList());
+		boolean seen = false;
+		for (Tree node : parents) {
+			if (seen) {
+				if (node.label().toString().equals("IN")) {
+					// TODO: check if a VP node exists with (VT, IN) tag
+					Tree artNode = node.deepCopy();
+					// Substitute original vtype by new, modified tree
+					Tree leaf = new LabeledScoredTreeNode(vtype.firstChild().label());
+					leaf.setValue(vtype.firstChild().value());
+					Tree artChild = new LabeledScoredTreeNode(vtype.label(),
+							Stream.of(leaf).collect(Collectors.toList()));
+					vtype.setChildren(Stream.of(artChild, artNode).collect(Collectors.toList()));
+				}
+				break;
+			}
+			if (node == vtype) {
+				seen = true;
+			}
+		}
 	}
 
 	/**
@@ -362,4 +398,31 @@ public class TripletExtractor {
 		}
 		return depthMap;
 	}
+
+	/**
+	 * Transforms a triplet of trees to a triplet containing their string
+	 * representations.
+	 * 
+	 * @param triplet - triplet containing the trees
+	 * @return triplet containing the string representation of each tree
+	 */
+	private Triplet<String, String, String> toMention(Triplet<Tree, Tree, Tree> triplet) {
+		return new Triplet<>(toMention(triplet.getFirst()), toMention(triplet.getSecond()),
+				toMention(triplet.getThird()));
+	}
+
+	/**
+	 * Transforms the string representation of the given tree to a mention.
+	 * 
+	 * @param root - root node of the tree
+	 * @return mention contained by the tree
+	 */
+	private String toMention(Tree root) {
+		String s = "";
+		for (Tree leaf : root.getLeaves()) {
+			s += leaf.value() + " ";
+		}
+		return s.substring(0, s.length() - 1);
+	}
+
 }

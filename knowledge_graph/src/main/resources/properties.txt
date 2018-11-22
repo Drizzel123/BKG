@@ -13701,2910 +13701,4365 @@
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/activeYearsStartDate",
         "domain": "",
-        "mentions": ["active since"]
+        "mentions": [
+            "active since",
+            "active years start date"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/highestRegion",
         "domain": "",
-        "mentions": ["highest region"]
+        "mentions": [
+            "highest region",
+            "highest region"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/servingRailwayLine",
         "domain": "",
-        "mentions": ["serve"]
+        "mentions": [
+            "serve",
+            "serving railway line"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/operatingSystem",
         "domain": "",
-        "mentions": ["run under"]
+        "mentions": [
+            "run under",
+            "operating system"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/composer",
         "domain": "",
-        "mentions": ["write"]
+        "mentions": [
+            "write",
+            "composer"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/composer",
         "domain": "",
-        "mentions": ["composer"]
+        "mentions": [
+            "composer",
+            "composer"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/composer",
         "domain": "",
-        "mentions": ["compose"]
+        "mentions": [
+            "compose",
+            "composer"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/deathYear",
         "domain": "",
-        "mentions": ["die in"]
+        "mentions": [
+            "die in",
+            "death year"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/decommissioningDate",
         "domain": "",
-        "mentions": ["decommissioned on"]
+        "mentions": [
+            "decommissioned on",
+            "decommissioning date"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/debutTeam",
         "domain": "",
-        "mentions": ["debut for"]
+        "mentions": [
+            "debut for",
+            "debut team"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/populationDensity",
         "domain": "",
-        "mentions": ["population density"]
+        "mentions": [
+            "population density",
+            "population density"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/timeZone",
         "domain": "",
-        "mentions": ["time zone"]
+        "mentions": [
+            "time zone",
+            "time zone"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/university",
         "domain": "",
-        "mentions": ["study at"]
+        "mentions": [
+            "study at",
+            "university"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/university",
         "domain": "",
-        "mentions": ["university"]
+        "mentions": [
+            "university",
+            "university"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/topSpeed",
         "domain": "",
-        "mentions": ["top speed"]
+        "mentions": [
+            "top speed",
+            "top speed"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/distributor",
         "domain": "",
-        "mentions": ["distribute"]
+        "mentions": [
+            "distribute",
+            "distributor"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/distributor",
         "domain": "",
-        "mentions": ["distributor"]
+        "mentions": [
+            "distributor",
+            "distributor"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/instrument",
         "domain": "",
-        "mentions": ["play"]
+        "mentions": [
+            "play",
+            "instrument"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/instrument",
         "domain": "",
-        "mentions": ["instrument of"]
+        "mentions": [
+            "instrument of",
+            "instrument"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/ground",
         "domain": "",
-        "mentions": ["home of"]
+        "mentions": [
+            "home of",
+            "ground"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/averageSpeed",
         "domain": "",
-        "mentions": ["average speed"]
+        "mentions": [
+            "average speed",
+            "average speed"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/spokenIn",
         "domain": "",
-        "mentions": ["language"]
+        "mentions": [
+            "language",
+            "spoken in"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/spokenIn",
         "domain": "",
-        "mentions": ["spoken in"]
+        "mentions": [
+            "spoken in",
+            "spoken in"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/designer",
         "domain": "",
-        "mentions": ["design"]
+        "mentions": [
+            "design",
+            "designer"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/designer",
         "domain": "",
-        "mentions": ["create"]
+        "mentions": [
+            "create",
+            "designer"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/designer",
         "domain": "",
-        "mentions": ["develop"]
+        "mentions": [
+            "develop",
+            "designer"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/genre",
         "domain": "",
-        "mentions": ["genre"]
+        "mentions": [
+            "genre",
+            "genre"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/title",
         "domain": "",
-        "mentions": ["known as"]
+        "mentions": [
+            "known as",
+            "title"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/parent",
         "domain": "",
-        "mentions": ["parent"]
+        "mentions": [
+            "parent",
+            "parent"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/parent",
         "domain": "",
-        "mentions": ["child"]
+        "mentions": [
+            "child",
+            "parent"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/nrhpReferenceNumber",
         "domain": "",
-        "mentions": ["NRHP reference number"]
+        "mentions": [
+            "NRHP reference number",
+            "nrhp reference number"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/nrhpReferenceNumber",
         "domain": "",
-        "mentions": ["National Register reference number"]
+        "mentions": [
+            "National Register reference number",
+            "nrhp reference number"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/nrhpReferenceNumber",
         "domain": "",
-        "mentions": ["reference number"]
+        "mentions": [
+            "reference number",
+            "nrhp reference number"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/office",
         "domain": "",
-        "mentions": ["position"]
+        "mentions": [
+            "position",
+            "office"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/releaseDate",
         "domain": "",
-        "mentions": ["come out on"]
+        "mentions": [
+            "come out on",
+            "release date"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/releaseDate",
         "domain": "",
-        "mentions": ["release date"]
+        "mentions": [
+            "release date",
+            "release date"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/releaseDate",
         "domain": "",
-        "mentions": ["released on"]
+        "mentions": [
+            "released on",
+            "release date"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/order",
         "domain": "",
-        "mentions": ["contain"]
+        "mentions": [
+            "contain",
+            "order"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/order",
         "domain": "",
-        "mentions": ["member"]
+        "mentions": [
+            "member",
+            "order"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/order",
         "domain": "",
-        "mentions": ["order"]
+        "mentions": [
+            "order",
+            "order"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/order",
         "domain": "",
-        "mentions": ["belong to"]
+        "mentions": [
+            "belong to",
+            "order"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/province",
         "domain": "",
-        "mentions": ["situated in"]
+        "mentions": [
+            "situated in",
+            "province"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/province",
         "domain": "",
-        "mentions": ["located in"]
+        "mentions": [
+            "located in",
+            "province"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/capacity",
         "domain": "",
-        "mentions": ["capacity"]
+        "mentions": [
+            "capacity",
+            "capacity"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/capacity",
         "domain": "",
-        "mentions": ["accommodate"]
+        "mentions": [
+            "accommodate",
+            "capacity"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/result",
         "domain": "",
-        "mentions": ["result of"]
+        "mentions": [
+            "result of",
+            "result"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/county",
         "domain": "",
-        "mentions": ["situated in"]
+        "mentions": [
+            "situated in",
+            "county"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/county",
         "domain": "",
-        "mentions": ["located in"]
+        "mentions": [
+            "located in",
+            "county"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/foundingDate",
         "domain": "",
-        "mentions": ["established on"]
+        "mentions": [
+            "established on",
+            "founding date"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/foundingDate",
         "domain": "",
-        "mentions": ["founded on"]
+        "mentions": [
+            "founded on",
+            "founding date"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/foundingDate",
         "domain": "",
-        "mentions": ["founding date"]
+        "mentions": [
+            "founding date",
+            "founding date"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/weight",
         "domain": "",
-        "mentions": ["weigh"]
+        "mentions": [
+            "weigh",
+            "weight"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/weight",
         "domain": "",
-        "mentions": ["weight"]
+        "mentions": [
+            "weight",
+            "weight"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/synonym",
         "domain": "",
-        "mentions": ["synonym"]
+        "mentions": [
+            "synonym",
+            "synonym"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/maximumElevation",
         "domain": "",
-        "mentions": ["maximum altitude"]
+        "mentions": [
+            "maximum altitude",
+            "maximum elevation"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/maximumElevation",
         "domain": "",
-        "mentions": ["rise to"]
+        "mentions": [
+            "rise to",
+            "maximum elevation"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/viceChancellor",
         "domain": "",
-        "mentions": ["vice chancellor"]
+        "mentions": [
+            "vice chancellor",
+            "vice chancellor"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/board",
         "domain": "",
-        "mentions": ["board member at"]
+        "mentions": [
+            "board member at",
+            "board"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/commander",
         "domain": "",
-        "mentions": ["command during"]
+        "mentions": [
+            "command during",
+            "commander"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/commander",
         "domain": "",
-        "mentions": ["commander in"]
+        "mentions": [
+            "commander in",
+            "commander"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/commander",
         "domain": "",
-        "mentions": ["leader in"]
+        "mentions": [
+            "leader in",
+            "commander"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/department",
         "domain": "",
-        "mentions": ["situated in"]
+        "mentions": [
+            "situated in",
+            "department"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/department",
         "domain": "",
-        "mentions": ["located in"]
+        "mentions": [
+            "located in",
+            "department"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/mouthPlace",
         "domain": "",
-        "mentions": ["run into"]
+        "mentions": [
+            "run into",
+            "mouth place"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/mouthPlace",
         "domain": "",
-        "mentions": ["flow into"]
+        "mentions": [
+            "flow into",
+            "mouth place"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/kingdom",
         "domain": "",
-        "mentions": ["contain"]
+        "mentions": [
+            "contain",
+            "kingdom"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/kingdom",
         "domain": "",
-        "mentions": ["member"]
+        "mentions": [
+            "member",
+            "kingdom"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/kingdom",
         "domain": "",
-        "mentions": ["kingdom"]
+        "mentions": [
+            "kingdom",
+            "kingdom"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/kingdom",
         "domain": "",
-        "mentions": ["belong to"]
+        "mentions": [
+            "belong to",
+            "kingdom"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/field",
         "domain": "",
-        "mentions": ["work on"]
+        "mentions": [
+            "work on",
+            "field"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/field",
         "domain": "",
-        "mentions": ["field"]
+        "mentions": [
+            "field",
+            "field"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/areaUrban",
         "domain": "",
-        "mentions": ["area"]
+        "mentions": [
+            "area",
+            "area urban"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/areaUrban",
         "domain": "",
-        "mentions": ["urban area"]
+        "mentions": [
+            "urban area",
+            "area urban"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/cinematography",
         "domain": "",
-        "mentions": ["cinematographer"]
+        "mentions": [
+            "cinematographer",
+            "cinematography"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/arrondissement",
         "domain": "",
-        "mentions": ["situated in"]
+        "mentions": [
+            "situated in",
+            "arrondissement"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/arrondissement",
         "domain": "",
-        "mentions": ["located in"]
+        "mentions": [
+            "located in",
+            "arrondissement"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/license",
         "domain": "",
-        "mentions": ["licensed under"]
+        "mentions": [
+            "licensed under",
+            "license"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/deathDate",
         "domain": "",
-        "mentions": ["die on"]
+        "mentions": [
+            "die on",
+            "death date"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/deathDate",
         "domain": "",
-        "mentions": ["death date"]
+        "mentions": [
+            "death date",
+            "death date"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/populationMetro",
         "domain": "",
-        "mentions": ["population"]
+        "mentions": [
+            "population",
+            "population metro"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/populationMetro",
         "domain": "",
-        "mentions": ["metropolitan population"]
+        "mentions": [
+            "metropolitan population",
+            "population metro"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/openingYear",
         "domain": "",
-        "mentions": ["opened in"]
+        "mentions": [
+            "opened in",
+            "opening year"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/periapsis",
         "domain": "",
-        "mentions": ["periapse"]
+        "mentions": [
+            "periapse",
+            "periapsis"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/periapsis",
         "domain": "",
-        "mentions": ["periapsis"]
+        "mentions": [
+            "periapsis",
+            "periapsis"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/patron",
         "domain": "",
-        "mentions": ["patron saint"]
+        "mentions": [
+            "patron saint",
+            "patron"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/patron",
         "domain": "",
-        "mentions": ["patron"]
+        "mentions": [
+            "patron",
+            "patron"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/alias",
         "domain": "",
-        "mentions": ["alias"]
+        "mentions": [
+            "alias",
+            "alias"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/alias",
         "domain": "",
-        "mentions": ["call"]
+        "mentions": [
+            "call",
+            "alias"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/gross",
         "domain": "",
-        "mentions": ["take in"]
+        "mentions": [
+            "take in",
+            "gross"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/gross",
         "domain": "",
-        "mentions": ["make"]
+        "mentions": [
+            "make",
+            "gross"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/gross",
         "domain": "",
-        "mentions": ["take over"]
+        "mentions": [
+            "take over",
+            "gross"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/gross",
         "domain": "",
-        "mentions": ["gross"]
+        "mentions": [
+            "gross",
+            "gross"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/minimumElevation",
         "domain": "",
-        "mentions": ["minimum altitude"]
+        "mentions": [
+            "minimum altitude",
+            "minimum elevation"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/status",
         "domain": "",
-        "mentions": ["status"]
+        "mentions": [
+            "status",
+            "status"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/canton",
         "domain": "",
-        "mentions": ["situated in"]
+        "mentions": [
+            "situated in",
+            "canton"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/canton",
         "domain": "",
-        "mentions": ["located in"]
+        "mentions": [
+            "located in",
+            "canton"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/slogan",
         "domain": "",
-        "mentions": ["slogan"]
+        "mentions": [
+            "slogan",
+            "slogan"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/bSide",
         "domain": "",
-        "mentions": ["B-side"]
+        "mentions": [
+            "B-side",
+            "b side"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/successor",
         "domain": "",
-        "mentions": ["preceed"]
+        "mentions": [
+            "preceed",
+            "successor"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/successor",
         "domain": "",
-        "mentions": ["successor"]
+        "mentions": [
+            "successor",
+            "successor"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/successor",
         "domain": "",
-        "mentions": ["predecessor"]
+        "mentions": [
+            "predecessor",
+            "successor"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/successor",
         "domain": "",
-        "mentions": ["succeed"]
+        "mentions": [
+            "succeed",
+            "successor"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/series",
         "domain": "",
-        "mentions": ["part of"]
+        "mentions": [
+            "part of",
+            "series"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/sourceCountry",
         "domain": "",
-        "mentions": ["originate in"]
+        "mentions": [
+            "originate in",
+            "source country"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/structuralSystem",
         "domain": "",
-        "mentions": ["made of"]
+        "mentions": [
+            "made of",
+            "structural system"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/structuralSystem",
         "domain": "",
-        "mentions": ["structural system of"]
+        "mentions": [
+            "structural system of",
+            "structural system"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/binomialAuthority",
         "domain": "",
-        "mentions": ["first describe"]
+        "mentions": [
+            "first describe",
+            "binomial authority"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/binomialAuthority",
         "domain": "",
-        "mentions": ["name"]
+        "mentions": [
+            "name",
+            "binomial authority"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/creator",
         "domain": "",
-        "mentions": ["creator"]
+        "mentions": [
+            "creator",
+            "creator"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/creator",
         "domain": "",
-        "mentions": ["create"]
+        "mentions": [
+            "create",
+            "creator"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/language",
         "domain": "",
-        "mentions": ["written in"]
+        "mentions": [
+            "written in",
+            "language"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/developer",
         "domain": "",
-        "mentions": ["developer"]
+        "mentions": [
+            "developer",
+            "developer"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/developer",
         "domain": "",
-        "mentions": ["develop"]
+        "mentions": [
+            "develop",
+            "developer"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/raceHorse",
         "domain": "",
-        "mentions": ["ride"]
+        "mentions": [
+            "ride",
+            "race horse"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/neighboringMunicipality",
         "domain": "",
-        "mentions": ["neighboring municipality"]
+        "mentions": [
+            "neighboring municipality",
+            "neighboring municipality"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/icaoLocationIdentifier",
         "domain": "",
-        "mentions": ["ICAO code"]
+        "mentions": [
+            "ICAO code",
+            "icao location identifier"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/icaoLocationIdentifier",
         "domain": "",
-        "mentions": ["location indicator"]
+        "mentions": [
+            "location indicator",
+            "icao location identifier"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/icaoLocationIdentifier",
         "domain": "",
-        "mentions": ["ICAO identifier"]
+        "mentions": [
+            "ICAO identifier",
+            "icao location identifier"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/routeJunction",
         "domain": "",
-        "mentions": ["intersect with"]
+        "mentions": [
+            "intersect with",
+            "route junction"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/routeJunction",
         "domain": "",
-        "mentions": ["cross"]
+        "mentions": [
+            "cross",
+            "route junction"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/place",
         "domain": "",
-        "mentions": ["take place in"]
+        "mentions": [
+            "take place in",
+            "place"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/boilingPoint",
         "domain": "",
-        "mentions": ["boiling point"]
+        "mentions": [
+            "boiling point",
+            "boiling point"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/boilingPoint",
         "domain": "",
-        "mentions": ["boil at"]
+        "mentions": [
+            "boil at",
+            "boiling point"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/broadcastArea",
         "domain": "",
-        "mentions": ["broadcasted in"]
+        "mentions": [
+            "broadcasted in",
+            "broadcast area"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/broadcastArea",
         "domain": "",
-        "mentions": ["cover"]
+        "mentions": [
+            "cover",
+            "broadcast area"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/revenue",
         "domain": "",
-        "mentions": ["revenue"]
+        "mentions": [
+            "revenue",
+            "revenue"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/college",
         "domain": "",
-        "mentions": ["attend"]
+        "mentions": [
+            "attend",
+            "college"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/college",
         "domain": "",
-        "mentions": ["graduate from"]
+        "mentions": [
+            "graduate from",
+            "college"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/college",
         "domain": "",
-        "mentions": ["play for"]
+        "mentions": [
+            "play for",
+            "college"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/populationMetroDensity",
         "domain": "",
-        "mentions": ["population density"]
+        "mentions": [
+            "population density",
+            "population metro density"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/day",
         "domain": "",
-        "mentions": ["day"]
+        "mentions": [
+            "day",
+            "day"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/sisterStation",
         "domain": "",
-        "mentions": ["sister network"]
+        "mentions": [
+            "sister network",
+            "sister station"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/sisterStation",
         "domain": "",
-        "mentions": ["sister channel"]
+        "mentions": [
+            "sister channel",
+            "sister station"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/sisterStation",
         "domain": "",
-        "mentions": ["sister station"]
+        "mentions": [
+            "sister station",
+            "sister station"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/owningCompany",
         "domain": "",
-        "mentions": ["subsidiary"]
+        "mentions": [
+            "subsidiary",
+            "owning company"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/owningCompany",
         "domain": "",
-        "mentions": ["own"]
+        "mentions": [
+            "own",
+            "owning company"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/owningCompany",
         "domain": "",
-        "mentions": ["daughter company"]
+        "mentions": [
+            "daughter company",
+            "owning company"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/owningCompany",
         "domain": "",
-        "mentions": ["parent company"]
+        "mentions": [
+            "parent company",
+            "owning company"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/profession",
         "domain": "",
-        "mentions": ["work as"]
+        "mentions": [
+            "work as",
+            "profession"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/profession",
         "domain": "",
-        "mentions": ["profession"]
+        "mentions": [
+            "profession",
+            "profession"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/dateCompleted",
         "domain": "",
-        "mentions": ["completed on"]
+        "mentions": [
+            "completed on",
+            "date completed"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/magnitude",
         "domain": "",
-        "mentions": ["magnitude"]
+        "mentions": [
+            "magnitude",
+            "magnitude"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/colourName",
         "domain": "",
-        "mentions": ["color"]
+        "mentions": [
+            "color",
+            "colour name"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/pseudonym",
         "domain": "",
-        "mentions": ["pseudonym"]
+        "mentions": [
+            "pseudonym",
+            "pseudonym"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/pseudonym",
         "domain": "",
-        "mentions": ["call"]
+        "mentions": [
+            "call",
+            "pseudonym"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/assembly",
         "domain": "",
-        "mentions": ["assembled in"]
+        "mentions": [
+            "assembled in",
+            "assembly"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/elevation",
         "domain": "",
-        "mentions": ["tall"]
+        "mentions": [
+            "tall",
+            "elevation"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/elevation",
         "domain": "",
-        "mentions": ["elevation"]
+        "mentions": [
+            "elevation",
+            "elevation"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/elevation",
         "domain": "",
-        "mentions": ["height"]
+        "mentions": [
+            "height",
+            "elevation"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/elevation",
         "domain": "",
-        "mentions": ["high"]
+        "mentions": [
+            "high",
+            "elevation"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/elevation",
         "domain": "",
-        "mentions": ["rise to"]
+        "mentions": [
+            "rise to",
+            "elevation"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/elevation",
         "domain": "",
-        "mentions": ["stand at"]
+        "mentions": [
+            "stand at",
+            "elevation"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/elevation",
         "domain": "",
-        "mentions": ["altitude"]
+        "mentions": [
+            "altitude",
+            "elevation"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/languageFamily",
         "domain": "",
-        "mentions": ["belong"]
+        "mentions": [
+            "belong",
+            "language family"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/languageFamily",
         "domain": "",
-        "mentions": ["language family"]
+        "mentions": [
+            "language family",
+            "language family"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/shipLaunch",
         "domain": "",
-        "mentions": ["launched on"]
+        "mentions": [
+            "launched on",
+            "ship launch"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/address",
         "domain": "",
-        "mentions": ["address"]
+        "mentions": [
+            "address",
+            "address"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/address",
         "domain": "",
-        "mentions": ["located in"]
+        "mentions": [
+            "located in",
+            "address"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/programmeFormat",
         "domain": "",
-        "mentions": ["play"]
+        "mentions": [
+            "play",
+            "programme format"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/division",
         "domain": "",
-        "mentions": ["belong to"]
+        "mentions": [
+            "belong to",
+            "division"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/writer",
         "domain": "",
-        "mentions": ["author"]
+        "mentions": [
+            "author",
+            "writer"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/writer",
         "domain": "",
-        "mentions": ["write"]
+        "mentions": [
+            "write",
+            "writer"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/writer",
         "domain": "",
-        "mentions": ["writer of"]
+        "mentions": [
+            "writer of",
+            "writer"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/seatingCapacity",
         "domain": "",
-        "mentions": ["capacity"]
+        "mentions": [
+            "capacity",
+            "seating capacity"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/seatingCapacity",
         "domain": "",
-        "mentions": ["seating capacity"]
+        "mentions": [
+            "seating capacity",
+            "seating capacity"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/review",
         "domain": "",
-        "mentions": ["reviewed at"]
+        "mentions": [
+            "reviewed at",
+            "review"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/review",
         "domain": "",
-        "mentions": ["review"]
+        "mentions": [
+            "review",
+            "review"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/homeArena",
         "domain": "",
-        "mentions": ["home stadium"]
+        "mentions": [
+            "home stadium",
+            "home arena"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/homeArena",
         "domain": "",
-        "mentions": ["home arena"]
+        "mentions": [
+            "home arena",
+            "home arena"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/homeArena",
         "domain": "",
-        "mentions": ["home of"]
+        "mentions": [
+            "home of",
+            "home arena"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/editing",
         "domain": "",
-        "mentions": ["edit"]
+        "mentions": [
+            "edit",
+            "editing"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/ethnicity",
         "domain": "",
-        "mentions": ["ethnicity"]
+        "mentions": [
+            "ethnicity",
+            "ethnicity"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/oclc",
         "domain": "",
-        "mentions": ["OCLC number"]
+        "mentions": [
+            "OCLC number",
+            "oclc"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/guest",
         "domain": "",
-        "mentions": ["guest star in"]
+        "mentions": [
+            "guest star in",
+            "guest"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/guest",
         "domain": "",
-        "mentions": ["feature"]
+        "mentions": [
+            "feature",
+            "guest"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/guest",
         "domain": "",
-        "mentions": ["appear in"]
+        "mentions": [
+            "appear in",
+            "guest"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/predecessor",
         "domain": "",
-        "mentions": ["preceed"]
+        "mentions": [
+            "preceed",
+            "predecessor"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/predecessor",
         "domain": "",
-        "mentions": ["successor"]
+        "mentions": [
+            "successor",
+            "predecessor"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/predecessor",
         "domain": "",
-        "mentions": ["predecessor"]
+        "mentions": [
+            "predecessor",
+            "predecessor"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/predecessor",
         "domain": "",
-        "mentions": ["succeed"]
+        "mentions": [
+            "succeed",
+            "predecessor"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/width",
         "domain": "",
-        "mentions": ["width"]
+        "mentions": [
+            "width",
+            "width"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/width",
         "domain": "",
-        "mentions": ["wide"]
+        "mentions": [
+            "wide",
+            "width"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/commissioningDate",
         "domain": "",
-        "mentions": ["commissioned on"]
+        "mentions": [
+            "commissioned on",
+            "commissioning date"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/birthPlace",
         "domain": "",
-        "mentions": ["birthplace"]
+        "mentions": [
+            "birthplace",
+            "birth place"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/birthPlace",
         "domain": "",
-        "mentions": ["come from"]
+        "mentions": [
+            "come from",
+            "birth place"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/birthPlace",
         "domain": "",
-        "mentions": ["born in"]
+        "mentions": [
+            "born in",
+            "birth place"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/birthPlace",
         "domain": "",
-        "mentions": ["place of birth"]
+        "mentions": [
+            "place of birth",
+            "birth place"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/birthPlace",
         "domain": "",
-        "mentions": ["birth place"]
+        "mentions": [
+            "birth place",
+            "birth place"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/launchDate",
         "domain": "",
-        "mentions": ["launched on"]
+        "mentions": [
+            "launched on",
+            "launch date"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/recordDate",
         "domain": "",
-        "mentions": ["record date"]
+        "mentions": [
+            "record date",
+            "record date"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/recordDate",
         "domain": "",
-        "mentions": ["recorded on"]
+        "mentions": [
+            "recorded on",
+            "record date"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/headquarter",
         "domain": "",
-        "mentions": ["based in"]
+        "mentions": [
+            "based in",
+            "headquarter"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/subsequentWork",
         "domain": "",
-        "mentions": ["sequel"]
+        "mentions": [
+            "sequel",
+            "subsequent work"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/subsequentWork",
         "domain": "",
-        "mentions": ["follow-up"]
+        "mentions": [
+            "follow-up",
+            "subsequent work"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/openingFilm",
         "domain": "",
-        "mentions": ["opening film at"]
+        "mentions": [
+            "opening film at",
+            "opening film"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/closestCity",
         "domain": "",
-        "mentions": ["situated near"]
+        "mentions": [
+            "situated near",
+            "closest city"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/closestCity",
         "domain": "",
-        "mentions": ["located near"]
+        "mentions": [
+            "located near",
+            "closest city"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/commonName",
         "domain": "",
-        "mentions": ["common name"]
+        "mentions": [
+            "common name",
+            "common name"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/commonName",
         "domain": "",
-        "mentions": ["call"]
+        "mentions": [
+            "call",
+            "common name"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/latestReleaseVersion",
         "domain": "",
-        "mentions": ["current release"]
+        "mentions": [
+            "current release",
+            "latest release version"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/latestReleaseVersion",
         "domain": "",
-        "mentions": ["latest version"]
+        "mentions": [
+            "latest version",
+            "latest release version"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/builder",
         "domain": "",
-        "mentions": ["build"]
+        "mentions": [
+            "build",
+            "builder"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/class",
         "domain": "",
-        "mentions": ["contain"]
+        "mentions": [
+            "contain",
+            "class"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/class",
         "domain": "",
-        "mentions": ["member"]
+        "mentions": [
+            "member",
+            "class"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/class",
         "domain": "",
-        "mentions": ["class"]
+        "mentions": [
+            "class",
+            "class"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/class",
         "domain": "",
-        "mentions": ["belong to"]
+        "mentions": [
+            "belong to",
+            "class"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/computingMedia",
         "domain": "",
-        "mentions": ["released on"]
+        "mentions": [
+            "released on",
+            "computing media"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/range",
         "domain": "",
-        "mentions": ["part of"]
+        "mentions": [
+            "part of",
+            "range"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/range",
         "domain": "",
-        "mentions": ["located in"]
+        "mentions": [
+            "located in",
+            "range"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/populationPlace",
         "domain": "",
-        "mentions": ["live in"]
+        "mentions": [
+            "live in",
+            "population place"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/formerBandMember",
         "domain": "",
-        "mentions": ["former band member of"]
+        "mentions": [
+            "former band member of",
+            "former band member"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/areaLand",
         "domain": "",
-        "mentions": ["land area"]
+        "mentions": [
+            "land area",
+            "area land"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/channel",
         "domain": "",
-        "mentions": ["air on"]
+        "mentions": [
+            "air on",
+            "channel"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/musicalBand",
         "domain": "",
-        "mentions": ["write"]
+        "mentions": [
+            "write",
+            "musical band"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/musicalBand",
         "domain": "",
-        "mentions": ["record"]
+        "mentions": [
+            "record",
+            "musical band"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/hometown",
         "domain": "",
-        "mentions": ["come from"]
+        "mentions": [
+            "come from",
+            "hometown"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/hometown",
         "domain": "",
-        "mentions": ["home town"]
+        "mentions": [
+            "home town",
+            "hometown"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/requirement",
         "domain": "",
-        "mentions": ["require"]
+        "mentions": [
+            "require",
+            "requirement"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/requirement",
         "domain": "",
-        "mentions": ["requirement of"]
+        "mentions": [
+            "requirement of",
+            "requirement"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/similar",
         "domain": "",
-        "mentions": ["like"]
+        "mentions": [
+            "like",
+            "similar"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/similar",
         "domain": "",
-        "mentions": ["similar to"]
+        "mentions": [
+            "similar to",
+            "similar"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/utcOffset",
         "domain": "",
-        "mentions": ["time zone offset"]
+        "mentions": [
+            "time zone offset",
+            "utc offset"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/utcOffset",
         "domain": "",
-        "mentions": ["UTC offset"]
+        "mentions": [
+            "UTC offset",
+            "utc offset"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/birthYear",
         "domain": "",
-        "mentions": ["born in"]
+        "mentions": [
+            "born in",
+            "birth year"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/influenced",
         "domain": "",
-        "mentions": ["influence"]
+        "mentions": [
+            "influence",
+            "influenced"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/format",
         "domain": "",
-        "mentions": ["format"]
+        "mentions": [
+            "format",
+            "format"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/associatedBand",
         "domain": "",
-        "mentions": ["associated act"]
+        "mentions": [
+            "associated act",
+            "associated band"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/number",
         "domain": "",
-        "mentions": ["shirt number"]
+        "mentions": [
+            "shirt number",
+            "number"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/number",
         "domain": "",
-        "mentions": ["squad number"]
+        "mentions": [
+            "squad number",
+            "number"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/manufacturer",
         "domain": "",
-        "mentions": ["manufacturer"]
+        "mentions": [
+            "manufacturer",
+            "manufacturer"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/manufacturer",
         "domain": "",
-        "mentions": ["produce"]
+        "mentions": [
+            "produce",
+            "manufacturer"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/manufacturer",
         "domain": "",
-        "mentions": ["manufacture"]
+        "mentions": [
+            "manufacture",
+            "manufacturer"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/product",
         "domain": "",
-        "mentions": ["produce"]
+        "mentions": [
+            "produce",
+            "product"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/product",
         "domain": "",
-        "mentions": ["develop"]
+        "mentions": [
+            "develop",
+            "product"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/product",
         "domain": "",
-        "mentions": ["create"]
+        "mentions": [
+            "create",
+            "product"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/product",
         "domain": "",
-        "mentions": ["product"]
+        "mentions": [
+            "product",
+            "product"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/populationUrban",
         "domain": "",
-        "mentions": ["urban population"]
+        "mentions": [
+            "urban population",
+            "population urban"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/populationUrban",
         "domain": "",
-        "mentions": ["population"]
+        "mentions": [
+            "population",
+            "population urban"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/dateUse",
         "domain": "",
-        "mentions": ["opened in"]
+        "mentions": [
+            "opened in",
+            "date use"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/influencedBy",
         "domain": "",
-        "mentions": ["influence"]
+        "mentions": [
+            "influence",
+            "influenced by"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/formationDate",
         "domain": "",
-        "mentions": ["established on"]
+        "mentions": [
+            "established on",
+            "formation date"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/formationDate",
         "domain": "",
-        "mentions": ["formation date"]
+        "mentions": [
+            "formation date",
+            "formation date"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/formationDate",
         "domain": "",
-        "mentions": ["formed on"]
+        "mentions": [
+            "formed on",
+            "formation date"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/position",
         "domain": "",
-        "mentions": ["position"]
+        "mentions": [
+            "position",
+            "position"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/militaryUnit",
         "domain": "",
-        "mentions": ["serve in"]
+        "mentions": [
+            "serve in",
+            "military unit"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/abbreviation",
         "domain": "",
-        "mentions": ["abbreviate"]
+        "mentions": [
+            "abbreviate",
+            "abbreviation"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/abbreviation",
         "domain": "",
-        "mentions": ["abbreviation"]
+        "mentions": [
+            "abbreviation",
+            "abbreviation"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/abbreviation",
         "domain": "",
-        "mentions": ["abbreviated as"]
+        "mentions": [
+            "abbreviated as",
+            "abbreviation"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/literaryGenre",
         "domain": "",
-        "mentions": ["genre"]
+        "mentions": [
+            "genre",
+            "literary genre"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/epoch",
         "domain": "",
-        "mentions": ["epoch"]
+        "mentions": [
+            "epoch",
+            "epoch"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/height",
         "domain": "",
-        "mentions": ["tall"]
+        "mentions": [
+            "tall",
+            "height"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/height",
         "domain": "",
-        "mentions": ["high"]
+        "mentions": [
+            "high",
+            "height"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/density",
         "domain": "",
-        "mentions": ["density"]
+        "mentions": [
+            "density",
+            "density"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/shipBeam",
         "domain": "",
-        "mentions": ["beam"]
+        "mentions": [
+            "beam",
+            "ship beam"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/dcc",
         "domain": "",
-        "mentions": ["Dewey classification"]
+        "mentions": [
+            "Dewey classification",
+            "dcc"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/sublimationPoint",
         "domain": "",
-        "mentions": ["sublimation point"]
+        "mentions": [
+            "sublimation point",
+            "sublimation point"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/sublimationPoint",
         "domain": "",
-        "mentions": ["sublime at"]
+        "mentions": [
+            "sublime at",
+            "sublimation point"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/causalties",
         "domain": "",
-        "mentions": ["casualties"]
+        "mentions": [
+            "casualties",
+            "causalties"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/locationCity",
         "domain": "",
-        "mentions": ["located in"]
+        "mentions": [
+            "located in",
+            "location city"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/almaMater",
         "domain": "",
-        "mentions": ["study at"]
+        "mentions": [
+            "study at",
+            "alma mater"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/almaMater",
         "domain": "",
-        "mentions": ["graduate from"]
+        "mentions": [
+            "graduate from",
+            "alma mater"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/almaMater",
         "domain": "",
-        "mentions": ["Alma Mater"]
+        "mentions": [
+            "Alma Mater",
+            "alma mater"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/source",
         "domain": "",
-        "mentions": ["source"]
+        "mentions": [
+            "source",
+            "source"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/source",
         "domain": "",
-        "mentions": ["originate in"]
+        "mentions": [
+            "originate in",
+            "source"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/district",
         "domain": "",
-        "mentions": ["situated in"]
+        "mentions": [
+            "situated in",
+            "district"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/district",
         "domain": "",
-        "mentions": ["located in"]
+        "mentions": [
+            "located in",
+            "district"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/entrezgene",
         "domain": "",
-        "mentions": ["Entrez ID"]
+        "mentions": [
+            "Entrez ID",
+            "entrezgene"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/entrezgene",
         "domain": "",
-        "mentions": ["Entrez Gene ID"]
+        "mentions": [
+            "Entrez Gene ID",
+            "entrezgene"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/intercommunality",
         "domain": "",
-        "mentions": ["part of"]
+        "mentions": [
+            "part of",
+            "intercommunality"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/intercommunality",
         "domain": "",
-        "mentions": ["suburb of"]
+        "mentions": [
+            "suburb of",
+            "intercommunality"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/apoapsis",
         "domain": "",
-        "mentions": ["apoapsis"]
+        "mentions": [
+            "apoapsis",
+            "apoapsis"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/cinematographer",
         "domain": "",
-        "mentions": ["shoot"]
+        "mentions": [
+            "shoot",
+            "cinematographer"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/frequency",
         "domain": "",
-        "mentions": ["broadcast on"]
+        "mentions": [
+            "broadcast on",
+            "frequency"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/frequency",
         "domain": "",
-        "mentions": ["frequency"]
+        "mentions": [
+            "frequency",
+            "frequency"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/manager",
         "domain": "",
-        "mentions": ["manage"]
+        "mentions": [
+            "manage",
+            "manager"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/manager",
         "domain": "",
-        "mentions": ["manager"]
+        "mentions": [
+            "manager",
+            "manager"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/network",
         "domain": "",
-        "mentions": ["broadcasted on"]
+        "mentions": [
+            "broadcasted on",
+            "network"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/network",
         "domain": "",
-        "mentions": ["aired on"]
+        "mentions": [
+            "aired on",
+            "network"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/completionDate",
         "domain": "",
-        "mentions": ["completed on"]
+        "mentions": [
+            "completed on",
+            "completion date"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/team",
         "domain": "",
-        "mentions": ["team"]
+        "mentions": [
+            "team",
+            "team"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/foundingPerson",
         "domain": "",
-        "mentions": ["establish"]
+        "mentions": [
+            "establish",
+            "founding person"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/foundingPerson",
         "domain": "",
-        "mentions": ["founder"]
+        "mentions": [
+            "founder",
+            "founding person"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/foundingPerson",
         "domain": "",
-        "mentions": ["found"]
+        "mentions": [
+            "found",
+            "founding person"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/orbitalPeriod",
         "domain": "",
-        "mentions": ["orbital period"]
+        "mentions": [
+            "orbital period",
+            "orbital period"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/iataLocationIdentifier",
         "domain": "",
-        "mentions": ["IATA code"]
+        "mentions": [
+            "IATA code",
+            "iata location identifier"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/iataLocationIdentifier",
         "domain": "",
-        "mentions": ["IATA location identifier"]
+        "mentions": [
+            "IATA location identifier",
+            "iata location identifier"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/iataLocationIdentifier",
         "domain": "",
-        "mentions": ["IATA identifier"]
+        "mentions": [
+            "IATA identifier",
+            "iata location identifier"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/areaWater",
         "domain": "",
-        "mentions": ["water area"]
+        "mentions": [
+            "water area",
+            "area water"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/postalCode",
         "domain": "",
-        "mentions": ["post code"]
+        "mentions": [
+            "post code",
+            "postal code"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/postalCode",
         "domain": "",
-        "mentions": ["postal code"]
+        "mentions": [
+            "postal code",
+            "postal code"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/birthDate",
         "domain": "",
-        "mentions": ["birth date"]
+        "mentions": [
+            "birth date",
+            "birth date"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/birthDate",
         "domain": "",
-        "mentions": ["born on"]
+        "mentions": [
+            "born on",
+            "birth date"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/birthDate",
         "domain": "",
-        "mentions": ["date of birth"]
+        "mentions": [
+            "date of birth",
+            "birth date"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/owner",
         "domain": "",
-        "mentions": ["own"]
+        "mentions": [
+            "own",
+            "owner"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/owner",
         "domain": "",
-        "mentions": ["owner"]
+        "mentions": [
+            "owner",
+            "owner"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/issn",
         "domain": "",
-        "mentions": ["ISSN"]
+        "mentions": [
+            "ISSN",
+            "issn"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/child",
         "domain": "",
-        "mentions": ["parent"]
+        "mentions": [
+            "parent",
+            "child"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/child",
         "domain": "",
-        "mentions": ["child"]
+        "mentions": [
+            "child",
+            "child"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/starring",
         "domain": "",
-        "mentions": ["star"]
+        "mentions": [
+            "star",
+            "starring"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/starring",
         "domain": "",
-        "mentions": ["feature"]
+        "mentions": [
+            "feature",
+            "starring"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/starring",
         "domain": "",
-        "mentions": ["play in"]
+        "mentions": [
+            "play in",
+            "starring"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/meltingPoint",
         "domain": "",
-        "mentions": ["melting point"]
+        "mentions": [
+            "melting point",
+            "melting point"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/meltingPoint",
         "domain": "",
-        "mentions": ["melt at"]
+        "mentions": [
+            "melt at",
+            "melting point"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/recordedIn",
         "domain": "",
-        "mentions": ["recorded in"]
+        "mentions": [
+            "recorded in",
+            "recorded in"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/formerName",
         "domain": "",
-        "mentions": ["former name"]
+        "mentions": [
+            "former name",
+            "former name"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/motto",
         "domain": "",
-        "mentions": ["motto"]
+        "mentions": [
+            "motto",
+            "motto"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/bandMember",
         "domain": "",
-        "mentions": ["member of"]
+        "mentions": [
+            "member of",
+            "band member"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/locatedInArea",
         "domain": "",
-        "mentions": ["located in"]
+        "mentions": [
+            "located in",
+            "located in area"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/populationUrbanDensity",
         "domain": "",
-        "mentions": ["population density"]
+        "mentions": [
+            "population density",
+            "population urban density"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/regionServed",
         "domain": "",
-        "mentions": ["operate in"]
+        "mentions": [
+            "operate in",
+            "region served"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/relative",
         "domain": "",
-        "mentions": ["related to"]
+        "mentions": [
+            "related to",
+            "relative"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/relative",
         "domain": "",
-        "mentions": ["relative"]
+        "mentions": [
+            "relative",
+            "relative"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/league",
         "domain": "",
-        "mentions": ["play in"]
+        "mentions": [
+            "play in",
+            "league"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/officialSchoolColour",
         "domain": "",
-        "mentions": ["official color"]
+        "mentions": [
+            "official color",
+            "official school colour"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/facultySize",
         "domain": "",
-        "mentions": ["employ"]
+        "mentions": [
+            "employ",
+            "faculty size"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/facultySize",
         "domain": "",
-        "mentions": ["faculty size"]
+        "mentions": [
+            "faculty size",
+            "faculty size"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/family",
         "domain": "",
-        "mentions": ["contain"]
+        "mentions": [
+            "contain",
+            "family"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/family",
         "domain": "",
-        "mentions": ["member"]
+        "mentions": [
+            "member",
+            "family"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/family",
         "domain": "",
-        "mentions": ["belong to"]
+        "mentions": [
+            "belong to",
+            "family"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/family",
         "domain": "",
-        "mentions": ["family"]
+        "mentions": [
+            "family",
+            "family"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/area",
         "domain": "",
-        "mentions": ["area"]
+        "mentions": [
+            "area",
+            "area"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/state",
         "domain": "",
-        "mentions": ["situated in"]
+        "mentions": [
+            "situated in",
+            "state"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/state",
         "domain": "",
-        "mentions": ["located in"]
+        "mentions": [
+            "located in",
+            "state"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/mouthMountain",
         "domain": "",
-        "mentions": ["run into"]
+        "mentions": [
+            "run into",
+            "mouth mountain"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/mouthMountain",
         "domain": "",
-        "mentions": ["flow into"]
+        "mentions": [
+            "flow into",
+            "mouth mountain"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/mountainRange",
         "domain": "",
-        "mentions": ["part of"]
+        "mentions": [
+            "part of",
+            "mountain range"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/squadNumber",
         "domain": "",
-        "mentions": ["shirt number"]
+        "mentions": [
+            "shirt number",
+            "squad number"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/squadNumber",
         "domain": "",
-        "mentions": ["squad number"]
+        "mentions": [
+            "squad number",
+            "squad number"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/operator",
         "domain": "",
-        "mentions": ["home of"]
+        "mentions": [
+            "home of",
+            "operator"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/award",
         "domain": "",
-        "mentions": ["win"]
+        "mentions": [
+            "win",
+            "award"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/award",
         "domain": "",
-        "mentions": ["receive"]
+        "mentions": [
+            "receive",
+            "award"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/award",
         "domain": "",
-        "mentions": ["award"]
+        "mentions": [
+            "award",
+            "award"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/award",
         "domain": "",
-        "mentions": ["recipient"]
+        "mentions": [
+            "recipient",
+            "award"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/award",
         "domain": "",
-        "mentions": ["awarded"]
+        "mentions": [
+            "awarded",
+            "award"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/areaTotal",
         "domain": "",
-        "mentions": ["area"]
+        "mentions": [
+            "area",
+            "area total"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/areaTotal",
         "domain": "",
-        "mentions": ["total area"]
+        "mentions": [
+            "total area",
+            "area total"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/occupation",
         "domain": "",
-        "mentions": ["work as"]
+        "mentions": [
+            "work as",
+            "occupation"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/occupation",
         "domain": "",
-        "mentions": ["occupation"]
+        "mentions": [
+            "occupation",
+            "occupation"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/affiliation",
         "domain": "",
-        "mentions": ["affiliated with"]
+        "mentions": [
+            "affiliated with",
+            "affiliation"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/affiliation",
         "domain": "",
-        "mentions": ["affiliated to"]
+        "mentions": [
+            "affiliated to",
+            "affiliation"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/callsignMeaning",
         "domain": "",
-        "mentions": ["stand for"]
+        "mentions": [
+            "stand for",
+            "callsign meaning"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/callsignMeaning",
         "domain": "",
-        "mentions": ["mean"]
+        "mentions": [
+            "mean",
+            "callsign meaning"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/lcc",
         "domain": "",
-        "mentions": ["LC classification"]
+        "mentions": [
+            "LC classification",
+            "lcc"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/publisher",
         "domain": "",
-        "mentions": ["publish"]
+        "mentions": [
+            "publish",
+            "publisher"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/publisher",
         "domain": "",
-        "mentions": ["publisher"]
+        "mentions": [
+            "publisher",
+            "publisher"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/activeYearsEndYear",
         "domain": "",
-        "mentions": ["active until"]
+        "mentions": [
+            "active until",
+            "active years end year"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/origin",
         "domain": "",
-        "mentions": ["made in"]
+        "mentions": [
+            "made in",
+            "origin"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/riverMouth",
         "domain": "",
-        "mentions": ["run into"]
+        "mentions": [
+            "run into",
+            "river mouth"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/riverMouth",
         "domain": "",
-        "mentions": ["flow into"]
+        "mentions": [
+            "flow into",
+            "river mouth"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/musicalArtist",
         "domain": "",
-        "mentions": ["write"]
+        "mentions": [
+            "write",
+            "musical artist"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/musicalArtist",
         "domain": "",
-        "mentions": ["interpreter of"]
+        "mentions": [
+            "interpreter of",
+            "musical artist"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/musicalArtist",
         "domain": "",
-        "mentions": ["record"]
+        "mentions": [
+            "record",
+            "musical artist"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/border",
         "domain": "",
-        "mentions": ["border"]
+        "mentions": [
+            "border",
+            "border"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/associatedRocket",
         "domain": "",
-        "mentions": ["blast off from"]
+        "mentions": [
+            "blast off from",
+            "associated rocket"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/associatedRocket",
         "domain": "",
-        "mentions": ["launch off from"]
+        "mentions": [
+            "launch off from",
+            "associated rocket"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/associatedRocket",
         "domain": "",
-        "mentions": ["take off from"]
+        "mentions": [
+            "take off from",
+            "associated rocket"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/areaCode",
         "domain": "",
-        "mentions": ["area code"]
+        "mentions": [
+            "area code",
+            "area code"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/operatedBy",
         "domain": "",
-        "mentions": ["operate"]
+        "mentions": [
+            "operate",
+            "operated by"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/region",
         "domain": "",
-        "mentions": ["located in"]
+        "mentions": [
+            "located in",
+            "region"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/absoluteMagnitude",
         "domain": "",
-        "mentions": ["absolute magnitude"]
+        "mentions": [
+            "absolute magnitude",
+            "absolute magnitude"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/religion",
         "domain": "",
-        "mentions": ["religion"]
+        "mentions": [
+            "religion",
+            "religion"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/yearOfConstruction",
         "domain": "",
-        "mentions": ["constructed in"]
+        "mentions": [
+            "constructed in",
+            "year of construction"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/restingPlace",
         "domain": "",
-        "mentions": ["resting place"]
+        "mentions": [
+            "resting place",
+            "resting place"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/restingPlace",
         "domain": "",
-        "mentions": ["buried in"]
+        "mentions": [
+            "buried in",
+            "resting place"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/spouse",
         "domain": "",
-        "mentions": ["marry"]
+        "mentions": [
+            "marry",
+            "spouse"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/spouse",
         "domain": "",
-        "mentions": ["marry to"]
+        "mentions": [
+            "marry to",
+            "spouse"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/spouse",
         "domain": "",
-        "mentions": ["wife"]
+        "mentions": [
+            "wife",
+            "spouse"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/spouse",
         "domain": "",
-        "mentions": ["husband"]
+        "mentions": [
+            "husband",
+            "spouse"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/spouse",
         "domain": "",
-        "mentions": ["spouse"]
+        "mentions": [
+            "spouse",
+            "spouse"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/chairman",
         "domain": "",
-        "mentions": ["chairman"]
+        "mentions": [
+            "chairman",
+            "chairman"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/residence",
         "domain": "",
-        "mentions": ["live"]
+        "mentions": [
+            "live",
+            "residence"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/residence",
         "domain": "",
-        "mentions": ["residence"]
+        "mentions": [
+            "residence",
+            "residence"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/residence",
         "domain": "",
-        "mentions": ["reside in"]
+        "mentions": [
+            "reside in",
+            "residence"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/architect",
         "domain": "",
-        "mentions": ["architect"]
+        "mentions": [
+            "architect",
+            "architect"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/architect",
         "domain": "",
-        "mentions": ["build"]
+        "mentions": [
+            "build",
+            "architect"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/architect",
         "domain": "",
-        "mentions": ["design"]
+        "mentions": [
+            "design",
+            "architect"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/programmingLanguage",
         "domain": "",
-        "mentions": ["programming language"]
+        "mentions": [
+            "programming language",
+            "programming language"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/programmingLanguage",
         "domain": "",
-        "mentions": ["written in"]
+        "mentions": [
+            "written in",
+            "programming language"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/musicComposer",
         "domain": "",
-        "mentions": ["composer"]
+        "mentions": [
+            "composer",
+            "music composer"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/gridReference",
         "domain": "",
-        "mentions": ["grid reference"]
+        "mentions": [
+            "grid reference",
+            "grid reference"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/broadcastNetwork",
         "domain": "",
-        "mentions": ["part of"]
+        "mentions": [
+            "part of",
+            "broadcast network"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/broadcastNetwork",
         "domain": "",
-        "mentions": ["operate"]
+        "mentions": [
+            "operate",
+            "broadcast network"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/president",
         "domain": "",
-        "mentions": ["serve under"]
+        "mentions": [
+            "serve under",
+            "president"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/foundedBy",
         "domain": "",
-        "mentions": ["establish"]
+        "mentions": [
+            "establish",
+            "founded by"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/foundedBy",
         "domain": "",
-        "mentions": ["founder"]
+        "mentions": [
+            "founder",
+            "founded by"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/foundedBy",
         "domain": "",
-        "mentions": ["found"]
+        "mentions": [
+            "found",
+            "founded by"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/isPartOf",
         "domain": "",
-        "mentions": ["part of"]
+        "mentions": [
+            "part of",
+            "is part of"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/formationYear",
         "domain": "",
-        "mentions": ["established in"]
+        "mentions": [
+            "established in",
+            "formation year"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/formationYear",
         "domain": "",
-        "mentions": ["formation year"]
+        "mentions": [
+            "formation year",
+            "formation year"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/formationYear",
         "domain": "",
-        "mentions": ["formed in"]
+        "mentions": [
+            "formed in",
+            "formation year"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/computingInput",
         "domain": "",
-        "mentions": ["use"]
+        "mentions": [
+            "use",
+            "computing input"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/computingInput",
         "domain": "",
-        "mentions": ["play with"]
+        "mentions": [
+            "play with",
+            "computing input"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/previousWork",
         "domain": "",
-        "mentions": ["prequel"]
+        "mentions": [
+            "prequel",
+            "previous work"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/runtime",
         "domain": "",
-        "mentions": ["long"]
+        "mentions": [
+            "long",
+            "runtime"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/runtime",
         "domain": "",
-        "mentions": ["runtime"]
+        "mentions": [
+            "runtime",
+            "runtime"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/battle",
         "domain": "",
-        "mentions": ["fight in"]
+        "mentions": [
+            "fight in",
+            "battle"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/battle",
         "domain": "",
-        "mentions": ["serve in"]
+        "mentions": [
+            "serve in",
+            "battle"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/meanTemperature",
         "domain": "",
-        "mentions": ["mean temperature on"]
+        "mentions": [
+            "mean temperature on",
+            "mean temperature"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/relatedMeanOfTransportation",
         "domain": "",
-        "mentions": ["based on"]
+        "mentions": [
+            "based on",
+            "related mean of transportation"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/country",
         "domain": "",
-        "mentions": ["located in"]
+        "mentions": [
+            "located in",
+            "country"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/canonizedPlace",
         "domain": "",
-        "mentions": ["canonize in"]
+        "mentions": [
+            "canonize in",
+            "canonized place"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/totalPopulation",
         "domain": "",
-        "mentions": ["total population"]
+        "mentions": [
+            "total population",
+            "total population"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/totalPopulation",
         "domain": "",
-        "mentions": ["population"]
+        "mentions": [
+            "population",
+            "total population"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/owningOrganization",
         "domain": "",
-        "mentions": ["own"]
+        "mentions": [
+            "own",
+            "owning organization"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/activeYearsEndDate",
         "domain": "",
-        "mentions": ["active until"]
+        "mentions": [
+            "active until",
+            "active years end date"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/numberOfStudents",
         "domain": "",
-        "mentions": ["student population"]
+        "mentions": [
+            "student population",
+            "number of students"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/numberOfStudents",
         "domain": "",
-        "mentions": ["serve"]
+        "mentions": [
+            "serve",
+            "number of students"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/numberOfStudents",
         "domain": "",
-        "mentions": ["enrollment of"]
+        "mentions": [
+            "enrollment of",
+            "number of students"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/crosses",
         "domain": "",
-        "mentions": ["crossing"]
+        "mentions": [
+            "crossing",
+            "crosses"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/crosses",
         "domain": "",
-        "mentions": ["cross"]
+        "mentions": [
+            "cross",
+            "crosses"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/crosses",
         "domain": "",
-        "mentions": ["span"]
+        "mentions": [
+            "span",
+            "crosses"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/crosses",
         "domain": "",
-        "mentions": ["bridge over"]
+        "mentions": [
+            "bridge over",
+            "crosses"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/crosses",
         "domain": "",
-        "mentions": ["bridge"]
+        "mentions": [
+            "bridge",
+            "crosses"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/crosses",
         "domain": "",
-        "mentions": ["traverse"]
+        "mentions": [
+            "traverse",
+            "crosses"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/deathPlace",
         "domain": "",
-        "mentions": ["die in"]
+        "mentions": [
+            "die in",
+            "death place"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/deathPlace",
         "domain": "",
-        "mentions": ["place of death"]
+        "mentions": [
+            "place of death",
+            "death place"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/deathPlace",
         "domain": "",
-        "mentions": ["death place"]
+        "mentions": [
+            "death place",
+            "death place"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/genus",
         "domain": "",
-        "mentions": ["member"]
+        "mentions": [
+            "member",
+            "genus"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/genus",
         "domain": "",
-        "mentions": ["belong to"]
+        "mentions": [
+            "belong to",
+            "genus"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/genus",
         "domain": "",
-        "mentions": ["genus"]
+        "mentions": [
+            "genus",
+            "genus"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/location",
         "domain": "",
-        "mentions": ["located in"]
+        "mentions": [
+            "located in",
+            "location"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/computingPlatform",
         "domain": "",
-        "mentions": ["ported to"]
+        "mentions": [
+            "ported to",
+            "computing platform"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/computingPlatform",
         "domain": "",
-        "mentions": ["developed for"]
+        "mentions": [
+            "developed for",
+            "computing platform"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/rector",
         "domain": "",
-        "mentions": ["rector"]
+        "mentions": [
+            "rector",
+            "rector"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/stateOfOrigin",
         "domain": "",
-        "mentions": ["come from"]
+        "mentions": [
+            "come from",
+            "state of origin"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/stateOfOrigin",
         "domain": "",
-        "mentions": ["born in"]
+        "mentions": [
+            "born in",
+            "state of origin"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/executiveProducer",
         "domain": "",
-        "mentions": ["executive producer"]
+        "mentions": [
+            "executive producer",
+            "executive producer"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/isbn",
         "domain": "",
-        "mentions": ["ISBN"]
+        "mentions": [
+            "ISBN",
+            "isbn"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/isPartOfMilitaryConflict",
         "domain": "",
-        "mentions": ["part of"]
+        "mentions": [
+            "part of",
+            "is part of military conflict"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/openingDate",
         "domain": "",
-        "mentions": ["opened on"]
+        "mentions": [
+            "opened on",
+            "opening date"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/date",
         "domain": "",
-        "mentions": ["take place on"]
+        "mentions": [
+            "take place on",
+            "date"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/activeYearsStartYear",
         "domain": "",
-        "mentions": ["active since"]
+        "mentions": [
+            "active since",
+            "active years start year"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/areaMetro",
         "domain": "",
-        "mentions": ["area"]
+        "mentions": [
+            "area",
+            "area metro"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/parentCompany",
         "domain": "",
-        "mentions": ["subsidiary"]
+        "mentions": [
+            "subsidiary",
+            "parent company"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/parentCompany",
         "domain": "",
-        "mentions": ["daughter company"]
+        "mentions": [
+            "daughter company",
+            "parent company"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/parentCompany",
         "domain": "",
-        "mentions": ["parent company"]
+        "mentions": [
+            "parent company",
+            "parent company"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/album",
         "domain": "",
-        "mentions": ["track on"]
+        "mentions": [
+            "track on",
+            "album"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/album",
         "domain": "",
-        "mentions": ["song on"]
+        "mentions": [
+            "song on",
+            "album"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/presenter",
         "domain": "",
-        "mentions": ["presenter"]
+        "mentions": [
+            "presenter",
+            "presenter"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/length",
         "domain": "",
-        "mentions": ["long"]
+        "mentions": [
+            "long",
+            "length"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/length",
         "domain": "",
-        "mentions": ["length"]
+        "mentions": [
+            "length",
+            "length"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/depth",
         "domain": "",
-        "mentions": ["deep"]
+        "mentions": [
+            "deep",
+            "depth"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/depth",
         "domain": "",
-        "mentions": ["depth"]
+        "mentions": [
+            "depth",
+            "depth"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/budget",
         "domain": "",
-        "mentions": ["budget"]
+        "mentions": [
+            "budget",
+            "budget"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/birthName",
         "domain": "",
-        "mentions": ["birth name"]
+        "mentions": [
+            "birth name",
+            "birth name"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/facilityId",
         "domain": "",
-        "mentions": ["facility ID"]
+        "mentions": [
+            "facility ID",
+            "facility id"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/militaryBranch",
         "domain": "",
-        "mentions": ["serve in"]
+        "mentions": [
+            "serve in",
+            "military branch"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/phylum",
         "domain": "",
-        "mentions": ["contain"]
+        "mentions": [
+            "contain",
+            "phylum"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/phylum",
         "domain": "",
-        "mentions": ["member"]
+        "mentions": [
+            "member",
+            "phylum"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/phylum",
         "domain": "",
-        "mentions": ["phylum"]
+        "mentions": [
+            "phylum",
+            "phylum"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/phylum",
         "domain": "",
-        "mentions": ["belong to"]
+        "mentions": [
+            "belong to",
+            "phylum"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/iupacName",
         "domain": "",
-        "mentions": ["IUPAC name"]
+        "mentions": [
+            "IUPAC name",
+            "iupac name"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/displacement",
         "domain": "",
-        "mentions": ["displacement"]
+        "mentions": [
+            "displacement",
+            "displacement"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/displacement",
         "domain": "",
-        "mentions": ["engine displacement"]
+        "mentions": [
+            "engine displacement",
+            "displacement"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/foundationPlace",
         "domain": "",
-        "mentions": ["foundation place"]
+        "mentions": [
+            "foundation place",
+            "foundation place"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/foundationPlace",
         "domain": "",
-        "mentions": ["found in"]
+        "mentions": [
+            "found in",
+            "foundation place"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/shipDraft",
         "domain": "",
-        "mentions": ["draft"]
+        "mentions": [
+            "draft",
+            "ship draft"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/runningMate",
         "domain": "",
-        "mentions": ["running mate"]
+        "mentions": [
+            "running mate",
+            "running mate"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/associatedMusicalArtist",
         "domain": "",
-        "mentions": ["associated act"]
+        "mentions": [
+            "associated act",
+            "associated musical artist"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/militaryCommand",
         "domain": "",
-        "mentions": ["command"]
+        "mentions": [
+            "command",
+            "military command"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/layingDown",
         "domain": "",
-        "mentions": ["laid down on"]
+        "mentions": [
+            "laid down on",
+            "laying down"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/conservationStatus",
         "domain": "",
-        "mentions": ["conservation status"]
+        "mentions": [
+            "conservation status",
+            "conservation status"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/monarch",
         "domain": "",
-        "mentions": ["king"]
+        "mentions": [
+            "king",
+            "monarch"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/highestMountain",
         "domain": "",
-        "mentions": ["highest mountain in"]
+        "mentions": [
+            "highest mountain in",
+            "highest mountain"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/highestMountain",
         "domain": "",
-        "mentions": ["highest mountain"]
+        "mentions": [
+            "highest mountain",
+            "highest mountain"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/locationCountry",
         "domain": "",
-        "mentions": ["located in"]
+        "mentions": [
+            "located in",
+            "location country"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/locationCountry",
         "domain": "",
-        "mentions": ["based in"]
+        "mentions": [
+            "based in",
+            "location country"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/mascot",
         "domain": "",
-        "mentions": ["mascot"]
+        "mentions": [
+            "mascot",
+            "mascot"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/populationTotal",
         "domain": "",
-        "mentions": ["total population"]
+        "mentions": [
+            "total population",
+            "population total"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/populationTotal",
         "domain": "",
-        "mentions": ["population"]
+        "mentions": [
+            "population",
+            "population total"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/agencyStationCode",
         "domain": "",
-        "mentions": ["station code"]
+        "mentions": [
+            "station code",
+            "agency station code"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/managerClub",
         "domain": "",
-        "mentions": ["manage"]
+        "mentions": [
+            "manage",
+            "manager club"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/managerClub",
         "domain": "",
-        "mentions": ["manager"]
+        "mentions": [
+            "manager",
+            "manager club"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/commandStructure",
         "domain": "",
-        "mentions": ["part of"]
+        "mentions": [
+            "part of",
+            "command structure"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/commandStructure",
         "domain": "",
-        "mentions": ["subordinate to"]
+        "mentions": [
+            "subordinate to",
+            "command structure"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/foundingYear",
         "domain": "",
-        "mentions": ["established in"]
+        "mentions": [
+            "established in",
+            "founding year"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/foundingYear",
         "domain": "",
-        "mentions": ["founding year"]
+        "mentions": [
+            "founding year",
+            "founding year"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/foundingYear",
         "domain": "",
-        "mentions": ["founded in"]
+        "mentions": [
+            "founded in",
+            "founding year"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/precursor",
         "domain": "",
-        "mentions": ["develop from"]
+        "mentions": [
+            "develop from",
+            "precursor"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/precursor",
         "domain": "",
-        "mentions": ["precede"]
+        "mentions": [
+            "precede",
+            "precursor"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/precursor",
         "domain": "",
-        "mentions": ["precursor of"]
+        "mentions": [
+            "precursor of",
+            "precursor"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/formerCoach",
         "domain": "",
-        "mentions": ["former coach"]
+        "mentions": [
+            "former coach",
+            "former coach"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/nearestCity",
         "domain": "",
-        "mentions": ["close to"]
+        "mentions": [
+            "close to",
+            "nearest city"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/city",
         "domain": "",
-        "mentions": ["located in"]
+        "mentions": [
+            "located in",
+            "city"
+        ]
     },
     {
         "schema": "http://www.w3.org/2000/01/rdf-schema#label",
         "predicate": "http://dbpedia.org/ontology/musicFusionGenre",
         "domain": "",
-        "mentions": ["fuse into"]
+        "mentions": [
+            "fuse into",
+            "music fusion genre"
+        ]
     }
 ]}

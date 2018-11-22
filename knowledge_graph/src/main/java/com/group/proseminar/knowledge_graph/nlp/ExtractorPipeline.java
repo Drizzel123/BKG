@@ -12,7 +12,6 @@ import com.group.proseminar.knowledge_graph.ontology.PredicateResolver;
 import edu.stanford.nlp.pipeline.Annotation;
 import edu.stanford.nlp.pipeline.CoreDocument;
 import edu.stanford.nlp.pipeline.StanfordCoreNLP;
-import edu.stanford.nlp.trees.Tree;
 
 /**
  * Controls pipeline features of the natural language processing package.
@@ -63,27 +62,30 @@ public class ExtractorPipeline {
 			resoluted = article;
 		}
 		Set<Entity> entities = corefResolver.linkEntitiesToMentions(doc);
+		
+		System.out.println(entities);
+		
 		Annotation res = new Annotation(resoluted);
 		extrPipeline.annotate(res);
-		Set<Triplet<Tree, Tree, Tree>> triplets = extractor.extractFromText(res);
+		Set<Triplet<String, String, String>> triplets = extractor.extractFromText(res);
 		EntityLinker linker = new EntityLinker();
 		EntitySearcher searcher = new EntitySearcher(entities);
 
 		Collection<Triplet<String, String, String>> result = new HashSet<>();
-
-		for (Triplet<Tree, Tree, Tree> triplet : triplets) {
+		
+		System.out.println("Triplets: " + triplets);
+		
+		for (Triplet<String, String, String> triplet : triplets) {
 			// handle subject and object
-			String subject = toMention(triplet.getFirst());
-			String object = toMention(triplet.getThird());
+			String subject = triplet.getFirst();
+			String predicate = triplet.getSecond();
+			String object = triplet.getThird();
 			Entity sEntity = searcher.getLargestEntity(subject);
 			Entity oEntity = searcher.getLargestEntity(object);
 			if (sEntity != null && oEntity != null) {
 				Set<Entity> set = Stream.of(sEntity, oEntity).collect(Collectors.toSet());
+				// link subject and object to URIs
 				linker.resolveURIs(set);
-
-				// handle predicate
-				String predicate = toMention(triplet.getSecond());
-
 				// write to triplet
 				String subjURI = sEntity.getUri();
 				String predURI = predResolver.resolveToURI(predicate);
@@ -125,19 +127,4 @@ public class ExtractorPipeline {
 		System.out.println("Result: " + result);
 		return result;
 	}
-
-	/**
-	 * Transforms the string representation of the given tree to a mention.
-	 * 
-	 * @param root - root node of the tree
-	 * @return mention contained by the tree
-	 */
-	private String toMention(Tree root) {
-		String s = "";
-		for (Tree leaf : root.getLeaves()) {
-			s += leaf.value() + " ";
-		}
-		return s.substring(0, s.length() - 1);
-	}
-
 }

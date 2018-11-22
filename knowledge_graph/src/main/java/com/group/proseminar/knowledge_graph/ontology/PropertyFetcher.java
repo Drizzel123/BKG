@@ -119,7 +119,9 @@ public class PropertyFetcher {
 			jentry.put("schema", schema);
 			JSONArray jmentions = new JSONArray();
 			String mention = triple.getObject().toString().substring(1, triple.getObject().toString().length() - 1);
+			String nextMention = extractMention(url.substring("http://dbpedia.org/ontology/".length())).toLowerCase();
 			jmentions.put(mention);
+			jmentions.put(nextMention);
 			jentry.put("mentions", jmentions);
 			jarray.put(jentry);
 		}

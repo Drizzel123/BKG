@@ -24,7 +24,8 @@ public class ExtractorPipelineTest {
 	@Test
 	public void extractFromTextTest() throws Exception {
 		ExtractorPipeline pipeline = new ExtractorPipeline();
-		pipeline.processArticle("New York City is the most densely populated major city in the United States.");
+//		pipeline.processArticle("New York City is the most densely populated major city in the United States.");
+		pipeline.processArticle("Barack Obama is the president of America.");
 		assertEquals(true, true);
 	}
 }

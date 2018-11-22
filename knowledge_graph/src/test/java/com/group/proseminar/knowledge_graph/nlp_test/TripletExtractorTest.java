@@ -19,7 +19,7 @@ public class TripletExtractorTest {
 
 	@Before
 	public void setup() {
-		String text = "Johann Carl Friedrich Gauss was a German mathematician and physicist who made significant contributions to many fields in mathematics and sciences. Sometimes referred to as the Princeps mathematicorum and the greatest mathematician since antiquity, Gauss had an exceptional influence in many fields of mathematics and science, and is ranked among history's most influential mathematicians.";
+		String text = " Londinium was founded by the Romans, who later abandoned the city.";
 		Properties extrProps = new Properties();
 		extrProps.put("annotators", EPROPERTIES);
 		this.extrPipeline = new StanfordCoreNLP(extrProps);
