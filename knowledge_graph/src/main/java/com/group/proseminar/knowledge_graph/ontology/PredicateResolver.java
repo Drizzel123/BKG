@@ -1,6 +1,7 @@
 package com.group.proseminar.knowledge_graph.ontology;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -8,6 +9,13 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import edu.stanford.nlp.ling.CoreAnnotations.SentencesAnnotation;
+import edu.stanford.nlp.ling.IndexedWord;
+import edu.stanford.nlp.pipeline.Annotation;
+import edu.stanford.nlp.semgraph.SemanticGraph;
+import edu.stanford.nlp.semgraph.SemanticGraphCoreAnnotations.BasicDependenciesAnnotation;
+import edu.stanford.nlp.semgraph.SemanticGraphEdge;
+import edu.stanford.nlp.util.CoreMap;
 import net.sf.extjwnl.JWNLException;
 
 /**
@@ -100,37 +108,40 @@ public class PredicateResolver {
 	 * Links predicates to URIs based on their mentions/synonyms and their
 	 * respective entry in the lookup-map.
 	 */
-	public String resolveToURI(String word) {
-		word = word.toLowerCase();
-		// Try with lemma and original word
-		String lemma = util.getLemmaAndPOS(word).getKey();
-		// Gets candidates for word and lemma respectively (sorted by likelihood)
-		List<Predicate> predWord = lookupMap.get(word);
-		List<Predicate> predLemma = lookupMap.get(lemma);
-		// TODO: pick the best predicate for the word not just the first with an URI
-		// (return if a match is found with the normal word, then look at the lemma)
-		if (predWord != null) {
-			Predicate bestPredWord = predWord.get(0);
+	public String resolveToURI(String mention) {
+		List<String> candidates = generateCandidates(mention);
+		for (String word: candidates) {
+			word = word.toLowerCase();
+			// Try with lemma and original word
+			String lemma = util.getLemmaAndPOS(word).getKey();
+			// Gets candidates for word and lemma respectively (sorted by likelihood)
+			List<Predicate> predWord = lookupMap.get(word);
+			List<Predicate> predLemma = lookupMap.get(lemma);
+			// TODO: pick the best predicate for the word not just the first with an URI
+			// (return if a match is found with the normal word, then look at the lemma)
+			if (predWord != null) {
+				Predicate bestPredWord = predWord.get(0);
 
-			if (bestPredWord.getUri() != null) {
-				System.out.println(bestPredWord);
-				return bestPredWord.getUri();
+				if (bestPredWord.getUri() != null) {
+					System.out.println(bestPredWord);
+					return bestPredWord.getUri();
+				}
 			}
-		}
-		if (predLemma != null) {
-			Predicate bestPredLemma = predLemma.get(0);
-			
-			if (bestPredLemma.getUri() != null) {
-				System.out.println(bestPredLemma);
-				return bestPredLemma.getUri();
+			if (predLemma != null) {
+				Predicate bestPredLemma = predLemma.get(0);
+				
+				if (bestPredLemma.getUri() != null) {
+					System.out.println(bestPredLemma);
+					return bestPredLemma.getUri();
+				}
 			}
-		}
-		if (predWord != null) {
-			Predicate bestPredWord = predWord.get(0);
+			if (predWord != null) {
+				Predicate bestPredWord = predWord.get(0);
 
-			if (bestPredWord.getUri() != null) {
-				System.out.println(bestPredWord);
-				return bestPredWord.getUri();
+				if (bestPredWord.getUri() != null) {
+					System.out.println(bestPredWord);
+					return bestPredWord.getUri();
+				}
 			}
 		}
 		return null;
@@ -138,5 +149,42 @@ public class PredicateResolver {
 
 	public Map<String, List<Predicate>> getLookupMap() {
 		return lookupMap;
+	}
+	
+	private static List<String> generateCandidates(String mention) {
+		List<String> words = new ArrayList<>(Arrays.asList(mention.split(" ")));
+		List<String> result = new ArrayList<>();
+		int index = words.size();
+		while (index > 0) {
+			int difference = words.size() - index;
+			for (int i = 0; i <= difference; i++) {
+				String candidate = String.join(" ", words.subList(i, i + index));
+				result.add(candidate);
+			}
+			index--;
+		}
+		return result;
+	}
+	
+	public String getVerbDependend(Annotation document, String predicate) {
+		List<CoreMap> sentences = document.get(SentencesAnnotation.class);
+		for (CoreMap sentence : sentences) {
+			SemanticGraph dependencies = sentence.get(BasicDependenciesAnnotation.class);
+			for (IndexedWord index: dependencies.getAllNodesByWordPattern(predicate)) {
+				List<String> result = new ArrayList<>();
+				for (SemanticGraphEdge e : dependencies.incomingEdgeIterable(dependencies.getNodeByIndex(index.index()))) {
+					if (e.getRelation().toString().equals("cop")) {
+						for (SemanticGraphEdge out: dependencies.outgoingEdgeIterable(e.getSource())) {
+							if (out.getRelation().toString().equals("amod")) {
+								result.add(out.getDependent().value());
+							}
+						}
+						result.add(e.getSource().value());
+						return String.join(" ", result);
+					}
+				}
+			}
+		}
+		return "";
 	}
 }

@@ -10,9 +10,9 @@ package com.group.proseminar.knowledge_graph.nlp;
  */
 public class Triplet<T, U, V> {
 
-	private final T first;
-	private final U second;
-	private final V third;
+	private T first;
+	private U second;
+	private V third;
 
 	public Triplet(T first, U second, V third) {
 		this.first = first;

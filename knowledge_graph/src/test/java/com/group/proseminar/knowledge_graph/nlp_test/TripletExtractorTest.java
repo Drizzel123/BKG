@@ -19,7 +19,7 @@ public class TripletExtractorTest {
 
 	@Before
 	public void setup() {
-		String text = " Londinium was founded by the Romans, who later abandoned the city.";
+		String text = "Londinium was founded by the Romans, who later abandoned the city.";
 		Properties extrProps = new Properties();
 		extrProps.put("annotators", EPROPERTIES);
 		this.extrPipeline = new StanfordCoreNLP(extrProps);

@@ -57,24 +57,24 @@ public class ExtractorPipeline {
 	public Collection<Triplet<String, String, String>> processArticle(String article) throws Exception {
 		CoreDocument doc = new CoreDocument(article);
 		corefPipeline.annotate(doc);
-		String resoluted = corefResolver.resolveCoreferences(doc);
-		if (resoluted == null) {
-			resoluted = article;
+		String resolved = corefResolver.resolveCoreferences(doc);
+		if (resolved == null) {
+			resolved = article;
 		}
 		Set<Entity> entities = corefResolver.linkEntitiesToMentions(doc);
-		
+
 		System.out.println(entities);
-		
-		Annotation res = new Annotation(resoluted);
+
+		Annotation res = new Annotation(resolved);
 		extrPipeline.annotate(res);
 		Set<Triplet<String, String, String>> triplets = extractor.extractFromText(res);
 		EntityLinker linker = new EntityLinker();
 		EntitySearcher searcher = new EntitySearcher(entities);
 
 		Collection<Triplet<String, String, String>> result = new HashSet<>();
-		
+
 		System.out.println("Triplets: " + triplets);
-		
+
 		for (Triplet<String, String, String> triplet : triplets) {
 			// handle subject and object
 			String subject = triplet.getFirst();
@@ -91,32 +91,25 @@ public class ExtractorPipeline {
 				String predURI = predResolver.resolveToURI(predicate);
 				String objURI = oEntity.getUri();
 
+				if (predURI == null) {
+					String edge = predResolver.getVerbDependend(res, predicate);
+					predURI = predResolver.resolveToURI(edge);
+					System.out.println("NEW CASE: " + predURI + " " + edge);
+				}
+
 				Triplet<String, String, String> uriTriplet = null;
 				if (subjURI != null && predURI != null && objURI != null) {
 					uriTriplet = new Triplet<>(subjURI, predURI, objURI);
-				} else if (subjURI != null && predURI != null && oEntity.getLabel() != null) {
-					uriTriplet = new Triplet<>(subjURI, predURI, oEntity.getBestMention());
-				}
+				} 
 				if (uriTriplet != null) {
 					result.add(uriTriplet);
 				}
 
 				System.out.println("Subject: " + subject + ", Predicate: " + predicate + ", Object: " + object);
 				// Print out progress
-				// Remember: not every entity might have been resolved to an URI
-				if (sEntity.getUri() != null) {
-					System.out.println("Subject (URI): " + sEntity.getUri() + ", Label: " + sEntity.getLabel());
-				} else {
-					System.out.println("Subject: " + sEntity.getBestMention());
-				}
-				if (predURI != null) {
-					System.out.println("URI: " + predURI);
-				}
-				if (oEntity.getUri() != null) {
-					System.out.println("Object (URI): " + oEntity.getUri() + ", Label: " + oEntity.getLabel());
-				} else {
-					System.out.println("Object: " + oEntity.getBestMention());
-				}
+				System.out.println("SubjectURI: " + subjURI);
+				System.out.println("PredicateURI: " + predURI);
+				System.out.println("ObjectURI: " + objURI);
 				System.out.println("-----------------------------------------------------------------------------");
 			}
 
