@@ -151,6 +151,11 @@ public class PredicateResolver {
 		return lookupMap;
 	}
 	
+	/**
+	 * Generates a list of mentions from the input string.
+	 * @param mention
+	 * @return
+	 */
 	private static List<String> generateCandidates(String mention) {
 		List<String> words = new ArrayList<>(Arrays.asList(mention.split(" ")));
 		List<String> result = new ArrayList<>();
@@ -166,6 +171,12 @@ public class PredicateResolver {
 		return result;
 	}
 	
+	/**
+	 * Gets the depending phrase of a predicate with respect to the sentence's dependency tree.
+	 * @param document - annotated document (requires parse annotation)
+	 * @param predicate 
+	 * @return depending pharse of the predicate
+	 */
 	public String getVerbDependend(Annotation document, String predicate) {
 		List<CoreMap> sentences = document.get(SentencesAnnotation.class);
 		for (CoreMap sentence : sentences) {

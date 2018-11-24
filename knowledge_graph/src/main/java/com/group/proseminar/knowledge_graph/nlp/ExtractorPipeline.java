@@ -69,7 +69,6 @@ public class ExtractorPipeline {
 		extrPipeline.annotate(res);
 		Set<Triplet<String, String, String>> triplets = extractor.extractFromText(res);
 		EntityLinker linker = new EntityLinker();
-		EntitySearcher searcher = new EntitySearcher(entities);
 
 		Collection<Triplet<String, String, String>> result = new HashSet<>();
 
@@ -80,8 +79,8 @@ public class ExtractorPipeline {
 			String subject = triplet.getFirst();
 			String predicate = triplet.getSecond();
 			String object = triplet.getThird();
-			Entity sEntity = searcher.getLargestEntity(subject);
-			Entity oEntity = searcher.getLargestEntity(object);
+			Entity sEntity = linker.getLargestEntity(entities, subject);
+			Entity oEntity = linker.getLargestEntity(entities, object);
 			if (sEntity != null && oEntity != null) {
 				Set<Entity> set = Stream.of(sEntity, oEntity).collect(Collectors.toSet());
 				// link subject and object to URIs
