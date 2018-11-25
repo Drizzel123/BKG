@@ -43,6 +43,11 @@ public class GraphConstructor {
 		return this.model;
 	}
 
+	/**
+	 * Query the range of a owl target.
+	 * @param owlTarget 
+	 * @return
+	 */
 	private static ParameterizedSparqlString getRangeQuery(String owlTarget) {
 		ParameterizedSparqlString qs = new ParameterizedSparqlString(
 				"prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> \n"
@@ -53,6 +58,11 @@ public class GraphConstructor {
 		return qs;
 	}
 
+	/**
+	 * Query the domain of a owl target.
+	 * @param owlTarget
+	 * @return
+	 */
 	private static ParameterizedSparqlString getDomainQuery(String owlTarget) {
 		ParameterizedSparqlString qs = new ParameterizedSparqlString("prefix owl: <http://www.w3.org/2002/07/owl#>\n"
 				+ "prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n" + "select distinct ?domain " + "{ <"
@@ -60,6 +70,11 @@ public class GraphConstructor {
 		return qs;
 	}
 
+	/**
+	 * Query the type of a resource target.
+	 * @param resourceTarget
+	 * @return
+	 */
 	private static ParameterizedSparqlString getTypeQuery(String resourceTarget) {
 		ParameterizedSparqlString qs = new ParameterizedSparqlString(
 				"prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> \n"
@@ -69,13 +84,23 @@ public class GraphConstructor {
 		return qs;
 	}
 
+	/**
+	 * Executes a given query.
+	 * @param query
+	 * @return
+	 */
 	private static ResultSet executeQuery(ParameterizedSparqlString query) {
 		QueryExecution exec = QueryExecutionFactory.sparqlService("http://dbpedia.org/sparql", query.asQuery());
 		ResultSet results = exec.execSelect();
 		return results;
 	}
 
-	private void insertAncestryToGraph(String initURI, int maxruns) {
+	/**
+	 * Insert the URIs forking from the initial URI with predicates type/domain/range.
+	 * @param initURI
+	 * @param maxruns
+	 */
+	public void insertAncestryToModel(Model model, String initURI, int maxruns) {
 		Stack<String> resourceURIs = new Stack<>();
 		resourceURIs.add(initURI);
 		int i = 0;
@@ -86,6 +111,7 @@ public class GraphConstructor {
 				ResultSet types = executeQuery(getTypeQuery(resourceURI));
 				// TODO: not sure if typeOf uri is correct
 				insert(model, resourceURIs, subject, typeOf, types, "type");
+				// TODO: add subClassOf
 
 			} else if (resourceURI.startsWith("http://dbpedia.org/ontology/")) {
 				ResultSet ranges = executeQuery(getRangeQuery(resourceURI));
@@ -97,6 +123,15 @@ public class GraphConstructor {
 		}
 	}
 
+	/**
+	 * Insert results to the model and add URIs to stack for further processing.
+	 * @param model
+	 * @param stack
+	 * @param subject
+	 * @param property
+	 * @param results
+	 * @param varName
+	 */
 	private void insert(Model model, Stack<String> stack, Resource subject, Property property, ResultSet results,
 			String varName) {
 		while (results.hasNext()) {
@@ -124,7 +159,7 @@ public class GraphConstructor {
 		while (iterP.hasNext()) {
 			Triple triple = iterP.next().asTriple();
 			String url = triple.getSubject().toString();
-			postProcessing.insertAncestryToGraph(url, 10);
+			postProcessing.insertAncestryToModel(postProcessing.getModel(), url, 10);
 			Thread.sleep(10);
 		}
 		
@@ -133,7 +168,7 @@ public class GraphConstructor {
 		while(iterC.hasNext()) {
 			Triple triple = iterC.next().asTriple();
 			String url = triple.getSubject().toString();
-			postProcessing.insertAncestryToGraph(url, 10);
+			postProcessing.insertAncestryToModel(postProcessing.getModel(), url, 10);
 			Thread.sleep(10);
 		}
 		

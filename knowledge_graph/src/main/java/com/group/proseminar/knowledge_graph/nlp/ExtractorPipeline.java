@@ -93,7 +93,6 @@ public class ExtractorPipeline {
 				if (predURI == null) {
 					String edge = predResolver.getVerbDependend(res, predicate);
 					predURI = predResolver.resolveToURI(edge);
-					System.out.println("NEW CASE: " + predURI + " " + edge);
 				}
 
 				Triplet<String, String, String> uriTriplet = null;
