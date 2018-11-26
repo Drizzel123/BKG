@@ -60,7 +60,7 @@ public class ExtractorPipeline {
 		this.extrPipeline = new StanfordCoreNLP(extrProps);
 		this.predResolver = new PredicateResolver();
 		// Initialize writer and model for output
-		Path path = Paths.get("src/main/resources/nlp_result.ttl");
+		Path path = Paths.get("src/main/resources/nlp_before_post_processing.ttl");
 		this.writer = new BufferedWriter(new FileWriter(path.toUri().getPath()));
 		this.resultModel = ModelFactory.createDefaultModel();
 		this.resultModel.setNsPrefix("dbr", "http://dbpedia.org/resource/");

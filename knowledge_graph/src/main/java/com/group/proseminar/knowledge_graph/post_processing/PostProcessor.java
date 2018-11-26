@@ -1,5 +1,8 @@
 package com.group.proseminar.knowledge_graph.post_processing;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.net.URI;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -31,7 +34,7 @@ public class PostProcessor {
 		String subject = statement.getSubject().toString();
 		String predicate = statement.getPredicate().toString();
 		String object = statement.getObject().toString();
-		
+
 		Model subjModel = ModelFactory.createDefaultModel();
 		constructor.insertAncestryToModel(subjModel, subject, 10);
 		NodeIterator tSubj = subjModel.listObjectsOfProperty(subjModel.getResource(subject), RDF.type);
@@ -50,15 +53,15 @@ public class PostProcessor {
 		Set<RDFNode> pSet = new HashSet<>();
 		dPred.forEachRemaining(pSet::add);
 		rPred.forEachRemaining(pSet::add);
-		
+
 		// IMPORTANT: sSet is now modified
 		sSet.retainAll(pSet);
-		
+
 		if (!sSet.isEmpty()) {
 			// subject and predicate have a common ancestor
 			return true;
 		}
-		
+
 		Model oModel = ModelFactory.createDefaultModel();
 		constructor.insertAncestryToModel(oModel, object, 10);
 		NodeIterator oObj = oModel.listObjectsOfProperty(oModel.getResource(object), RDF.type);
@@ -69,9 +72,9 @@ public class PostProcessor {
 		oObj.forEachRemaining(oSet::add);
 		rObj.forEachRemaining(oSet::add);
 		dObj.forEachRemaining(oSet::add);
-		
+
 		oSet.retainAll(pSet);
-		
+
 		if (!oSet.isEmpty()) {
 			// object and predicate have a common ancestor
 			return true;
@@ -79,25 +82,33 @@ public class PostProcessor {
 		return false;
 	}
 
-	public void performPostProcessing() {
+	public void performPostProcessing(String originPath, String successfulPath, String unsuccessfulPath)
+			throws IOException {
 		// Initialize reader model
-		Path path = Paths.get("src/main/resources/nlp_result.ttl");
-		URI uri = path.toUri();
+		Path origin = Paths.get(originPath);
+		URI originURI = origin.toUri();
 		Model reader = ModelFactory.createDefaultModel();
-		reader.read(uri.toString(), "Turtle");
+		reader.read(originURI.toString(), "Turtle");
 		StmtIterator statements = reader.listStatements();
+
 		// Initialize model for successful post-processed statements
 		Model successful = ModelFactory.createDefaultModel();
+
 		// Initialize model for unsuccessful post-processed statements
 		Model unsuccessful = ModelFactory.createDefaultModel();
 
 		List<Statement> list = new ArrayList<>();
 		statements.forEachRemaining(list::add);
-		list.stream().map(x-> checkTriplet(x)? successful.add(x) : unsuccessful.add(x));
-		
-		System.out.println("Successful:");
-		successful.write(System.out,"Turtle");
-		System.out.println("Unsuccessful:");
-		unsuccessful.write(System.out,"Turtle");
+		list.stream().map(x -> checkTriplet(x) ? successful.add(x) : unsuccessful.add(x));
+
+		// Write successful model to path
+		URI successfulURI = Paths.get(successfulPath).toUri();
+		BufferedWriter successfulWriter = new BufferedWriter(new FileWriter(successfulURI.getPath()));
+		successful.write(successfulWriter, "Turtle");
+
+		// Write unsuccessful model to path
+		URI unsuccessfulURI = Paths.get(unsuccessfulPath).toUri();
+		BufferedWriter unsuccessfulWriter = new BufferedWriter(new FileWriter(unsuccessfulURI.getPath()));
+		unsuccessful.write(unsuccessfulWriter, "Turtle");
 	}
 }
