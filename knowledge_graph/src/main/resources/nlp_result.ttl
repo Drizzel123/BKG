@@ -1,0 +1,7 @@
+@prefix dbo:   <http://dbpedia.org/ontology/> .
+@prefix dbr:   <http://dbpedia.org/resource/> .
+
+dbr:Barack_Obama  dbo:monarch  dbr:United_States ;
+        dbo:president  dbr:United_States .
+
+dbr:New_York_City  dbo:city  dbr:United_States .

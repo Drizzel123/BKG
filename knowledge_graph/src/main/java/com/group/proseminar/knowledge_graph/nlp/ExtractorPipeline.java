@@ -1,11 +1,21 @@
 package com.group.proseminar.knowledge_graph.nlp;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Properties;
 import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
+import org.apache.jena.rdf.model.Model;
+import org.apache.jena.rdf.model.ModelFactory;
+import org.apache.jena.rdf.model.Property;
+import org.apache.jena.rdf.model.Resource;
 
 import com.group.proseminar.knowledge_graph.ontology.PredicateResolver;
 
@@ -28,11 +38,15 @@ public class ExtractorPipeline {
 	private CoreferenceResolver corefResolver;
 	private TripletExtractor extractor;
 	private PredicateResolver predResolver;
+	private BufferedWriter writer;
+	private Model resultModel;
 
 	/**
 	 * Initialize dependent classes and setup annotators.
+	 * 
+	 * @throws IOException
 	 */
-	public ExtractorPipeline() {
+	public ExtractorPipeline() throws IOException {
 		this.corefResolver = new CoreferenceResolver();
 		this.extractor = new TripletExtractor();
 		// Initialize corefPipeline
@@ -45,16 +59,21 @@ public class ExtractorPipeline {
 		extrProps.put("annotators", EPROPERTIES);
 		this.extrPipeline = new StanfordCoreNLP(extrProps);
 		this.predResolver = new PredicateResolver();
+		// Initialize writer and model for output
+		Path path = Paths.get("src/main/resources/nlp_result.ttl");
+		this.writer = new BufferedWriter(new FileWriter(path.toUri().getPath()));
+		this.resultModel = ModelFactory.createDefaultModel();
+		this.resultModel.setNsPrefix("dbr", "http://dbpedia.org/resource/");
+		this.resultModel.setNsPrefix("dbo", "http://dbpedia.org/ontology/");
 	}
 
 	/**
 	 * Executes pipeline approach on a given article.
 	 * 
 	 * @param article
-	 * @return a collection of found triplets, specified by URIs.
 	 * @throws Exception
 	 */
-	public Collection<Triplet<String, String, String>> processArticle(String article) throws Exception {
+	public void processArticle(String article) throws Exception {
 		CoreDocument doc = new CoreDocument(article);
 		corefPipeline.annotate(doc);
 		String resolved = corefResolver.resolveCoreferences(doc);
@@ -98,7 +117,7 @@ public class ExtractorPipeline {
 				Triplet<String, String, String> uriTriplet = null;
 				if (subjURI != null && predURI != null && objURI != null) {
 					uriTriplet = new Triplet<>(subjURI, predURI, objURI);
-				} 
+				}
 				if (uriTriplet != null) {
 					result.add(uriTriplet);
 				}
@@ -110,12 +129,29 @@ public class ExtractorPipeline {
 				System.out.println("ObjectURI: " + objURI);
 				System.out.println("-----------------------------------------------------------------------------");
 			}
-
-			// handle predicate
-			// TODO: handle predicate
 		}
-		System.out.println("Processing finished.");
-		System.out.println("Result: " + result);
-		return result;
+		
+		// Insert results to model
+		result.stream().forEach(x->insertTripletToModel(x.getFirst(), x.getSecond(), x.getThird()));
+	}
+
+	/**
+	 * Inserts triplets of format subject, predicate, object to a jena-model.
+	 * @param sURI - uri of subject
+	 * @param pURI - uri of predicate
+	 * @param oURI - uri of object
+	 */
+	private void insertTripletToModel(String sURI, String pURI, String oURI) {
+		Resource sResource = this.resultModel.createResource(sURI);
+		Property property = this.resultModel.createProperty(pURI);
+		Resource oResource = this.resultModel.createResource(oURI);
+		this.resultModel.add(sResource, property, oResource);
+	}
+	
+	/**
+	 * Write model to file.
+	 */
+	public void writeResultToFile() {
+		this.resultModel.write(writer,"Turtle");
 	}
 }

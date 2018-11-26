@@ -19,6 +19,8 @@ import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.rdf.model.Property;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.rdf.model.StmtIterator;
+import org.apache.jena.vocabulary.RDF;
+import org.apache.jena.vocabulary.RDFS;
 
 /**
  * Creates a graph based on domain/range/type relations.
@@ -28,15 +30,9 @@ import org.apache.jena.rdf.model.StmtIterator;
  */
 public class GraphConstructor {
 	private Model model;
-	private Property typeOf;
-	private Property range;
-	private Property domain;
 
 	public GraphConstructor() {
 		this.model = ModelFactory.createDefaultModel();
-		this.typeOf = model.createProperty("http://dbpedia.org/ontology/type");
-		this.range = model.createProperty("http://dbpedia.org/ontology/range");
-		this.domain = model.createProperty("http://dbpedia.org/ontology/domain");
 	}
 
 	public Model getModel() {
@@ -45,7 +41,8 @@ public class GraphConstructor {
 
 	/**
 	 * Query the range of a owl target.
-	 * @param owlTarget 
+	 * 
+	 * @param owlTarget
 	 * @return
 	 */
 	private static ParameterizedSparqlString getRangeQuery(String owlTarget) {
@@ -60,6 +57,7 @@ public class GraphConstructor {
 
 	/**
 	 * Query the domain of a owl target.
+	 * 
 	 * @param owlTarget
 	 * @return
 	 */
@@ -72,6 +70,7 @@ public class GraphConstructor {
 
 	/**
 	 * Query the type of a resource target.
+	 * 
 	 * @param resourceTarget
 	 * @return
 	 */
@@ -86,6 +85,7 @@ public class GraphConstructor {
 
 	/**
 	 * Executes a given query.
+	 * 
 	 * @param query
 	 * @return
 	 */
@@ -96,7 +96,9 @@ public class GraphConstructor {
 	}
 
 	/**
-	 * Insert the URIs forking from the initial URI with predicates type/domain/range.
+	 * Insert the URIs forking from the initial URI with predicates
+	 * type/domain/range.
+	 * 
 	 * @param initURI
 	 * @param maxruns
 	 */
@@ -110,14 +112,14 @@ public class GraphConstructor {
 			if (resourceURI.startsWith("http://dbpedia.org/resource/")) {
 				ResultSet types = executeQuery(getTypeQuery(resourceURI));
 				// TODO: not sure if typeOf uri is correct
-				insert(model, resourceURIs, subject, typeOf, types, "type");
+				insert(model, resourceURIs, subject, RDF.type, types, "type");
 				// TODO: add subClassOf
 
 			} else if (resourceURI.startsWith("http://dbpedia.org/ontology/")) {
 				ResultSet ranges = executeQuery(getRangeQuery(resourceURI));
-				insert(model, resourceURIs, subject, range, ranges, "range");
+				insert(model, resourceURIs, subject, RDFS.range, ranges, "range");
 				ResultSet domains = executeQuery(getDomainQuery(resourceURI));
-				insert(model, resourceURIs, subject, domain, domains, "domain");
+				insert(model, resourceURIs, subject, RDFS.domain, domains, "domain");
 			}
 			i++;
 		}
@@ -125,6 +127,7 @@ public class GraphConstructor {
 
 	/**
 	 * Insert results to the model and add URIs to stack for further processing.
+	 * 
 	 * @param model
 	 * @param stack
 	 * @param subject
@@ -139,11 +142,11 @@ public class GraphConstructor {
 			Resource object = model.getResource(next.get(varName).toString());
 			model.add(subject, property, object);
 			if (object.getURI().startsWith("http://dbpedia.org/resource/")) {
-				if (!model.contains(object, typeOf)) {
+				if (!model.contains(object, RDF.type)) {
 					stack.add(object.getURI());
 				}
 			} else if (object.getURI().startsWith("http://dbpedia.org/ontology/")) {
-				if (!model.contains(object, range) || !model.contains(object, domain)) {
+				if (!model.contains(object, RDFS.range) || !model.contains(object, RDFS.domain)) {
 					stack.add(object.getURI());
 				}
 			}
@@ -152,7 +155,7 @@ public class GraphConstructor {
 
 	public static void main(String[] args) throws IOException, InterruptedException {
 		GraphConstructor postProcessing = new GraphConstructor();
-		
+
 		Model reader = ModelFactory.createDefaultModel();
 		reader.read("dbpedia_3Eng_property.ttl", "TURTLE");
 		StmtIterator iterP = reader.listStatements();
@@ -162,16 +165,16 @@ public class GraphConstructor {
 			postProcessing.insertAncestryToModel(postProcessing.getModel(), url, 10);
 			Thread.sleep(10);
 		}
-		
+
 		reader.read("dbpedia_3Eng_class.ttl", "TURTLE");
 		StmtIterator iterC = reader.listStatements();
-		while(iterC.hasNext()) {
+		while (iterC.hasNext()) {
 			Triple triple = iterC.next().asTriple();
 			String url = triple.getSubject().toString();
 			postProcessing.insertAncestryToModel(postProcessing.getModel(), url, 10);
 			Thread.sleep(10);
 		}
-		
+
 		Path path = Paths.get("src/main/resources/graph.ttl");
 		URI uri = path.toUri();
 		BufferedWriter writer = new BufferedWriter(new FileWriter(uri.getPath()));

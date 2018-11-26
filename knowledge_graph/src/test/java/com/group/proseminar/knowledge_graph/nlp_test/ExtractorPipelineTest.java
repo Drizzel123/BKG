@@ -24,10 +24,11 @@ public class ExtractorPipelineTest {
 	@Test
 	public void extractFromTextTest() throws Exception {
 		ExtractorPipeline pipeline = new ExtractorPipeline();
-//		pipeline.processArticle("New York City is the most densely populated major city in the United States.");
-//		pipeline.processArticle("Barack Obama is the next president of America.");
+		pipeline.processArticle("New York City is the most densely populated major city in the United States.");
+		pipeline.processArticle("Barack Obama is the next president of America.");
 		pipeline.processArticle("Obama was the king of America.");
-//		pipeline.processArticle("Rome was founded by Romans, who later abandoned the city.");
+		pipeline.processArticle("Rome was founded by Romans, who later abandoned the city.");
+		pipeline.writeResultToFile();
 		assertEquals(true, true);
 	}
 }
