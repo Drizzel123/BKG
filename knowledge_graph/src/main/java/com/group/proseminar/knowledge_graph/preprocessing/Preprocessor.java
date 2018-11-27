@@ -11,8 +11,22 @@ import edu.stanford.nlp.pipeline.CoreEntityMention;
 import edu.stanford.nlp.pipeline.StanfordCoreNLP;
 import edu.stanford.nlp.simple.Document;
 
+/**
+ * Provides preprocessing using its static method preprocess.
+ * 
+ * @author Sibar Soumi
+ *
+ */
 
 public class Preprocessor {
+	/**
+	 * Removes special characters from the text and converts patterns like:
+	 * "<i>Albert Einstein (14 March 1879 – 18 April 1955)</i>"
+	 * into "<i>Albert Einstein was born in 14 March 1879. Albert Einstein died in 18 April 1955</i>"
+	 * @param uri
+	 * @param plainText The text to be preprocessed.
+	 * @return The text {@link plainTesxt} after preprocessing being performed on it.
+	 */
 	public static String preprocess(String uri, String plainText) {
 		plainText = plainText.replaceAll("[^(\\x00-\\xFF)|\\u2013|\\u2014]", "");
 		
@@ -43,11 +57,15 @@ public class Preprocessor {
 			plainText=person+" died in "+Dates.get(1)+". "+plainText;
 		    	
 		if (Dates.size()>=1)
-			plainText=person+" is born in "+Dates.get(0)+". "+plainText;
+			plainText=person+" was born in "+Dates.get(0)+". "+plainText;
 		
 		return plainText;
 	}
-
+	/**
+	 * Converts Dates from format "May 26, 1980" into "26 May 1980".
+	 * @param Date The date whose format is to be converted
+	 * @return The date {@link Date} after being converted into the new format.
+	 */
 	private static String fixDateFormat(String Date) {
 		if (Date.matches(
 				"\\d{1,2}\\s(January|February|March|April|May|June|July|August|September|October|November|December)\\s\\d{1,4}"))

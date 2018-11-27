@@ -2,6 +2,14 @@ package com.group.proseminar.knowledge_graph.reader;
 
 import com.group.proseminar.knowledge_graph.preprocessing.Preprocessor;
 
+/**
+ * An object from this class is generated for each article fetched by {@link DataFetcher}.
+ * It calls all the required steps for handling the article.
+ * 
+ * @author Sibar Soumi
+ *
+ */
+
 class ArticleHolder extends Thread {
 	private String plainText, uri;
 	private Controller controller;
