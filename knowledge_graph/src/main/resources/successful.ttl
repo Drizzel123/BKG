@@ -1,9 +1,7 @@
-<http://dbpedia.org/resource/Barack_Obama>
-        <http://dbpedia.org/ontology/monarch>
-                <http://dbpedia.org/resource/United_States> ;
-        <http://dbpedia.org/ontology/president>
-                <http://dbpedia.org/resource/United_States> .
+@prefix dbo:   <http://dbpedia.org/ontology/> .
+@prefix dbr:   <http://dbpedia.org/resource/> .
 
-<http://dbpedia.org/resource/New_York_City>
-        <http://dbpedia.org/ontology/city>
-                <http://dbpedia.org/resource/United_States> .
+dbr:Barack_Obama  dbo:monarch  dbr:United_States ;
+        dbo:president  dbr:United_States .
+
+dbr:New_York_City  dbo:city  dbr:United_States .

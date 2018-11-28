@@ -1,1345 +1,1117 @@
-<http://dbpedia.org/ontology/activeYearsStartDate>
+@prefix dbo:   <http://dbpedia.org/ontology/> .
+@prefix dbr:   <http://dbpedia.org/resource/> .
+
+dbo:activeYearsStartDate
         <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#date> .
 
-<http://dbpedia.org/ontology/highestRegion>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Island> ;
+dbo:highestRegion  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Island ;
         <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/PopulatedPlace> .
+                dbo:PopulatedPlace .
 
-<http://dbpedia.org/ontology/servingRailwayLine>
+dbo:servingRailwayLine
         <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Station> .
+                dbo:Station .
 
-<http://dbpedia.org/ontology/operatingSystem>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Software> .
+dbo:operatingSystem  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Software .
 
-<http://dbpedia.org/ontology/decommissioningDate>
+dbo:decommissioningDate
         <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Ship> ;
+                dbo:Ship ;
         <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#date> .
 
-<http://dbpedia.org/ontology/deathYear>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Person> ;
+dbo:deathYear  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Person ;
         <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#gYear> .
 
-<http://dbpedia.org/ontology/composer>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Work> ;
+dbo:composer  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Work ;
         <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Person> .
+                dbo:Person .
 
-<http://dbpedia.org/ontology/debutTeam>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Athlete> ;
+dbo:debutTeam  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Athlete ;
         <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/SportsTeam> .
+                dbo:SportsTeam .
 
-<http://dbpedia.org/ontology/populationDensity>
+dbo:populationDensity
         <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/PopulatedPlace> ;
+                dbo:PopulatedPlace ;
         <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#double> .
 
-<http://dbpedia.org/ontology/timeZone>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Place> .
+dbo:timeZone  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Place .
 
-<http://dbpedia.org/ontology/university>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Person> ;
+dbo:university  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Person ;
         <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/EducationalInstitution> .
+                dbo:EducationalInstitution .
 
-<http://dbpedia.org/ontology/topSpeed>
-        <http://www.w3.org/2000/01/rdf-schema#range>
+dbo:topSpeed  <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#double> .
 
-<http://dbpedia.org/ontology/instrument>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Artist> ;
+dbo:instrument  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Artist ;
         <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Instrument> .
+                dbo:Instrument .
 
-<http://dbpedia.org/ontology/distributor>
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Organisation> .
+dbo:distributor  <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:Organisation .
 
-<http://dbpedia.org/ontology/ground>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/SoccerClub> ;
+dbo:ground  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:SoccerClub ;
         <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Place> .
+                dbo:Place .
 
-<http://dbpedia.org/ontology/averageSpeed>
-        <http://www.w3.org/2000/01/rdf-schema#range>
+dbo:averageSpeed  <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#double> .
 
-<http://dbpedia.org/ontology/spokenIn>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Language> ;
+dbo:spokenIn  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Language ;
         <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/PopulatedPlace> .
+                dbo:PopulatedPlace .
 
-<http://dbpedia.org/ontology/second>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Person> ;
+dbo:second  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Person ;
         <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 
-<http://dbpedia.org/ontology/designer>
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Person> .
+dbo:designer  <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:Person .
 
-<http://dbpedia.org/ontology/parent>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Person> ;
+dbo:parent  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Person ;
         <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Person> .
+                dbo:Person .
 
-<http://dbpedia.org/ontology/title>
-        <http://www.w3.org/2000/01/rdf-schema#range>
+dbo:title  <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString> .
 
-<http://dbpedia.org/ontology/nrhpReferenceNumber>
+dbo:nrhpReferenceNumber
         <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/HistoricPlace> ;
+                dbo:HistoricPlace ;
         <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#string> .
 
-<http://dbpedia.org/ontology/genre>
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Genre> .
+dbo:genre  <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:Genre .
 
-<http://dbpedia.org/ontology/office>
+dbo:office  <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#string> .
+
+dbo:releaseDate  <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#date> .
+
+dbo:order  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Species .
+
+dbo:province  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Place ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:Province .
+
+dbo:capacity  <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+
+dbo:result  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:MilitaryConflict ;
         <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#string> .
 
-<http://dbpedia.org/ontology/releaseDate>
+dbo:county  <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:PopulatedPlace .
+
+dbo:foundingDate  <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#date> .
+
+dbo:weight  <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#double> .
+
+dbo:synonym  <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#string> .
+
+dbo:maximumElevation  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Place ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#double> .
+
+dbo:viceChancellor  <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:Person .
+
+dbo:board  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Person .
+
+dbo:commander  <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:Person .
+
+dbo:department  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:PopulatedPlace ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:PopulatedPlace .
+
+dbo:mouthPlace  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:River ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:PopulatedPlace .
+
+dbo:kingdom  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Species .
+
+dbo:field  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Artist .
+
+dbo:areaUrban  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:PopulatedPlace ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#double> .
+
+dbo:cinematography  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Film ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:Person .
+
+dbo:arrondissement  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:PopulatedPlace ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:PopulatedPlace .
+
+dbo:license  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Work .
+
+dbo:deathDate  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Person ;
         <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#date> .
 
-<http://dbpedia.org/ontology/order>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Species> .
-
-<http://dbpedia.org/ontology/province>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Place> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Province> .
-
-<http://dbpedia.org/ontology/capacity>
+dbo:populationMetro  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:PopulatedPlace ;
         <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 
-<http://dbpedia.org/ontology/result>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/MilitaryConflict> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2001/XMLSchema#string> .
-
-<http://dbpedia.org/ontology/county>
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/PopulatedPlace> .
-
-<http://dbpedia.org/ontology/foundingDate>
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2001/XMLSchema#date> .
-
-<http://dbpedia.org/ontology/weight>
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2001/XMLSchema#double> .
-
-<http://dbpedia.org/ontology/synonym>
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2001/XMLSchema#string> .
-
-<http://dbpedia.org/ontology/maximumElevation>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Place> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2001/XMLSchema#double> .
-
-<http://dbpedia.org/ontology/viceChancellor>
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Person> .
-
-<http://dbpedia.org/ontology/board>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Person> .
-
-<http://dbpedia.org/ontology/commander>
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Person> .
-
-<http://dbpedia.org/ontology/department>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/PopulatedPlace> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/PopulatedPlace> .
-
-<http://dbpedia.org/ontology/mouthPlace>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/River> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/PopulatedPlace> .
-
-<http://dbpedia.org/ontology/kingdom>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Species> .
-
-<http://dbpedia.org/ontology/field>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Artist> .
-
-<http://dbpedia.org/ontology/areaUrban>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/PopulatedPlace> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2001/XMLSchema#double> .
-
-<http://dbpedia.org/ontology/cinematography>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Film> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Person> .
-
-<http://dbpedia.org/ontology/arrondissement>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/PopulatedPlace> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/PopulatedPlace> .
-
-<http://dbpedia.org/ontology/license>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Work> .
-
-<http://dbpedia.org/ontology/deathDate>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Person> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2001/XMLSchema#date> .
-
-<http://dbpedia.org/ontology/populationMetro>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/PopulatedPlace> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-
-<http://dbpedia.org/ontology/openingYear>
-        <http://www.w3.org/2000/01/rdf-schema#range>
+dbo:openingYear  <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#gYear> .
 
-<http://dbpedia.org/ontology/periapsis>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/CelestialBody> ;
+dbo:periapsis  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:CelestialBody ;
         <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#double> .
 
-<http://dbpedia.org/ontology/alias>
-        <http://www.w3.org/2000/01/rdf-schema#range>
+dbo:alias  <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString> .
 
-<http://dbpedia.org/ontology/patron>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/MilitaryUnit> ;
+dbo:patron  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:MilitaryUnit ;
         <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Person> .
+                dbo:Person .
 
-<http://dbpedia.org/ontology/gross>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Film> ;
+dbo:gross  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Film ;
         <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#double> .
 
-<http://dbpedia.org/ontology/minimumElevation>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Place> ;
+dbo:minimumElevation  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Place ;
         <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#double> .
 
-<http://dbpedia.org/ontology/status>
+dbo:status  <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#string> .
+
+dbo:canton  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Settlement ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:Settlement .
+
+dbo:slogan  <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString> .
+
+dbo:bSide  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Single ;
         <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#string> .
 
-<http://dbpedia.org/ontology/canton>
+dbo:sourceCountry  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Stream ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:Country .
+
+dbo:structuralSystem  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Building .
+
+dbo:creator  <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:Agent .
+
+dbo:binomialAuthority
         <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Settlement> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Settlement> .
+                dbo:Species .
 
-<http://dbpedia.org/ontology/slogan>
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString> .
+dbo:developer  <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:Agent .
 
-<http://dbpedia.org/ontology/bSide>
+dbo:language  <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:Language .
+
+dbo:raceHorse  <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:RaceHorse .
+
+dbo:neighboringMunicipality
         <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Single> ;
+                dbo:PopulatedPlace ;
         <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2001/XMLSchema#string> .
+                dbo:PopulatedPlace .
 
-<http://dbpedia.org/ontology/sourceCountry>
+dbo:icaoLocationIdentifier
         <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Stream> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Country> .
-
-<http://dbpedia.org/ontology/structuralSystem>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Building> .
-
-<http://dbpedia.org/ontology/creator>
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Agent> .
-
-<http://dbpedia.org/ontology/binomialAuthority>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Species> .
-
-<http://dbpedia.org/ontology/developer>
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Agent> .
-
-<http://dbpedia.org/ontology/language>
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Language> .
-
-<http://dbpedia.org/ontology/raceHorse>
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/RaceHorse> .
-
-<http://dbpedia.org/ontology/neighboringMunicipality>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/PopulatedPlace> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/PopulatedPlace> .
-
-<http://dbpedia.org/ontology/icaoLocationIdentifier>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Airport> ;
+                dbo:Airport ;
         <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#string> .
 
-<http://dbpedia.org/ontology/routeJunction>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/RouteOfTransportation> ;
+dbo:routeJunction  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:RouteOfTransportation ;
         <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/RouteOfTransportation> .
+                dbo:RouteOfTransportation .
 
-<http://dbpedia.org/ontology/place>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/MilitaryConflict> ;
+dbo:place  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:MilitaryConflict ;
         <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/PopulatedPlace> .
+                dbo:PopulatedPlace .
 
-<http://dbpedia.org/ontology/boilingPoint>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/ChemicalSubstance> ;
+dbo:boilingPoint  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:ChemicalSubstance ;
         <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#double> .
 
-<http://dbpedia.org/ontology/broadcastArea>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Broadcaster> ;
+dbo:broadcastArea  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Broadcaster ;
         <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/PopulatedPlace> .
+                dbo:PopulatedPlace .
 
-<http://dbpedia.org/ontology/revenue>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Organisation> ;
+dbo:revenue  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Organisation ;
         <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#double> .
 
-<http://dbpedia.org/ontology/college>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Person> ;
+dbo:college  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Person ;
         <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/EducationalInstitution> .
+                dbo:EducationalInstitution .
 
-<http://dbpedia.org/ontology/populationMetroDensity>
+dbo:populationMetroDensity
         <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/PopulatedPlace> ;
+                dbo:PopulatedPlace ;
         <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#double> .
 
-<http://dbpedia.org/ontology/day>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Settlement> ;
+dbo:day  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Settlement ;
         <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#date> .
 
-<http://dbpedia.org/ontology/sisterStation>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Broadcaster> ;
+dbo:sisterStation  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Broadcaster ;
         <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Broadcaster> .
+                dbo:Broadcaster .
 
-<http://dbpedia.org/ontology/profession>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Person> .
+dbo:profession  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Person .
 
-<http://dbpedia.org/ontology/dateCompleted>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Canal> ;
+dbo:dateCompleted  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Canal ;
         <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#date> .
 
-<http://dbpedia.org/ontology/owningCompany>
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Company> .
+dbo:owningCompany  <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:Company .
 
-<http://dbpedia.org/ontology/colourName>
+dbo:colourName  <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString> .
+
+dbo:pseudonym  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Person ;
         <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString> .
 
-<http://dbpedia.org/ontology/pseudonym>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Person> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString> .
+dbo:assembly  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:MeanOfTransportation .
 
-<http://dbpedia.org/ontology/assembly>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/MeanOfTransportation> .
-
-<http://dbpedia.org/ontology/elevation>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Place> ;
+dbo:elevation  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Place ;
         <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#double> .
 
-<http://dbpedia.org/ontology/shipLaunch>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Ship> ;
+dbo:shipLaunch  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Ship ;
         <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#date> .
 
-<http://dbpedia.org/ontology/languageFamily>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Language> .
+dbo:languageFamily  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Language .
 
-<http://dbpedia.org/ontology/address>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Place> ;
+dbo:address  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Place ;
         <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString> .
 
-<http://dbpedia.org/ontology/programmeFormat>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Broadcaster> .
+dbo:programmeFormat  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Broadcaster .
 
-<http://dbpedia.org/ontology/writer>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Work> ;
+dbo:writer  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Work ;
         <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Person> .
+                dbo:Person .
 
-<http://dbpedia.org/ontology/seatingCapacity>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Building> ;
+dbo:seatingCapacity  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Building ;
         <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 
-<http://dbpedia.org/ontology/review>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Album> ;
+dbo:review  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Album ;
         <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#anyURI> .
 
-<http://dbpedia.org/ontology/ethnicity>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Person> ;
+dbo:ethnicity  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Person ;
         <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/EthnicGroup> .
+                dbo:EthnicGroup .
 
-<http://dbpedia.org/ontology/homeArena>
+dbo:homeArena  <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:Arena .
+
+dbo:editing  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Film ;
         <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Arena> .
+                dbo:Person .
 
-<http://dbpedia.org/ontology/editing>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Film> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Person> .
-
-<http://dbpedia.org/ontology/oclc>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/WrittenWork> ;
+dbo:oclc  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:WrittenWork ;
         <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#string> .
 
-<http://dbpedia.org/ontology/guest>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/TelevisionEpisode> ;
+dbo:guest  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:TelevisionEpisode ;
         <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Person> .
+                dbo:Person .
 
-<http://dbpedia.org/ontology/width>
-        <http://www.w3.org/2000/01/rdf-schema#range>
+dbo:width  <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#double> .
 
-<http://dbpedia.org/ontology/commissioningDate>
+dbo:commissioningDate
         <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Ship> ;
+                dbo:Ship ;
         <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#date> .
 
-<http://dbpedia.org/ontology/launchDate>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/SpaceMission> ;
+dbo:launchDate  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:SpaceMission ;
         <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#date> .
 
-<http://dbpedia.org/ontology/birthPlace>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Person> ;
+dbo:birthPlace  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Person ;
         <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Place> .
+                dbo:Place .
 
-<http://dbpedia.org/ontology/recordDate>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/MusicalWork> ;
+dbo:recordDate  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:MusicalWork ;
         <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#date> .
 
-<http://dbpedia.org/ontology/headquarter>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Organisation> ;
+dbo:headquarter  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Organisation ;
         <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/PopulatedPlace> .
+                dbo:PopulatedPlace .
 
-<http://dbpedia.org/ontology/subsequentWork>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Work> ;
+dbo:subsequentWork  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Work ;
         <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Work> .
+                dbo:Work .
 
-<http://dbpedia.org/ontology/openingFilm>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/FilmFestival> ;
+dbo:openingFilm  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:FilmFestival ;
         <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Film> .
+                dbo:Film .
 
-<http://dbpedia.org/ontology/commonName>
-        <http://www.w3.org/2000/01/rdf-schema#range>
+dbo:commonName  <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString> .
 
-<http://dbpedia.org/ontology/latestReleaseVersion>
+dbo:latestReleaseVersion
         <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Software> ;
+                dbo:Software ;
         <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#string> .
 
-<http://dbpedia.org/ontology/class>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/MeanOfTransportation> .
+dbo:class  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:MeanOfTransportation .
 
-<http://dbpedia.org/ontology/computingMedia>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Software> .
+dbo:computingMedia  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Software .
 
-<http://dbpedia.org/ontology/range>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
+dbo:range  <http://www.w3.org/2000/01/rdf-schema#domain>
                 <http://dbpedia.org/ontology/MeanOfTransportation_,_Instrument> ;
         <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#positiveInteger> .
 
-<http://dbpedia.org/ontology/populationPlace>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/EthnicGroup> ;
+dbo:populationPlace  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:EthnicGroup ;
         <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/PopulatedPlace> .
+                dbo:PopulatedPlace .
 
-<http://dbpedia.org/ontology/formerBandMember>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Band> ;
+dbo:formerBandMember  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Band ;
         <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Person> .
+                dbo:Person .
 
-<http://dbpedia.org/ontology/areaLand>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Place> ;
+dbo:areaLand  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Place ;
         <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#double> .
 
-<http://dbpedia.org/ontology/channel>
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Broadcaster> .
+dbo:channel  <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:Broadcaster .
 
-<http://dbpedia.org/ontology/requirement>
+dbo:requirement  <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#string> .
+
+dbo:utcOffset  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Place ;
         <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#string> .
 
-<http://dbpedia.org/ontology/utcOffset>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Place> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2001/XMLSchema#string> .
-
-<http://dbpedia.org/ontology/birthYear>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Person> ;
+dbo:birthYear  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Person ;
         <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#gYear> .
 
-<http://dbpedia.org/ontology/number>
-        <http://www.w3.org/2000/01/rdf-schema#range>
+dbo:number  <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#string> .
 
-<http://dbpedia.org/ontology/associatedBand>
+dbo:associatedBand  <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:Band .
+
+dbo:musicalBand  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Single ;
         <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Band> .
+                dbo:Band .
 
-<http://dbpedia.org/ontology/musicalBand>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Single> ;
+dbo:hometown  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Agent ;
         <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Band> .
+                dbo:Settlement .
 
-<http://dbpedia.org/ontology/hometown>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Agent> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Settlement> .
+dbo:manufacturer  <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:Organisation .
 
-<http://dbpedia.org/ontology/manufacturer>
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Organisation> .
+dbo:product  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Organisation .
 
-<http://dbpedia.org/ontology/product>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Organisation> .
-
-<http://dbpedia.org/ontology/populationUrban>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/PopulatedPlace> ;
+dbo:populationUrban  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:PopulatedPlace ;
         <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 
-<http://dbpedia.org/ontology/dateUse>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Canal> ;
+dbo:dateUse  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Canal ;
         <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#date> .
 
-<http://dbpedia.org/ontology/formationDate>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Organisation> ;
+dbo:formationDate  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Organisation ;
         <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#date> .
 
-<http://dbpedia.org/ontology/militaryUnit>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/MilitaryPerson> ;
+dbo:militaryUnit  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:MilitaryPerson ;
         <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/MilitaryUnit> .
+                dbo:MilitaryUnit .
 
-<http://dbpedia.org/ontology/abbreviation>
+dbo:abbreviation  <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#string> .
+
+dbo:epoch  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Planet ;
         <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#string> .
 
-<http://dbpedia.org/ontology/epoch>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Planet> ;
+dbo:density  <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#double> .
+
+dbo:height  <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#double> .
+
+dbo:literaryGenre  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:WrittenWork .
+
+dbo:shipBeam  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Ship ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#double> .
+
+dbo:dcc  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Work ;
         <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#string> .
 
-<http://dbpedia.org/ontology/density>
-        <http://www.w3.org/2000/01/rdf-schema#range>
+dbo:sublimationPoint  <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#double> .
 
-<http://dbpedia.org/ontology/height>
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2001/XMLSchema#double> .
-
-<http://dbpedia.org/ontology/literaryGenre>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/WrittenWork> .
-
-<http://dbpedia.org/ontology/shipBeam>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Ship> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2001/XMLSchema#double> .
-
-<http://dbpedia.org/ontology/dcc>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Work> ;
+dbo:causalties  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:MilitaryConflict ;
         <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#string> .
 
-<http://dbpedia.org/ontology/sublimationPoint>
+dbo:locationCity  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Organisation ;
         <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2001/XMLSchema#double> .
+                dbo:City .
 
-<http://dbpedia.org/ontology/causalties>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/MilitaryConflict> ;
+dbo:almaMater  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Person ;
         <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2001/XMLSchema#string> .
+                dbo:EducationalInstitution .
 
-<http://dbpedia.org/ontology/locationCity>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Organisation> ;
+dbo:district  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Place ;
         <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/City> .
+                dbo:PopulatedPlace .
 
-<http://dbpedia.org/ontology/almaMater>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Person> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/EducationalInstitution> .
-
-<http://dbpedia.org/ontology/district>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Place> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/PopulatedPlace> .
-
-<http://dbpedia.org/ontology/entrezgene>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Biomolecule> ;
+dbo:entrezgene  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Biomolecule ;
         <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#string> .
 
-<http://dbpedia.org/ontology/intercommunality>
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/PopulatedPlace> .
+dbo:intercommunality  <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:PopulatedPlace .
 
-<http://dbpedia.org/ontology/apoapsis>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/CelestialBody> ;
+dbo:apoapsis  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:CelestialBody ;
         <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#double> .
 
-<http://dbpedia.org/ontology/frequency>
-        <http://www.w3.org/2000/01/rdf-schema#range>
+dbo:frequency  <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#double> .
 
-<http://dbpedia.org/ontology/manager>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/SportsTeam> ;
+dbo:manager  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:SportsTeam ;
         <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Person> .
+                dbo:Person .
 
-<http://dbpedia.org/ontology/network>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Broadcaster> ;
+dbo:network  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Broadcaster ;
         <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Broadcaster> .
+                dbo:Broadcaster .
 
-<http://dbpedia.org/ontology/completionDate>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Work> ;
+dbo:completionDate  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Work ;
         <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#date> .
 
-<http://dbpedia.org/ontology/team>
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/SportsTeam> .
+dbo:team  <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:SportsTeam .
 
-<http://dbpedia.org/ontology/orbitalPeriod>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Planet> ;
+dbo:orbitalPeriod  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Planet ;
         <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#double> .
 
-<http://dbpedia.org/ontology/iataLocationIdentifier>
+dbo:iataLocationIdentifier
         <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Infrastructure> ;
+                dbo:Infrastructure ;
         <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#string> .
 
-<http://dbpedia.org/ontology/areaWater>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Place> ;
+dbo:areaWater  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Place ;
         <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#double> .
 
-<http://dbpedia.org/ontology/postalCode>
-        <http://www.w3.org/2000/01/rdf-schema#range>
+dbo:postalCode  <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#string> .
 
-<http://dbpedia.org/ontology/birthDate>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Person> ;
+dbo:birthDate  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Person ;
         <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#date> .
 
-<http://dbpedia.org/ontology/owner>
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Agent> .
+dbo:owner  <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:Agent .
 
-<http://dbpedia.org/ontology/issn>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/PeriodicalLiterature> ;
+dbo:issn  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:PeriodicalLiterature ;
         <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#string> .
 
-<http://dbpedia.org/ontology/child>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Person> ;
+dbo:child  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Person ;
         <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Person> .
+                dbo:Person .
 
-<http://dbpedia.org/ontology/recordedIn>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/MusicalWork> ;
+dbo:recordedIn  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:MusicalWork ;
         <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/PopulatedPlace> .
+                dbo:PopulatedPlace .
 
-<http://dbpedia.org/ontology/meltingPoint>
+dbo:meltingPoint  <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#double> .
+
+dbo:starring  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Work ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:Actor .
+
+dbo:formerName  <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString> .
+
+dbo:motto  <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#string> .
+
+dbo:populationUrbanDensity
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:PopulatedPlace ;
         <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#double> .
 
-<http://dbpedia.org/ontology/starring>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Work> ;
+dbo:locatedInArea  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Place ;
         <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Actor> .
+                dbo:Place .
 
-<http://dbpedia.org/ontology/formerName>
+dbo:bandMember  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Band ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:Person .
+
+dbo:regionServed  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Organisation ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:Place .
+
+dbo:relative  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Person ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:Person .
+
+dbo:league  <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:SportsLeague .
+
+dbo:officialSchoolColour
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:EducationalInstitution ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#string> .
+
+dbo:facultySize  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:EducationalInstitution ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+
+dbo:family  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Species ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:Species .
+
+dbo:area  <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#double> .
+
+dbo:state  <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:PopulatedPlace .
+
+dbo:mouthMountain  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:River ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:Mountain .
+
+dbo:mountainRange  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Mountain ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:MountainRange .
+
+dbo:squadNumber  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:SportsTeamMember ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+
+dbo:callsignMeaning  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Broadcaster ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#string> .
+
+dbo:areaTotal  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Place ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#double> .
+
+dbo:occupation  <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:PersonFunction .
+
+dbo:affiliation  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Organisation ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:Organisation .
+
+dbo:award  <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:Award .
+
+dbo:lcc  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:WrittenWork ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#string> .
+
+dbo:activeYearsEndYear
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#gYear> .
+
+dbo:publisher  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Work ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:Agent .
+
+dbo:origin  <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:PopulatedPlace .
+
+dbo:riverMouth  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:River ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:BodyOfWater .
+
+dbo:musicalArtist  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Single ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:MusicalArtist .
+
+dbo:border  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Island ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:PopulatedPlace .
+
+dbo:associatedRocket  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:LaunchPad ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:Rocket .
+
+dbo:areaCode  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Place ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#string> .
+
+dbo:region  <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:Place .
+
+dbo:absoluteMagnitude
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:CelestialBody ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#double> .
+
+dbo:yearOfConstruction
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Place ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#gYear> .
+
+dbo:residence  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Person ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:Place .
+
+dbo:chairman  <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:Person .
+
+dbo:spouse  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Person ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:Person .
+
+dbo:restingPlace  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Person ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:Place .
+
+dbo:architect  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:ArchitecturalStructure ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:Architect .
+
+dbo:programmingLanguage
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Software .
+
+dbo:musicComposer  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Work ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:MusicalArtist .
+
+dbo:gridReference  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Place ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#string> .
+
+dbo:broadcastNetwork  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Broadcaster ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:BroadcastNetwork .
+
+dbo:president  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Organisation ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:Person .
+
+dbo:foundedBy  <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:Agent .
+
+dbo:formationYear  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Organisation ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#gYear> .
+
+dbo:computingInput  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Software .
+
+dbo:previousWork  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Work ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:Work .
+
+dbo:runtime  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Work ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#double> .
+
+dbo:meanTemperature  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Planet ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#double> .
+
+dbo:battle  <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:MilitaryConflict .
+
+dbo:relatedMeanOfTransportation
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:MeanOfTransportation ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:MeanOfTransportation .
+
+dbo:country  <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:Country .
+
+dbo:canonizedPlace  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Saint ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:PopulatedPlace .
+
+dbo:totalPopulation  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:EthnicGroup ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+
+dbo:activeYearsEndDate
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#date> .
+
+dbo:numberOfStudents  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:EducationalInstitution ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+
+dbo:crosses  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Bridge ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:River .
+
+dbo:deathPlace  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Person ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:Place .
+
+dbo:genus  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Species .
+
+dbo:location  <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:Place .
+
+dbo:computingPlatform
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Software .
+
+dbo:stateOfOrigin  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Person ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:Country .
+
+dbo:rector  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:EducationalInstitution ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:Person .
+
+dbo:executiveProducer
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:Person .
+
+dbo:isbn  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:WrittenWork ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#string> .
+
+dbo:isPartOfMilitaryConflict
+        <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:MilitaryConflict ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:MilitaryConflict .
+
+dbo:date  <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#date> .
+
+dbo:openingDate  <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#date> .
+
+dbo:activeYearsStartYear
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#gYear> .
+
+dbo:areaMetro  <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#double> .
+
+dbo:parentCompany  <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:Company .
+
+dbo:budget  <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#double> .
+
+dbo:presenter  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:TelevisionShow ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:Person .
+
+dbo:length  <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#double> .
+
+dbo:depth  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Place ;
+        <http://www.w3.org/2000/01/rdf-schema#range>
+                <http://www.w3.org/2001/XMLSchema#double> .
+
+dbo:album  <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:Album .
+
+dbo:birthName  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Person ;
         <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString> .
 
-<http://dbpedia.org/ontology/motto>
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2001/XMLSchema#string> .
-
-<http://dbpedia.org/ontology/populationUrbanDensity>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/PopulatedPlace> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2001/XMLSchema#double> .
-
-<http://dbpedia.org/ontology/locatedInArea>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Place> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Place> .
-
-<http://dbpedia.org/ontology/bandMember>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Band> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Person> .
-
-<http://dbpedia.org/ontology/regionServed>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Organisation> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Place> .
-
-<http://dbpedia.org/ontology/relative>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Person> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Person> .
-
-<http://dbpedia.org/ontology/league>
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/SportsLeague> .
-
-<http://dbpedia.org/ontology/officialSchoolColour>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/EducationalInstitution> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2001/XMLSchema#string> .
-
-<http://dbpedia.org/ontology/facultySize>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/EducationalInstitution> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-
-<http://dbpedia.org/ontology/family>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Species> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Species> .
-
-<http://dbpedia.org/ontology/area>
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2001/XMLSchema#double> .
-
-<http://dbpedia.org/ontology/state>
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/PopulatedPlace> .
-
-<http://dbpedia.org/ontology/mouthMountain>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/River> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Mountain> .
-
-<http://dbpedia.org/ontology/mountainRange>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Mountain> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/MountainRange> .
-
-<http://dbpedia.org/ontology/squadNumber>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/SportsTeamMember> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-
-<http://dbpedia.org/ontology/callsignMeaning>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Broadcaster> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2001/XMLSchema#string> .
-
-<http://dbpedia.org/ontology/areaTotal>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Place> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2001/XMLSchema#double> .
-
-<http://dbpedia.org/ontology/occupation>
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/PersonFunction> .
-
-<http://dbpedia.org/ontology/affiliation>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Organisation> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Organisation> .
-
-<http://dbpedia.org/ontology/award>
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Award> .
-
-<http://dbpedia.org/ontology/lcc>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/WrittenWork> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2001/XMLSchema#string> .
-
-<http://dbpedia.org/ontology/activeYearsEndYear>
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2001/XMLSchema#gYear> .
-
-<http://dbpedia.org/ontology/publisher>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Work> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Agent> .
-
-<http://dbpedia.org/ontology/origin>
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/PopulatedPlace> .
-
-<http://dbpedia.org/ontology/riverMouth>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/River> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/BodyOfWater> .
-
-<http://dbpedia.org/ontology/musicalArtist>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Single> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/MusicalArtist> .
-
-<http://dbpedia.org/ontology/border>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Island> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/PopulatedPlace> .
-
-<http://dbpedia.org/ontology/associatedRocket>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/LaunchPad> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Rocket> .
-
-<http://dbpedia.org/ontology/areaCode>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Place> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2001/XMLSchema#string> .
-
-<http://dbpedia.org/ontology/region>
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Place> .
-
-<http://dbpedia.org/ontology/absoluteMagnitude>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/CelestialBody> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2001/XMLSchema#double> .
-
-<http://dbpedia.org/ontology/yearOfConstruction>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Place> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2001/XMLSchema#gYear> .
-
-<http://dbpedia.org/ontology/residence>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Person> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Place> .
-
-<http://dbpedia.org/ontology/chairman>
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Person> .
-
-<http://dbpedia.org/ontology/spouse>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Person> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Person> .
-
-<http://dbpedia.org/ontology/restingPlace>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Person> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Place> .
-
-<http://dbpedia.org/ontology/architect>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/ArchitecturalStructure> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Architect> .
-
-<http://dbpedia.org/ontology/programmingLanguage>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Software> .
-
-<http://dbpedia.org/ontology/musicComposer>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Work> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/MusicalArtist> .
-
-<http://dbpedia.org/ontology/gridReference>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Place> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2001/XMLSchema#string> .
-
-<http://dbpedia.org/ontology/broadcastNetwork>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Broadcaster> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/BroadcastNetwork> .
-
-<http://dbpedia.org/ontology/president>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Organisation> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Person> .
-
-<http://dbpedia.org/ontology/foundedBy>
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Agent> .
-
-<http://dbpedia.org/ontology/formationYear>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Organisation> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2001/XMLSchema#gYear> .
-
-<http://dbpedia.org/ontology/computingInput>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Software> .
-
-<http://dbpedia.org/ontology/previousWork>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Work> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Work> .
-
-<http://dbpedia.org/ontology/runtime>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Work> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2001/XMLSchema#double> .
-
-<http://dbpedia.org/ontology/meanTemperature>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Planet> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2001/XMLSchema#double> .
-
-<http://dbpedia.org/ontology/battle>
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/MilitaryConflict> .
-
-<http://dbpedia.org/ontology/relatedMeanOfTransportation>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/MeanOfTransportation> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/MeanOfTransportation> .
-
-<http://dbpedia.org/ontology/country>
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Country> .
-
-<http://dbpedia.org/ontology/canonizedPlace>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Saint> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/PopulatedPlace> .
-
-<http://dbpedia.org/ontology/totalPopulation>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/EthnicGroup> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-
-<http://dbpedia.org/ontology/activeYearsEndDate>
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2001/XMLSchema#date> .
-
-<http://dbpedia.org/ontology/numberOfStudents>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/EducationalInstitution> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-
-<http://dbpedia.org/ontology/crosses>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Bridge> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/River> .
-
-<http://dbpedia.org/ontology/deathPlace>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Person> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Place> .
-
-<http://dbpedia.org/ontology/genus>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Species> .
-
-<http://dbpedia.org/ontology/location>
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Place> .
-
-<http://dbpedia.org/ontology/computingPlatform>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Software> .
-
-<http://dbpedia.org/ontology/stateOfOrigin>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Person> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Country> .
-
-<http://dbpedia.org/ontology/rector>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/EducationalInstitution> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Person> .
-
-<http://dbpedia.org/ontology/executiveProducer>
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Person> .
-
-<http://dbpedia.org/ontology/isbn>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/WrittenWork> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2001/XMLSchema#string> .
-
-<http://dbpedia.org/ontology/isPartOfMilitaryConflict>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/MilitaryConflict> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/MilitaryConflict> .
-
-<http://dbpedia.org/ontology/date>
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2001/XMLSchema#date> .
-
-<http://dbpedia.org/ontology/openingDate>
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2001/XMLSchema#date> .
-
-<http://dbpedia.org/ontology/activeYearsStartYear>
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2001/XMLSchema#gYear> .
-
-<http://dbpedia.org/ontology/areaMetro>
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2001/XMLSchema#double> .
-
-<http://dbpedia.org/ontology/parentCompany>
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Company> .
-
-<http://dbpedia.org/ontology/budget>
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2001/XMLSchema#double> .
-
-<http://dbpedia.org/ontology/presenter>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/TelevisionShow> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Person> .
-
-<http://dbpedia.org/ontology/length>
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2001/XMLSchema#double> .
-
-<http://dbpedia.org/ontology/depth>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Place> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/2001/XMLSchema#double> .
-
-<http://dbpedia.org/ontology/album>
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Album> .
-
-<http://dbpedia.org/ontology/birthName>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Person> ;
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString> .
-
-<http://dbpedia.org/ontology/facilityId>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/RadioStation> ;
+dbo:facilityId  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:RadioStation ;
         <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#integer> .
 
-<http://dbpedia.org/ontology/militaryBranch>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/MilitaryPerson> ;
+dbo:militaryBranch  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:MilitaryPerson ;
         <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/MilitaryUnit> .
+                dbo:MilitaryUnit .
 
-<http://dbpedia.org/ontology/iupacName>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Drug> ;
+dbo:iupacName  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Drug ;
         <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString> .
 
-<http://dbpedia.org/ontology/phylum>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Species> .
+dbo:phylum  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Species .
 
-<http://dbpedia.org/ontology/foundationPlace>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Organisation> ;
+dbo:foundationPlace  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Organisation ;
         <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/City> .
+                dbo:City .
 
-<http://dbpedia.org/ontology/displacement>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/AutomobileEngine> ;
+dbo:displacement  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:AutomobileEngine ;
         <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#double> .
 
-<http://dbpedia.org/ontology/shipDraft>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Ship> ;
+dbo:shipDraft  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Ship ;
         <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#double> .
 
-<http://dbpedia.org/ontology/runningMate>
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Person> .
+dbo:runningMate  <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:Person .
 
-<http://dbpedia.org/ontology/militaryCommand>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/MilitaryPerson> ;
+dbo:militaryCommand  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:MilitaryPerson ;
         <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#string> .
 
-<http://dbpedia.org/ontology/associatedMusicalArtist>
+dbo:associatedMusicalArtist
         <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/MusicalArtist> .
+                dbo:MusicalArtist .
 
-<http://dbpedia.org/ontology/layingDown>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Ship> ;
+dbo:layingDown  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Ship ;
         <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#date> .
 
-<http://dbpedia.org/ontology/conservationStatus>
+dbo:conservationStatus
         <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Species> ;
+                dbo:Species ;
         <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#string> .
 
-<http://dbpedia.org/ontology/monarch>
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Person> .
+dbo:monarch  <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:Person .
 
-<http://dbpedia.org/ontology/highestMountain>
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Mountain> .
+dbo:highestMountain  <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:Mountain .
 
-<http://dbpedia.org/ontology/mascot>
-        <http://www.w3.org/2000/01/rdf-schema#range>
+dbo:mascot  <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#string> .
 
-<http://dbpedia.org/ontology/locationCountry>
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Country> .
+dbo:locationCountry  <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:Country .
 
-<http://dbpedia.org/ontology/populationTotal>
-        <http://www.w3.org/2000/01/rdf-schema#range>
+dbo:populationTotal  <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 
-<http://dbpedia.org/ontology/agencyStationCode>
+dbo:agencyStationCode
         <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Station> ;
+                dbo:Station ;
         <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#string> .
 
-<http://dbpedia.org/ontology/managerClub>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Athlete> ;
+dbo:managerClub  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Athlete ;
         <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/SportsTeam> .
+                dbo:SportsTeam .
 
-<http://dbpedia.org/ontology/commandStructure>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/MilitaryUnit> ;
+dbo:commandStructure  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:MilitaryUnit ;
         <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/MilitaryUnit> .
+                dbo:MilitaryUnit .
 
-<http://dbpedia.org/ontology/foundingYear>
-        <http://www.w3.org/2000/01/rdf-schema#range>
+dbo:foundingYear  <http://www.w3.org/2000/01/rdf-schema#range>
                 <http://www.w3.org/2001/XMLSchema#gYear> .
 
-<http://dbpedia.org/ontology/precursor>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/AnatomicalStructure> ;
+dbo:precursor  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:AnatomicalStructure ;
         <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Embryology> .
+                dbo:Embryology .
 
-<http://dbpedia.org/ontology/musicFusionGenre>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/MusicGenre> ;
+dbo:musicFusionGenre  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:MusicGenre ;
         <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/MusicGenre> .
+                dbo:MusicGenre .
 
-<http://dbpedia.org/ontology/city>
-        <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/City> .
+dbo:city  <http://www.w3.org/2000/01/rdf-schema#range>
+                dbo:City .
 
-<http://dbpedia.org/ontology/formerCoach>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/FigureSkater> ;
+dbo:formerCoach  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:FigureSkater ;
         <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/Person> .
+                dbo:Person .
 
-<http://dbpedia.org/ontology/nearestCity>
-        <http://www.w3.org/2000/01/rdf-schema#domain>
-                <http://dbpedia.org/ontology/Place> ;
+dbo:nearestCity  <http://www.w3.org/2000/01/rdf-schema#domain>
+                dbo:Place ;
         <http://www.w3.org/2000/01/rdf-schema#range>
-                <http://dbpedia.org/ontology/PopulatedPlace> .
+                dbo:PopulatedPlace .

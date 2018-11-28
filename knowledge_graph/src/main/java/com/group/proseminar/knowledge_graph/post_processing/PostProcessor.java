@@ -4,6 +4,7 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URI;
+import java.net.URISyntaxException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.HashSet;
@@ -107,10 +108,8 @@ public class PostProcessor {
 	 * @param unsuccessfulPath
 	 * @throws IOException
 	 */
-	private void performPostProcessing(String originPath) {
+	private void performPostProcessing(URI originURI) {
 		// Initialize reader model
-		Path origin = Paths.get(originPath);
-		URI originURI = origin.toUri();
 		Model reader = ModelFactory.createDefaultModel();
 		reader.read(originURI.toString(), "Turtle");
 		// Iterate over statements and check them
@@ -133,8 +132,7 @@ public class PostProcessor {
 	 * @param path
 	 * @throws IOException
 	 */
-	private void writeModelToFile(Model model, String path) throws IOException {
-		URI uri = Paths.get(path).toUri();
+	private void writeModelToFile(Model model, URI uri) throws IOException {
 		BufferedWriter writer = new BufferedWriter(new FileWriter(uri.getPath()));
 		model.write(writer, "Turtle");
 	}
@@ -144,24 +142,22 @@ public class PostProcessor {
 	 * unsuccessful.
 	 * 
 	 * @throws IOException
+	 * @throws URISyntaxException 
 	 */
-	public void performPostProcessing() throws IOException {
-		// Create uri for results (successful post-processing)
+	public void performPostProcessing() throws IOException{
+		// Create uris for results (successful and unsuccessful post-processing)
 		URI successfulUri = Paths.get("src/main/resources/successful.ttl").toUri();
-
-		// Create uri for results (unsuccessful post-processing)
 		URI unsuccessfulUri = Paths.get("src/main/resources/unsuccessful.ttl").toUri();
 
 		// Perform post-processing for nlp package
 		URI nlpUri = Paths.get("src/main/resources/nlp_results.ttl").toUri();
-		performPostProcessing(nlpUri.getPath());
+		performPostProcessing(nlpUri);
 
-		// Create model reading results of FOX
-		// TODO:
+		// TODO: Create model reading results of FOX
 
-		writeModelToFile(this.successful, successfulUri.getPath());
-
-		writeModelToFile(this.unsuccessful, unsuccessfulUri.getPath());
+		// Write results to file
+		writeModelToFile(this.successful, successfulUri);
+		writeModelToFile(this.unsuccessful, unsuccessfulUri);
 	}
 
 	public static void main(String[] args) {
