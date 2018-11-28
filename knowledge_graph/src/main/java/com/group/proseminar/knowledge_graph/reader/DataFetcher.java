@@ -10,6 +10,15 @@ import java.nio.charset.Charset;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+/**
+ * An object from this class is created by {@link Controller}.
+ * It connects to dbpedia and fetches all articles that are classified under the given ontology.
+ * For each fetched article an {@link ArticleHolder} is generated, registered in the pool at {@link Controller}, and started to run.
+ * 
+ * @author Sibar Soumi
+ *
+ */
+
 class DataFetcher extends Thread {
 	private String url;
 	private Controller controller;

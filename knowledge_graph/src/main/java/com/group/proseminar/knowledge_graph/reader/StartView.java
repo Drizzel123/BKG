@@ -10,6 +10,13 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+/**
+ * Startup graphical user interface where the user can enter the ontology of the articles s/he wants to fetch and build the knowledge graph from.
+ * 
+ * @author Sibar Soumi
+ *
+ */
+
 class StartView extends JFrame {
 
 	private JTextField ontology_chooser;
