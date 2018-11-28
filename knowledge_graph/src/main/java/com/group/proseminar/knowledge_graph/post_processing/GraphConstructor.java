@@ -33,6 +33,8 @@ public class GraphConstructor {
 
 	public GraphConstructor() {
 		this.model = ModelFactory.createDefaultModel();
+		this.model.setNsPrefix("dbr", "http://dbpedia.org/resource/");
+		this.model.setNsPrefix("dbo", "http://dbpedia.org/ontology/");
 	}
 
 	public Model getModel() {
@@ -154,7 +156,7 @@ public class GraphConstructor {
 	}
 
 	public static void main(String[] args) throws IOException, InterruptedException {
-		GraphConstructor postProcessing = new GraphConstructor();
+		GraphConstructor graph = new GraphConstructor();
 
 		Model reader = ModelFactory.createDefaultModel();
 		reader.read("dbpedia_3Eng_property.ttl", "TURTLE");
@@ -162,7 +164,7 @@ public class GraphConstructor {
 		while (iterP.hasNext()) {
 			Triple triple = iterP.next().asTriple();
 			String url = triple.getSubject().toString();
-			postProcessing.insertAncestryToModel(postProcessing.getModel(), url, 10);
+			graph.insertAncestryToModel(graph.getModel(), url, 10);
 			Thread.sleep(10);
 		}
 
@@ -171,14 +173,14 @@ public class GraphConstructor {
 		while (iterC.hasNext()) {
 			Triple triple = iterC.next().asTriple();
 			String url = triple.getSubject().toString();
-			postProcessing.insertAncestryToModel(postProcessing.getModel(), url, 10);
+			graph.insertAncestryToModel(graph.getModel(), url, 10);
 			Thread.sleep(10);
 		}
 
 		Path path = Paths.get("src/main/resources/graph.ttl");
 		URI uri = path.toUri();
 		BufferedWriter writer = new BufferedWriter(new FileWriter(uri.getPath()));
-		postProcessing.getModel().write(writer, "Turtle");
+		graph.getModel().write(writer, "Turtle");
 	}
 
 }

@@ -6,9 +6,7 @@ import java.io.IOException;
 import java.net.URI;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 import org.apache.jena.rdf.model.Model;
@@ -27,13 +25,18 @@ import org.apache.jena.vocabulary.RDFS;
  *
  */
 public class PostProcessor {
-	private Model model;
 	private GraphConstructor constructor;
+	private Model successful;
+	private Model unsuccessful;
 
 	public PostProcessor() {
-		this.model = ModelFactory.createDefaultModel();
-		this.model.read("graph.ttl", "TURTLE");
 		this.constructor = new GraphConstructor();
+		this.successful = ModelFactory.createDefaultModel();
+		this.successful.setNsPrefix("dbr", "http://dbpedia.org/resource/");
+		this.successful.setNsPrefix("dbo", "http://dbpedia.org/ontology/");
+		this.unsuccessful = ModelFactory.createDefaultModel();
+		this.unsuccessful.setNsPrefix("dbr", "http://dbpedia.org/resource/");
+		this.unsuccessful.setNsPrefix("dbo", "http://dbpedia.org/ontology/");
 	}
 
 	/**
@@ -97,41 +100,77 @@ public class PostProcessor {
 	/**
 	 * Separates the triplets in file with path {@code originPath } with respect to
 	 * the post-processing. Triplets with successful post-processing will be added
-	 * to the file with path {@code successfulPath}, the remaining to the file with
-	 * path {@code unsuccessfulPath}
+	 * to the model successful, the remaining to the model unsuccessful.
 	 * 
 	 * @param originPath
 	 * @param successfulPath
 	 * @param unsuccessfulPath
 	 * @throws IOException
 	 */
-	public void performPostProcessing(String originPath, String successfulPath, String unsuccessfulPath)
-			throws IOException {
+	private void performPostProcessing(String originPath) {
 		// Initialize reader model
 		Path origin = Paths.get(originPath);
 		URI originURI = origin.toUri();
 		Model reader = ModelFactory.createDefaultModel();
 		reader.read(originURI.toString(), "Turtle");
+		// Iterate over statements and check them
 		StmtIterator statements = reader.listStatements();
+		// Add statements to successful/unsuccessful model
+		while (statements.hasNext()) {
+			Statement next = statements.next();
+			if (checkTriplet(next)) {
+				successful.add(next);
+			} else {
+				unsuccessful.add(next);
+			}
+		}
+	}
 
-		// Initialize model for successful post-processed statements
-		Model successful = ModelFactory.createDefaultModel();
+	/**
+	 * Write a given model to a file at the specified path.
+	 * 
+	 * @param model
+	 * @param path
+	 * @throws IOException
+	 */
+	private void writeModelToFile(Model model, String path) throws IOException {
+		URI uri = Paths.get(path).toUri();
+		BufferedWriter writer = new BufferedWriter(new FileWriter(uri.getPath()));
+		model.write(writer, "Turtle");
+	}
 
-		// Initialize model for unsuccessful post-processed statements
-		Model unsuccessful = ModelFactory.createDefaultModel();
+	/**
+	 * Performs post-processing and separates the statements in successful and
+	 * unsuccessful.
+	 * 
+	 * @throws IOException
+	 */
+	public void performPostProcessing() throws IOException {
+		// Create uri for results (successful post-processing)
+		URI successfulUri = Paths.get("src/main/resources/successful.ttl").toUri();
 
-		List<Statement> list = new ArrayList<>();
-		statements.forEachRemaining(list::add);
-		list.stream().map(x -> checkTriplet(x) ? successful.add(x) : unsuccessful.add(x));
+		// Create uri for results (unsuccessful post-processing)
+		URI unsuccessfulUri = Paths.get("src/main/resources/unsuccessful.ttl").toUri();
 
-		// Write successful model to path
-		URI successfulURI = Paths.get(successfulPath).toUri();
-		BufferedWriter successfulWriter = new BufferedWriter(new FileWriter(successfulURI.getPath()));
-		successful.write(successfulWriter, "Turtle");
+		// Perform post-processing for nlp package
+		URI nlpUri = Paths.get("src/main/resources/nlp_results.ttl").toUri();
+		performPostProcessing(nlpUri.getPath());
 
-		// Write unsuccessful model to path
-		URI unsuccessfulURI = Paths.get(unsuccessfulPath).toUri();
-		BufferedWriter unsuccessfulWriter = new BufferedWriter(new FileWriter(unsuccessfulURI.getPath()));
-		unsuccessful.write(unsuccessfulWriter, "Turtle");
+		// Create model reading results of FOX
+		// TODO:
+
+		writeModelToFile(this.successful, successfulUri.getPath());
+
+		writeModelToFile(this.unsuccessful, unsuccessfulUri.getPath());
+	}
+
+	public static void main(String[] args) {
+		PostProcessor processor = new PostProcessor();
+		try {
+			processor.performPostProcessing();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }
