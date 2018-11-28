@@ -20,6 +20,12 @@ import org.apache.jena.rdf.model.StmtIterator;
 import org.apache.jena.vocabulary.RDF;
 import org.apache.jena.vocabulary.RDFS;
 
+/**
+ * Checks what statements (triplets) in a collection are to be considered valid.
+ * 
+ * @author Stefan Werner
+ *
+ */
 public class PostProcessor {
 	private Model model;
 	private GraphConstructor constructor;
@@ -30,6 +36,12 @@ public class PostProcessor {
 		this.constructor = new GraphConstructor();
 	}
 
+	/**
+	 * Checks if a Statement is likely to be valid.
+	 * 
+	 * @param statement
+	 * @return true if the post-processing accepts the statement, false otherwise
+	 */
 	public boolean checkTriplet(Statement statement) {
 		String subject = statement.getSubject().toString();
 		String predicate = statement.getPredicate().toString();
@@ -82,6 +94,17 @@ public class PostProcessor {
 		return false;
 	}
 
+	/**
+	 * Separates the triplets in file with path {@code originPath } with respect to
+	 * the post-processing. Triplets with successful post-processing will be added
+	 * to the file with path {@code successfulPath}, the remaining to the file with
+	 * path {@code unsuccessfulPath}
+	 * 
+	 * @param originPath
+	 * @param successfulPath
+	 * @param unsuccessfulPath
+	 * @throws IOException
+	 */
 	public void performPostProcessing(String originPath, String successfulPath, String unsuccessfulPath)
 			throws IOException {
 		// Initialize reader model

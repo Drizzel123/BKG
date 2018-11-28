@@ -20,6 +20,7 @@ class ArticleHolder extends Thread {
 		plainText = Preprocessor.preprocess(uri, plainText);
 				
 		controller.deleteHolderFromThePool(this);
+		System.out.println(controller);
 	}
 
 }
