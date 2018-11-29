@@ -19,7 +19,6 @@ import org.apache.jena.rdf.model.Resource;
 
 import com.group.proseminar.knowledge_graph.ontology.PredicateResolver;
 
-import edu.stanford.nlp.pipeline.Annotation;
 import edu.stanford.nlp.pipeline.CoreDocument;
 import edu.stanford.nlp.pipeline.StanfordCoreNLP;
 
@@ -36,7 +35,6 @@ public class ExtractorPipeline {
 	private final String CPROPERTIES = "tokenize,ssplit,pos,lemma,ner,parse,dcoref";
 	private final String EPROPERTIES = "tokenize,ssplit,pos,lemma,ner,parse";
 	private CoreferenceResolver corefResolver;
-	private TripletExtractor extractor;
 	private PredicateResolver predResolver;
 	private BufferedWriter writer;
 	private Model resultModel;
@@ -48,15 +46,16 @@ public class ExtractorPipeline {
 	 */
 	public ExtractorPipeline() throws IOException {
 		this.corefResolver = new CoreferenceResolver();
-		this.extractor = new TripletExtractor();
 		// Initialize corefPipeline
 		Properties corefProps = new Properties();
 		corefProps.put("annotators", CPROPERTIES);
 		corefProps.put("dcoref.score", true);
+		corefProps.put("threads", "8");
 		this.corefPipeline = new StanfordCoreNLP(corefProps);
 		// Initialize extrPipeline
 		Properties extrProps = new Properties();
 		extrProps.put("annotators", EPROPERTIES);
+		extrProps.put("threads", "8");
 		this.extrPipeline = new StanfordCoreNLP(extrProps);
 		this.predResolver = new PredicateResolver();
 		// Initialize writer and model for output
@@ -84,9 +83,9 @@ public class ExtractorPipeline {
 
 		System.out.println(entities);
 
-		Annotation res = new Annotation(resolved);
+		CoreDocument res = new CoreDocument(resolved);
 		extrPipeline.annotate(res);
-		Set<Triplet<String, String, String>> triplets = extractor.extractFromText(res);
+		Set<Triplet<String, String, String>> triplets = TripletExtractor.extractTriplets(res);
 		EntityLinker linker = new EntityLinker();
 
 		Collection<Triplet<String, String, String>> result = new HashSet<>();
@@ -110,7 +109,7 @@ public class ExtractorPipeline {
 				String objURI = oEntity.getUri();
 
 				if (predURI == null) {
-					String edge = predResolver.getVerbDependend(res, predicate);
+					String edge = predResolver.getVerbDependend(res.annotation(), predicate);
 					predURI = predResolver.resolveToURI(edge);
 				}
 

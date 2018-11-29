@@ -41,6 +41,7 @@ public class SynonymUtil {
 		this.dictionary = Dictionary.getDefaultResourceInstance();
 		Properties properties = new Properties();
 		properties.put("annotators", PROPERTIES);
+		properties.put("threads", "8");
 		this.pipeline = new StanfordCoreNLP(properties);
 	}
 

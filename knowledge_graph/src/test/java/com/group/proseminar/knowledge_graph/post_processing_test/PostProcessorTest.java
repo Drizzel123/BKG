@@ -46,6 +46,11 @@ public class PostProcessorTest {
 		Resource o_2 = model.createResource(obj_2);
 		Statement statement_3 = model.createStatement(s_2, p_3, o_2);
 		assertEquals(true, processor.checkTriplet(statement_3));
+		
+		String pred_4 = "http://dbpedia.org/ontology/cites";
+		Property p_4 = model.createProperty(pred_4);
+		Statement statement_4 = model.createStatement(s_2, p_4, o_2);
+		assertEquals(false,processor.checkTriplet(statement_4));
 
 	}
 }

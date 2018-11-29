@@ -27,7 +27,7 @@ public class ExtractorPipelineTest {
 		pipeline.processArticle("New York City is the most densely populated major city in the United States.");
 		pipeline.processArticle("Barack Obama is the next president of America.");
 		pipeline.processArticle("Obama was the king of America.");
-		pipeline.processArticle("Rome was founded by Romans, who later abandoned the city.");
+		pipeline.processArticle("Rome was founded in 1993.");
 		pipeline.writeResultToFile();
 		assertEquals(true, true);
 	}
