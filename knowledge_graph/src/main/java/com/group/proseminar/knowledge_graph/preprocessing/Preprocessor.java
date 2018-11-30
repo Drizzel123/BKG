@@ -48,9 +48,14 @@ public class Preprocessor {
 		    	Dates.add(em.text());
 		    else if (person.isEmpty() && em.entityType().equals("PERSON"))
 		       	person = em.text();
-		       
+		  
+		try {
 		if (person.isEmpty() && Dates.size()>=1)
 			person=firstSentence.substring(0, firstSentence.indexOf('(')-1);
+		}
+		catch (java.lang.StringIndexOutOfBoundsException e)
+		{
+		}
 		    	
 		
 		if (Dates.size()>=2)
