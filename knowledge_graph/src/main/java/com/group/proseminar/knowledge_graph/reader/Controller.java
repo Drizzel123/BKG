@@ -13,15 +13,14 @@ import java.util.concurrent.Semaphore;
 
 public class Controller {
 	private Semaphore start_view_wait = new Semaphore(0);
-	private Semaphore pool_limiter ;
+	private Semaphore pool_limiter = new Semaphore(10);
 	private String ontology;
 	private LinkedList<ArticleHolder> pool = new LinkedList<ArticleHolder>();
 	/**
 	 * Once created, {@link StartView} is generated and showed to ask the user for an ontology.
 	 * Once an ontology is entered and registered, a signal is triggered using the semaphore {@link start_view_wait} and therefore {@link DataFetcher} is created and started.
 	 */
-	public Controller(int max_threads_simultaneously) {
-		pool_limiter = new Semaphore(max_threads_simultaneously);
+	public Controller() {
 		StartView start_view = new StartView(start_view_wait, this);
 		try {
 			start_view_wait.acquire();

@@ -15,6 +15,6 @@ public class App {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		new Controller(Integer.parseInt(args[0]));
+		new Controller();
 	}
 }
