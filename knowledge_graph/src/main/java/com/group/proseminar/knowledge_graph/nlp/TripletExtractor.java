@@ -1,5 +1,6 @@
 package com.group.proseminar.knowledge_graph.nlp;
 
+import java.util.AbstractMap;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -7,6 +8,7 @@ import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 import java.util.Stack;
 import java.util.stream.Collectors;
@@ -14,9 +16,12 @@ import java.util.stream.Stream;
 
 import edu.stanford.nlp.ling.CoreAnnotations;
 import edu.stanford.nlp.ling.CoreLabel;
+import edu.stanford.nlp.ling.IndexedWord;
 import edu.stanford.nlp.pipeline.CoreDocument;
 import edu.stanford.nlp.pipeline.CoreEntityMention;
 import edu.stanford.nlp.pipeline.CoreSentence;
+import edu.stanford.nlp.semgraph.SemanticGraph;
+import edu.stanford.nlp.semgraph.SemanticGraphEdge;
 import edu.stanford.nlp.trees.LabeledScoredTreeNode;
 import edu.stanford.nlp.trees.Tree;
 
@@ -28,17 +33,74 @@ import edu.stanford.nlp.trees.Tree;
 public class TripletExtractor {
 
 	/**
+	 * Get dependent phrase of current predicate phrase.
+	 * 
+	 * @param sentence - sentence of the predicate
+	 * @param word     - predicate
+	 * @return (string representation of the mentions dependency root, string
+	 *         representation of the new predicate)
+	 */
+	public static Entry<String, String> getDependentPredicate(CoreSentence sentence, String word) {
+		SemanticGraph dependencies = sentence.dependencyParse();
+		for (IndexedWord index : dependencies.getAllNodesByWordPattern(word)) {
+			List<String> result = new ArrayList<>();
+			for (SemanticGraphEdge e : dependencies.incomingEdgeIterable(dependencies.getNodeByIndex(index.index()))) {
+				if (e.getRelation().toString().equals("cop")) {
+					for (SemanticGraphEdge out : dependencies.outgoingEdgeIterable(e.getSource())) {
+						if (out.getRelation().toString().equals("amod")) {
+							result.add(out.getDependent().value());
+						}
+					}
+					result.add(e.getSource().value());
+					return new AbstractMap.SimpleEntry<String, String>(e.getSource().value(), String.join(" ", result));
+				}
+			}
+		}
+		return null;
+	}
+
+	/**
+	 * Get dependent phrase of current object phrase.
+	 * 
+	 * @param sentence - sentence of the object
+	 * @param word     - object
+	 * @return (string representation of the mentions dependency root, string
+	 *         representation of the new object)
+	 */
+	public static Entry<String, String> getDependentObject(CoreSentence sentence, String word) {
+		SemanticGraph dependencies = sentence.dependencyParse();
+		for (IndexedWord index : dependencies.getAllNodesByWordPattern(word)) {
+			List<Integer> result = new ArrayList<>();
+			for (SemanticGraphEdge e : dependencies.outgoingEdgeIterable(dependencies.getNodeByIndex(index.index()))) {
+				if (e.getRelation().toString().startsWith("nmod")) {
+					result.add(e.getDependent().index());
+					for (SemanticGraphEdge out : dependencies.outgoingEdgeIterable(e.getTarget())) {
+						if (out.getRelation().toString().startsWith("compound")) {
+							result.add(out.getDependent().index());
+						}
+					}
+					result.sort((e1, e2) -> e1.compareTo(e2));
+					return new AbstractMap.SimpleEntry<String, String>(e.getSource().value(), String.join(" ", result
+							.stream().map(x -> sentence.tokens().get(x - 1).value()).collect(Collectors.toList())));
+				}
+			}
+		}
+		return null;
+	}
+
+	/**
 	 * Extracts a set of triplets (subject, predicate, object) given an annotated
 	 * text.
 	 * 
 	 * @param document
 	 * @return
 	 */
-	public static Set<Triplet<String, String, String>> extractTriplets(CoreDocument document) {
-		Set<Triplet<String, String, String>> triplets = new HashSet<>();
+	public static Map<CoreSentence, Set<Triplet<String, String, String>>> extractTriplets(CoreDocument document) {
+		Map<CoreSentence, Set<Triplet<String, String, String>>> tripletMap = new HashMap<>();
+
 		for (CoreSentence sentence : document.sentences()) {
+			Set<Triplet<String, String, String>> triplets = new HashSet<>();
 			List<CoreEntityMention> entities = sentence.entityMentions();
-			entities.forEach(x -> System.out.println(x));
 			Tree cparse = sentence.constituencyParse().firstChild();
 
 			List<Tree> sroots = cparse.stream().filter(t -> t.label().value().equals("S")).collect(Collectors.toList());
@@ -48,8 +110,9 @@ public class TripletExtractor {
 					triplets.add(triplet);
 				}
 			}
+			tripletMap.put(sentence, triplets);
 		}
-		return triplets;
+		return tripletMap;
 	}
 
 	/**
@@ -211,7 +274,7 @@ public class TripletExtractor {
 	 * @param vt       - the current verb
 	 * @return
 	 */
-	public static CoreEntityMention extractObject(List<CoreEntityMention> entities, Tree sroot, Tree vt) {
+	private static CoreEntityMention extractObject(List<CoreEntityMention> entities, Tree sroot, Tree vt) {
 		Tree origin = extractObjectOrigin(sroot, vt);
 		if (origin != null) {
 			return mentionFromTree(entities, origin);
@@ -226,7 +289,7 @@ public class TripletExtractor {
 	 * @param vt    node of the predicate (verb type)
 	 * @return origin of the object
 	 */
-	public static Tree extractObjectOrigin(Tree sroot, Tree vt) {
+	private static Tree extractObjectOrigin(Tree sroot, Tree vt) {
 		List<Tree> siblings = vt.siblings(sroot);
 		Set<String> types = Stream.of("NP", "PP", "ADJP").collect(Collectors.toSet());
 

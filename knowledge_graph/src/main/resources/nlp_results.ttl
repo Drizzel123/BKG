@@ -1,9 +1,8 @@
 @prefix dbo:   <http://dbpedia.org/ontology/> .
 @prefix dbr:   <http://dbpedia.org/resource/> .
 
-dbr:Rome  dbo:foundingYear  dbr:1993 .
+dbr:Barack_Obama  dbo:monarch  dbr:United_States ;
+        dbo:president  dbr:United_States .
 
-dbr:Barack_Obama  dbo:monarch  dbr:Barack_Obama ;
-        dbo:president  dbr:Barack_Obama .
-
-dbr:New_York_City  dbo:city  dbr:United_States .
+dbr:New_York_City  dbo:city  dbr:United_States ;
+        dbo:foundingYear  dbr:1993 .

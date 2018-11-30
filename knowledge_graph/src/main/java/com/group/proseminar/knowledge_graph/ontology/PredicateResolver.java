@@ -9,13 +9,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import edu.stanford.nlp.ling.CoreAnnotations.SentencesAnnotation;
-import edu.stanford.nlp.ling.IndexedWord;
-import edu.stanford.nlp.pipeline.Annotation;
-import edu.stanford.nlp.semgraph.SemanticGraph;
-import edu.stanford.nlp.semgraph.SemanticGraphCoreAnnotations.BasicDependenciesAnnotation;
-import edu.stanford.nlp.semgraph.SemanticGraphEdge;
-import edu.stanford.nlp.util.CoreMap;
 import net.sf.extjwnl.JWNLException;
 
 /**
@@ -123,7 +116,6 @@ public class PredicateResolver {
 				Predicate bestPredWord = predWord.get(0);
 
 				if (bestPredWord.getUri() != null) {
-					System.out.println(bestPredWord);
 					return bestPredWord.getUri();
 				}
 			}
@@ -131,7 +123,6 @@ public class PredicateResolver {
 				Predicate bestPredLemma = predLemma.get(0);
 				
 				if (bestPredLemma.getUri() != null) {
-					System.out.println(bestPredLemma);
 					return bestPredLemma.getUri();
 				}
 			}
@@ -139,7 +130,6 @@ public class PredicateResolver {
 				Predicate bestPredWord = predWord.get(0);
 
 				if (bestPredWord.getUri() != null) {
-					System.out.println(bestPredWord);
 					return bestPredWord.getUri();
 				}
 			}
@@ -169,33 +159,5 @@ public class PredicateResolver {
 			index--;
 		}
 		return result;
-	}
-	
-	/**
-	 * Gets the depending phrase of a predicate with respect to the sentence's dependency tree.
-	 * @param document - annotated document (requires parse annotation)
-	 * @param predicate 
-	 * @return depending pharse of the predicate
-	 */
-	public String getVerbDependend(Annotation document, String predicate) {
-		List<CoreMap> sentences = document.get(SentencesAnnotation.class);
-		for (CoreMap sentence : sentences) {
-			SemanticGraph dependencies = sentence.get(BasicDependenciesAnnotation.class);
-			for (IndexedWord index: dependencies.getAllNodesByWordPattern(predicate)) {
-				List<String> result = new ArrayList<>();
-				for (SemanticGraphEdge e : dependencies.incomingEdgeIterable(dependencies.getNodeByIndex(index.index()))) {
-					if (e.getRelation().toString().equals("cop")) {
-						for (SemanticGraphEdge out: dependencies.outgoingEdgeIterable(e.getSource())) {
-							if (out.getRelation().toString().equals("amod")) {
-								result.add(out.getDependent().value());
-							}
-						}
-						result.add(e.getSource().value());
-						return String.join(" ", result);
-					}
-				}
-			}
-		}
-		return "";
-	}
+	}	
 }
